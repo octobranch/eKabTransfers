@@ -1,0 +1,2183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eKab - Transporte Privado Local desde Aeropuerto de Cancún | SUV y Vans</title>
+    <meta name="description" content="Servicio de transporte privado local desde Aeropuerto de Cancún. SUV para 4 pasajeros, vans para 8 y 15 personas. Reserva fácil por WhatsApp. Precios fijos, sin tarifas ocultas.">
+    <meta name="keywords" content="transporte vip cancún, traslado aeropuerto cancún, taxi vip cancún, suv aeropuerto cancún, van cancún, transporte privado cancún, van 15 pasajeros, traslado grupal cancún, shuttle cancun, local shuttle, transporte local, eKab transporte">
+    <meta name="author" content="eKab Transporte Privado">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.ekab.mx">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="eKab - Transporte Local Privado Cancún | SUV y Vans">
+    <meta property="og:description" content="Transporte privado en SUV para 4 personas o vans para 8-15 personas. Sin apps, solo WhatsApp. Precios fijos y transparentes.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.ekab.com">
+    <meta property="og:image" content="https://www.ekab.com/images/og-image.jpg">
+    <meta property="og:locale" content="es_MX">
+    
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="eKab - Transporte Local Privado Cancún">
+    <meta name="twitter:description" content="Transporte privado Local en SUV para 4 personas o vans para 8-15 personas. Sin apps, solo WhatsApp.">
+    <meta name="twitter:image" content="https://www.ekab.mx/images/twitter-card.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚕</text></svg>">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #1a56db;
+            --primary-dark: #1e429f;
+            --primary-light: #e1eaff;
+            --vip-color: #8b5cf6;
+            --vip-light: #f5f3ff;
+            --secondary-color: #1f2937;
+            --accent-color: #f59e0b;
+            --accent-light: #fffbeb;
+            --text-dark: #1f2937;
+            --text-medium: #4b5563;
+            --text-light: #6b7280;
+            --background-light: #f9fafb;
+            --white: #ffffff;
+            --gray-50: #f9fafb;
+            --gray-100: #f3f4f6;
+            --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05);
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            --shadow-md: 0 6px 12px -2px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+            --border-radius: 16px;
+            --border-radius-lg: 20px;
+            --max-width: 1200px;
+            --transition: all 0.3s ease;
+            --transition-slow: all 0.5s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background: var(--white);
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+            min-height: 100vh;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+            line-height: 1.2;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            color: var(--text-medium);
+        }
+
+        .container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 1.5rem;
+            width: 100%;
+        }
+
+        /* Header - Improved with better mobile handling */
+        .header {
+            background: rgba(255, 255, 255, 0.95);
+            box-shadow: var(--shadow);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+            padding: 0.75rem 0;
+            transition: var(--transition);
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 1.5rem;
+            max-width: var(--max-width);
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-family: 'Montserrat', sans-serif;
+            padding: 0.5rem 0;
+            position: relative;
+            z-index: 1001;
+        }
+
+        .logo::after {
+            content: "VIP";
+            position: absolute;
+            top: -8px;
+            right: -40px;
+            background: var(--vip-color);
+            color: white;
+            font-size: 0.7rem;
+            padding: 0.25rem 0.75rem;
+            border-radius: 12px;
+            font-weight: 700;
+        }
+
+        .logo i {
+            color: var(--vip-color);
+            font-size: 1.5rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1.5rem;
+            align-items: center;
+        }
+
+        .nav-link {
+            font-weight: 600;
+            color: var(--text-dark);
+            text-decoration: none;
+            transition: var(--transition);
+            position: relative;
+            padding: 0.5rem 0;
+            font-size: 1rem;
+        }
+
+        .nav-link::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 3px;
+            background: var(--primary-color);
+            border-radius: 3px;
+            transition: var(--transition);
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .language-toggle {
+            display: flex;
+            gap: 0.25rem;
+            background: var(--gray-100);
+            padding: 0.25rem;
+            border-radius: 8px;
+            margin-left: 1rem;
+        }
+
+        .lang-btn {
+            padding: 0.4rem 1rem;
+            background: transparent;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: var(--transition);
+            font-size: 0.9rem;
+        }
+
+        .lang-btn.active {
+            background: var(--white);
+            color: var(--primary-color);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .mobile-toggle {
+            display: none;
+            background: transparent;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--text-dark);
+            cursor: pointer;
+            margin-left: 1rem;
+            z-index: 1001;
+        }
+
+        /* Hero Section with responsive adjustments */
+        .hero {
+            background: linear-gradient(135deg, #1a56db 0%, #0c2e6e 100%);
+            color: var(--white);
+            padding: 7rem 1.5rem 5rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%231c3faa' fill-opacity='0.15' fill-rule='evenodd'/%3E%3C/svg%3E");
+            opacity: 0.3;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            font-weight: 900;
+            margin-bottom: 1.25rem;
+            line-height: 1.2;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.15);
+        }
+
+        .vip-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: linear-gradient(45deg, var(--vip-color), #6d28d9);
+            color: white;
+            padding: 0.5rem 1.25rem;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            margin-bottom: 1.25rem;
+            animation: pulse 2s infinite;
+            box-shadow: 0 4px 10px rgba(139, 92, 246, 0.3);
+        }
+
+        .hero-subtitle {
+            font-size: 1.15rem;
+            margin-bottom: 2rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            font-weight: 400;
+            color: #ffffff;
+            opacity: 0.95;
+        }
+
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--white);
+            color: var(--primary-color);
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            box-shadow: var(--shadow-xl);
+            transition: var(--transition);
+            border: 2px solid transparent;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .cta-button::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            background: var(--primary-color);
+            transition: var(--transition-slow);
+            z-index: -1;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+            color: white;
+        }
+
+        .cta-button:hover::before {
+            width: 100%;
+        }
+
+        .hero-image {
+            margin-top: 3rem;
+            position: relative;
+            border-radius: var(--border-radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-xl);
+            transform: perspective(1000px) rotateY(-5deg);
+            border: 8px solid rgba(255,255,255,0.1);
+            max-width: 800px;
+            margin: 3rem auto 0;
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            max-height: 300px;
+            object-fit: cover;
+        }
+
+        /* Section Styling */
+        .section {
+            padding: 5rem 1.5rem;
+            position: relative;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.25rem;
+            font-weight: 800;
+            margin-bottom: 1.25rem;
+            color: var(--text-dark);
+            position: relative;
+            display: inline-block;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 70px;
+            height: 4px;
+            background: var(--primary-color);
+            margin: 1rem auto;
+            border-radius: 3px;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.1rem;
+            color: var(--text-light);
+            margin-bottom: 3rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            font-weight: 400;
+        }
+
+        /* Vehicle Types Section */
+        .vehicle-types {
+            background: var(--white);
+        }
+
+        .vehicles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .vehicle-card {
+            background: var(--white);
+            border-radius: var(--border-radius-lg);
+            padding: 2rem;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            border-top: 5px solid var(--primary-color);
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .vehicle-card.vip {
+            border-top: 5px solid var(--vip-color);
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(139, 92, 246, 0.1), 0 10px 10px -5px rgba(139, 92, 246, 0.04);
+        }
+
+        .vehicle-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .vehicle-card.vip:hover {
+            transform: translateY(-15px);
+        }
+
+        .vehicle-icon {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 1.25rem;
+            background: var(--primary-light);
+            width: 80px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            margin: 0 auto 1.5rem;
+            transition: var(--transition);
+        }
+
+        .vehicle-card:hover .vehicle-icon {
+            transform: scale(1.1);
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .vehicle-card.vip .vehicle-icon {
+            color: var(--vip-color);
+            background: var(--vip-light);
+        }
+
+        .vehicle-card.vip:hover .vehicle-icon {
+            background: var(--vip-color);
+            color: white;
+        }
+
+        .vehicle-name {
+            font-size: 1.5rem;
+            font-weight: 800;
+            margin-bottom: 0.75rem;
+        }
+
+        .vehicle-capacity {
+            font-size: 1rem;
+            background: rgba(37, 99, 235, 0.1);
+            color: var(--primary-dark);
+            display: inline-block;
+            padding: 0.35rem 1rem;
+            border-radius: 30px;
+            margin-bottom: 1.25rem;
+            font-weight: 600;
+        }
+
+        .vehicle-card.vip .vehicle-capacity {
+            background: rgba(139, 92, 246, 0.1);
+            color: var(--vip-color);
+        }
+
+        .vehicle-features {
+            list-style: none;
+            text-align: left;
+            margin-bottom: 1.75rem;
+            flex-grow: 1;
+            padding-left: 1.5rem;
+        }
+
+        .vehicle-features li {
+            padding: 0.5rem 0;
+            position: relative;
+            padding-left: 1.5rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .vehicle-features li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        .vehicle-card.vip .vehicle-features li::before {
+            color: var(--vip-color);
+        }
+        
+        /* Added price styling */
+        .vehicle-price {
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: var(--text-dark);
+            margin-top: auto;
+            margin-bottom: 1.25rem;
+        }
+
+        .vehicle-price span {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--text-light);
+        }
+
+        /* Routes Section */
+        .routes {
+            background: linear-gradient(135deg, var(--gray-50) 0%, var(--white) 100%);
+        }
+        
+        .routes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .route-card {
+            background: var(--white);
+            border-radius: var(--border-radius-lg);
+            padding: 2rem;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border: 1px solid rgba(37, 99, 235, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .route-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .route-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.25rem;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+        }
+
+        .route-name {
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: var(--text-dark);
+        }
+
+        .route-price {
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .route-price .price-label {
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--text-light);
+        }
+
+        .route-details {
+            color: var(--text-light);
+            margin-bottom: 1.25rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.95rem;
+        }
+
+        .vehicle-selector {
+            margin: 1.25rem 0;
+            padding: 1.25rem;
+            background: var(--gray-50);
+            border-radius: var(--border-radius);
+        }
+
+        .selector-title {
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-dark);
+            font-size: 1.05rem;
+        }
+
+        .vehicle-options {
+            display: flex;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+        }
+
+        .vehicle-option {
+            flex: 1;
+            min-width: 110px;
+            padding: 0.9rem;
+            border: 2px solid var(--gray-100);
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            transition: var(--transition);
+            text-align: center;
+        }
+
+        .vehicle-option:hover {
+            border-color: var(--primary-color);
+            background: var(--primary-light);
+        }
+
+        .vehicle-option.selected {
+            border-color: var(--primary-color);
+            background: var(--primary-light);
+        }
+
+        .vehicle-option.vip {
+            border: 2px solid var(--vip-light);
+        }
+
+        .vehicle-option.vip:hover {
+            border-color: var(--vip-color);
+            background: var(--vip-light);
+        }
+
+        .vehicle-option.vip.selected {
+            border-color: var(--vip-color);
+            background: var(--vip-light);
+        }
+
+        .vehicle-option-icon {
+            font-size: 1.4rem;
+            margin-bottom: 0.5rem;
+            color: var(--primary-color);
+        }
+
+        .vehicle-option.vip .vehicle-option-icon {
+            color: var(--vip-color);
+        }
+
+        .vehicle-option-name {
+            font-weight: 700;
+            margin-bottom: 0.25rem;
+            font-size: 0.95rem;
+        }
+
+        .vehicle-option-capacity {
+            font-size: 0.8rem;
+            color: var(--text-light);
+        }
+
+        .route-btn {
+            width: 100%;
+            background: var(--primary-color);
+            color: var(--white);
+            padding: 1rem;
+            border: none;
+            border-radius: 12px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            text-decoration: none;
+            font-size: 1rem;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .route-btn::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            background: var(--primary-dark);
+            transition: var(--transition);
+            z-index: -1;
+        }
+
+        .route-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        .route-btn:hover::before {
+            width: 100%;
+        }
+
+        .quote-btn {
+            background: var(--accent-color);
+        }
+
+        .quote-btn::before {
+            background: #d97706;
+        }
+
+        .quote-btn:hover {
+            background: var(--accent-color);
+        }
+
+        /* How it works */
+        .how-it-works {
+            background: linear-gradient(135deg, #f0fdfa 0%, #f0f9ff 100%);
+            clip-path: polygon(0 5%, 100% 0, 100% 95%, 0 100%);
+        }
+
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .step {
+            text-align: center;
+            padding: 2rem;
+            background: var(--white);
+            border-radius: var(--border-radius-lg);
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .step:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .step-number {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(45deg, var(--primary-color), var(--primary-dark));
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.6rem;
+            font-weight: 700;
+            margin: 0 auto 1.25rem;
+            transition: var(--transition);
+            position: relative;
+            z-index: 1;
+        }
+
+        .step-number::before {
+            content: "";
+            position: absolute;
+            top: -5px;
+            left: -5px;
+            right: -5px;
+            bottom: -5px;
+            border-radius: 50%;
+            background: rgba(26, 86, 219, 0.1);
+            z-index: -1;
+        }
+
+        .step:hover .step-number {
+            transform: scale(1.1);
+        }
+
+        .step-title {
+            font-size: 1.3rem;
+            font-weight: 800;
+            margin-bottom: 0.75rem;
+            color: var(--text-dark);
+        }
+
+        .step-description {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        /* Benefits */
+        .benefits {
+            background: var(--white);
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .benefit {
+            background: var(--white);
+            border-radius: var(--border-radius-lg);
+            padding: 2rem;
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border: 1px solid rgba(37, 99, 235, 0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .benefit:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .benefit-icon {
+            width: 70px;
+            height: 70px;
+            background: var(--primary-light);
+            color: var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.25rem;
+            font-size: 2rem;
+            transition: var(--transition);
+        }
+
+        .benefit:hover .benefit-icon {
+            background: var(--primary-color);
+            color: white;
+            transform: rotateY(180deg);
+        }
+
+        .benefit-title {
+            font-size: 1.3rem;
+            font-weight: 800;
+            margin-bottom: 0.75rem;
+            color: var(--text-dark);
+        }
+
+        .benefit-description {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            background: linear-gradient(135deg, #f0fdf4 0%, #eff6ff 100%);
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .testimonial {
+            background: var(--white);
+            border-radius: var(--border-radius-lg);
+            padding: 2rem;
+            position: relative;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .testimonial:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .testimonial::before {
+            content: """;
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            font-size: 4rem;
+            color: var(--primary-light);
+            font-family: serif;
+            line-height: 1;
+            opacity: 0.3;
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 1.25rem;
+            color: var(--text-dark);
+            position: relative;
+            z-index: 1;
+            font-size: 0.95rem;
+        }
+
+        .testimonial-author {
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.95rem;
+        }
+
+        .testimonial-rating {
+            color: var(--accent-color);
+            margin-bottom: 0.75rem;
+            font-size: 1.1rem;
+        }
+
+        /* FAQ Section */
+        .faq {
+            background: var(--background-light);
+        }
+
+        .faq-grid {
+            max-width: 800px;
+            margin: 2.5rem auto 0;
+        }
+
+        .faq-item {
+            margin-bottom: 1.25rem;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            background: var(--white);
+        }
+
+        .faq-question {
+            padding: 1.25rem;
+            background: var(--primary-color);
+            color: white;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: var(--transition);
+            font-size: 1.05rem;
+        }
+
+        .faq-question:hover {
+            background: var(--primary-dark);
+        }
+        
+        .faq-question i {
+            transition: transform 0.3s ease;
+            font-size: 1.1rem;
+        }
+
+        .faq-answer {
+            padding: 0 1.25rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .faq-answer.active {
+            padding: 1.25rem;
+            max-height: 500px;
+        }
+
+        .faq-answer p {
+            font-size: 0.95rem;
+        }
+
+        /* Footer */
+        .footer {
+            background: linear-gradient(135deg, #0c2e6e 0%, var(--secondary-color) 100%);
+            color: var(--white);
+            padding: 5rem 1.5rem 2rem;
+            clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 100%);
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 2rem;
+        }
+
+        .footer-section h4 {
+            font-size: 1.3rem;
+            font-weight: 800;
+            margin-bottom: 1.25rem;
+            color: var(--white);
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        .footer-section h4::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 3px;
+            background: var(--primary-color);
+            border-radius: 3px;
+        }
+
+        .footer-section p, .footer-section a {
+            color: #d1d5db;
+            text-decoration: none;
+            margin-bottom: 0.5rem;
+            display: block;
+            transition: var(--transition);
+            font-size: 0.95rem;
+        }
+
+        .footer-section a:hover {
+            color: var(--primary-color);
+            transform: translateX(5px);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 0.75rem;
+            margin-top: 0.75rem;
+        }
+
+        .social-link {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+
+        .social-link:hover {
+            background: var(--primary-color);
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2.5rem;
+            margin-top: 2.5rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #9ca3af;
+            max-width: var(--max-width);
+            margin: 2.5rem auto 0;
+            font-size: 0.9rem;
+        }
+
+        /* WhatsApp Float Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 1.5rem;
+            right: 1.5rem;
+            width: 60px;
+            height: 60px;
+            background: #25d366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 8px 20px rgba(37, 211, 102, 0.3);
+            z-index: 1000;
+            transition: var(--transition);
+            text-decoration: none;
+            color: var(--white);
+            font-size: 1.7rem;
+            animation: bounce 2s infinite;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            background: #128c7e;
+            box-shadow: 0 12px 25px rgba(37, 211, 102, 0.4);
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-10px);
+            }
+            60% {
+                transform: translateY(-5px);
+            }
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(139, 92, 246, 0.4);
+            }
+            70% {
+                box-shadow: 0 0 0 10px rgba(139, 92, 246, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(139, 92, 246, 0);
+            }
+        }
+
+        /* Responsive Design - Enhanced */
+        @media (max-width: 992px) {
+            .hero h1 {
+                font-size: 2.3rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .section {
+                padding: 4rem 1.25rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: rgba(255, 255, 255, 0.98);
+                flex-direction: column;
+                padding: 6rem 2rem 2rem;
+                gap: 1.5rem;
+                justify-content: center;
+                align-items: center;
+                z-index: 1000;
+                backdrop-filter: blur(5px);
+            }
+            
+            .nav-links.active {
+                display: flex;
+            }
+            
+            .mobile-toggle {
+                display: block;
+            }
+            
+            .hero {
+                padding: 6rem 1.25rem 4rem;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1rem;
+            }
+            
+            .section {
+                padding: 3.5rem 1.25rem;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+            
+            .section-subtitle {
+                font-size: 1rem;
+            }
+            
+            .vehicles-grid,
+            .routes-grid,
+            .steps-grid,
+            .benefits-grid,
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+                max-width: 500px;
+                margin: 0 auto;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .whatsapp-float {
+                bottom: 1.25rem;
+                right: 1.25rem;
+                width: 50px;
+                height: 50px;
+                font-size: 1.4rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero {
+                padding: 5rem 1rem 3rem;
+                clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
+            }
+            
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 0.95rem;
+            }
+            
+            .vip-badge {
+                padding: 0.4rem 1rem;
+                font-size: 0.85rem;
+            }
+            
+            .cta-button {
+                padding: 0.9rem 1.75rem;
+                font-size: 1rem;
+            }
+            
+            .hero-image {
+                border-width: 5px;
+            }
+            
+            .section {
+                padding: 3rem 1rem;
+            }
+            
+            .section-title {
+                font-size: 1.6rem;
+            }
+            
+            .section-subtitle {
+                font-size: 0.95rem;
+                margin-bottom: 2.5rem;
+            }
+            
+            .vehicle-card,
+            .route-card,
+            .step,
+            .benefit,
+            .testimonial {
+                padding: 1.5rem;
+            }
+            
+            .vehicle-features {
+                padding-left: 1rem;
+            }
+            
+            .vehicle-features li {
+                padding-left: 1.25rem;
+                font-size: 0.95rem;
+            }
+            
+            .vehicle-selector {
+                padding: 1rem;
+            }
+            
+            .vehicle-options {
+                flex-direction: column;
+            }
+            
+            .vehicle-option {
+                min-width: 100%;
+            }
+            
+            .footer {
+                padding: 4rem 1rem 1.5rem;
+            }
+            
+            .language-toggle {
+                margin-left: 0.5rem;
+            }
+        }
+
+        /* Utility Classes */
+        .text-center {
+            text-align: center;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Close button for mobile menu */
+        .close-menu {
+            position: absolute;
+            top: 1.5rem;
+            right: 1.5rem;
+            font-size: 1.8rem;
+            background: none;
+            border: none;
+            color: var(--text-dark);
+            cursor: pointer;
+            z-index: 1001;
+        }
+    </style>
+</head>
+<body>
+  
+    <header class="header">
+        <nav class="nav">
+            <a href="#" class="logo">
+                <i class="fas fa-taxi"></i>
+                eKab
+            </a>
+            
+            <div class="nav-links">
+                <button class="close-menu"><i class="fas fa-times"></i></button>
+                <a href="#vehicles" class="nav-link" data-es="Vehículos" data-en="Vehicles">Vehículos</a>
+                <a href="#routes" class="nav-link" data-es="Rutas" data-en="Routes">Rutas</a>
+                <a href="#how-it-works" class="nav-link" data-es="Cómo Funciona" data-en="How It Works">Cómo Funciona</a>
+                <a href="#benefits" class="nav-link" data-es="Beneficios" data-en="Benefits">Beneficios</a>
+                <a href="#testimonials" class="nav-link" data-es="Testimonios" data-en="Testimonials">Testimonios</a>
+                <a href="#faq" class="nav-link" data-es="FAQ" data-en="FAQ">FAQ</a>
+            </div>
+            
+            <div class="nav-right">
+                <div class="language-toggle">
+                    <button class="lang-btn active" onclick="switchLanguage('es')">ES</button>
+                    <button class="lang-btn" onclick="switchLanguage('en')">EN</button>
+                </div>
+                <button class="mobile-toggle" id="mobileToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 data-es="Transporte Privado Local desde Aeropuerto de Cancún" data-en="Local Private Transport from Cancun Airport">Transporte Privado Local desde Aeropuerto de Cancún</h1>
+            <p class="hero-subtitle" data-es="Servicio exclusivo de transporte privado en SUV para 4 personas o vans para 8 y 15 personas. Reserva directa por WhatsApp sin aplicaciones ni tarifas ocultas." data-en="Exclusive private transport service in SUV for 4 people or vans for 8 and 15 people. Direct booking via WhatsApp without apps or hidden fees.">
+                Servicio exclusivo de transporte privado en SUV para 4 personas o vans para 8 y 15 personas. Reserva directa por WhatsApp sin aplicaciones ni tarifas ocultas.
+            </p>
+            <div class="vip-badge" data-es="TRANSPORTE LOCAL" data-en="LOCAL SHUTTLE">TRANSPORTE LOCAL</div>
+            <a href="https://wa.me/529981901967?text=Hola,%20acabo%20de%20visitar%20eKab%20y%20quiero%20cotizar%20un%20traslado%20VIP%20desde%20el%20aeropuerto." class="cta-button" target="_blank" aria-label="Cotizar por WhatsApp">
+                <i class="fab fa-whatsapp"></i>
+                <span data-es="Reservar ahora" data-en="Book now">Reservar ahora</span>
+            </a>
+        </div>
+        
+        <div class="hero-image">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='400' viewBox='0 0 800 400'%3E%3Crect width='800' height='400' fill='%231a56db'/%3E%3Ccircle cx='200' cy='200' r='80' fill='%238b5cf6' opacity='0.3'/%3E%3Ccircle cx='600' cy='200' r='120' fill='%238b5cf6' opacity='0.2'/%3E%3Crect x='100' y='150' width='600' height='100' rx='20' fill='%23ffffff' opacity='0.9'/%3E%3Ccircle cx='150' cy='200' r='30' fill='%231a56db'/%3E%3Ccircle cx='650' cy='200' r='30' fill='%231a56db'/%3E%3C/svg%3E" alt="eKab VIP Transportation">
+        </div>
+    </section>
+
+    <!-- Vehicle Types Section -->
+    <section class="section vehicle-types" id="vehicles">
+        <div class="container">
+            <h2 class="section-title" data-es="Nuestras Unidades de Transporte" data-en="Our Transport Vehicles">Nuestras Unidades de Transporte</h2>
+            <p class="section-subtitle" data-es="Elige el vehículo perfecto para tu grupo con eKab" data-en="Choose the perfect vehicle for your group with eKab">
+                Elige el vehículo perfecto para tu grupo con eKab
+            </p>
+            
+            <div class="vehicles-grid">
+                <div class="vehicle-card">
+                    <div class="vehicle-icon">
+                        <i class="fas fa-shuttle-van"></i>
+                    </div>
+                    <h3 class="vehicle-name" data-es="Van Estándar" data-en="Standard Van">Van Estándar</h3>
+                    <div class="vehicle-capacity" data-es="Máximo 8 pasajeros" data-en="Up to 8 passengers">Máximo 8 pasajeros</div>
+                    <ul class="vehicle-features">
+                        <li data-es="Ideal para grupos pequeños" data-en="Ideal for small groups">Ideal para grupos pequeños</li>
+                        <li data-es="Equipaje amplio" data-en="Ample luggage space">Equipaje amplio</li>
+                        <li data-es="Aire acondicionado" data-en="Air conditioning">Aire acondicionado</li>
+                        <li data-es="WiFi gratuito" data-en="Free WiFi">WiFi gratuito</li>
+                    </ul>
+                    <!-- Added price -->
+                    <div class="vehicle-price" data-es="Desde $600 MXN" data-en="From $600 MXN">Desde $600 MXN</div>
+                </div>
+                
+                <div class="vehicle-card vip">
+                    <div class="vehicle-icon">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <h3 class="vehicle-name" data-es="SUV" data-en="SUV">SUV</h3>
+                    <div class="vehicle-capacity" data-es="Máximo 4 pasajeros" data-en="Up to 4 passengers">Máximo 4 pasajeros</div>
+                    <ul class="vehicle-features">
+                        <li data-es="Servicio exclusivo" data-en="Exclusive service">Servicio exclusivo</li>
+                        <li data-es="Asientos de lujo" data-en="Luxury seats">Asientos de lujo</li>
+                        <li data-es="Conductor profesional" data-en="Professional driver">Conductor profesional</li>
+                        <li data-es="Agua y snacks incluidos" data-en="Water and snacks included">Agua y snacks incluidos</li>
+                    </ul>
+                    <!-- Added price -->
+                    <div class="vehicle-price" data-es="Desde $850 MXN" data-en="From $850 MXN">Desde $850 MXN</div>
+                </div>
+                
+                <div class="vehicle-card">
+                    <div class="vehicle-icon">
+                        <i class="fas fa-bus"></i>
+                    </div>
+                    <h3 class="vehicle-name" data-es="Van Grande" data-en="Large Van">Van Grande</h3>
+                    <div class="vehicle-capacity" data-es="Máximo 15 pasajeros" data-en="Up to 15 passengers">Máximo 15 pasajeros</div>
+                    <ul class="vehicle-features">
+                        <li data-es="Perfecto para grupos grandes" data-en="Perfect for large groups">Perfecto para grupos grandes</li>
+                        <li data-es="Amplio espacio para equipaje" data-en="Spacious luggage area">Amplio espacio para equipaje</li>
+                        <li data-es="Confort garantizado" data-en="Guaranteed comfort">Confort garantizado</li>
+                        <li data-es="Sistema de entretenimiento" data-en="Entertainment system">Sistema de entretenimiento</li>
+                    </ul>
+                    <!-- Added price -->
+                    <div class="vehicle-price" data-es="Desde $950 MXN" data-en="From $950 MXN">Desde $950 MXN</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Routes Section -->
+    <section class="section routes" id="routes">
+        <div class="container">
+            <h2 class="section-title" data-es="Rutas Populares desde Aeropuerto de Cancún" data-en="Popular Routes from Cancun Airport">Rutas Populares desde Aeropuerto de Cancún</h2>
+            <p class="section-subtitle" data-es="Transporte privado a los principales destinos de Quintana Roo" data-en="Private shuttle to main destinations in Quintana Roo">
+                Transporte privado a los principales destinos de Quintana Roo
+            </p>
+            
+            <div class="routes-grid">
+                <div class="route-card">
+                    <div class="route-header">
+                        <h3 class="route-name" data-es="Cancún Centro" data-en="Cancun Downtown">Cancún Centro</h3>
+                        <div class="route-price">
+                            <span class="price-label" data-es="Precio" data-en="Cost">Precio</span> 
+                            $450 MXN
+                        </div>
+                    </div>
+                    <p class="route-details">
+                        <i class="fas fa-clock"></i>
+                        <span data-es="Tiempo estimado: 25-30 minutos" data-en="Estimated time: 25-30 minutes">
+                            Tiempo estimado: 25-30 minutos
+                        </span>
+                    </p>
+                    
+                    <div class="vehicle-selector">
+                        <div class="selector-title">
+                            <i class="fas fa-car"></i>
+                            <span data-es="Seleccione tipo de vehículo:" data-en="Select vehicle type:">Seleccione tipo de vehículo:</span>
+                        </div>
+                        <div class="vehicle-options">
+                            <div class="vehicle-option" data-type="van8" data-price="600">
+                                <div class="vehicle-option-icon">
+                                    <i class="fas fa-shuttle-van"></i>
+                                </div>
+                                <div class="vehicle-option-name" data-es="Van 8 Pax" data-en="Van 8 Pax">Van 8 Pax</div>
+                                <div class="vehicle-option-capacity" data-es="Máx 8 personas" data-en="Max 8 people">Máx 8 personas</div>
+                            </div>
+                            <div class="vehicle-option vip" data-type="suv" data-price="950">
+                                <div class="vehicle-option-icon">
+                                    <i class="fas fa-car"></i>
+                                </div>
+                                <div class="vehicle-option-name">SUV VIP</div>
+                                <div class="vehicle-option-capacity" data-es="Máx 4 personas" data-en="Max 4 people">Máx 4 personas</div>
+                            </div>
+                            <div class="vehicle-option" data-type="van15" data-price="800">
+                                <div class="vehicle-option-icon">
+                                    <i class="fas fa-bus"></i>
+                                </div>
+                                <div class="vehicle-option-name" data-es="Van 15 Pax" data-en="Van 15 Pax">Van 15 Pax</div>
+                                <div class="vehicle-option-capacity" data-es="Máx 15 personas" data-en="Max 15 people">Máx 15 personas</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="https://wa.me/529981901967?text=Hola,%20quiero%20reservar%20un%20traslado%20desde%20el%20aeropuerto%20de%20Cancún%20hacia%20Cancún%20Centro%20en%20Van%208%20pasajeros." class="route-btn" target="_blank">
+                        <i class="fab fa-whatsapp"></i>
+                        <span data-es="Reservar por WhatsApp" data-en="Book via WhatsApp">Reservar por WhatsApp</span>
+                    </a>
+                </div>
+
+                <div class="route-card">
+                    <div class="route-header">
+                        <h3 class="route-name" data-es="Zona Hotelera" data-en="Hotel Zone">Zona Hotelera</h3>
+                        <div class="route-price">
+                            <span class="price-label" data-es="Desde" data-en="From">Desde</span> 
+                            $600 MXN
+                        </div>
+                    </div>
+                    <p class="route-details">
+                        <i class="fas fa-clock"></i>
+                        <span data-es="Tiempo estimado: 30-40 minutos" data-en="Estimated time: 30-40 minutes">
+                            Tiempo estimado: 30-40 minutos
+                        </span>
+                    </p>
+                    
+                    <div class="vehicle-selector">
+                        <div class="selector-title">
+                            <i class="fas fa-car"></i>
+                            <span data-es="Seleccione tipo de vehículo:" data-en="Select vehicle type:">Seleccione tipo de vehículo:</span>
+                        </div>
+                        <div class="vehicle-options">
+                            <div class="vehicle-option" data-type="van8" data-price="600">
+                                <div class="vehicle-option-icon">
+                                    <i class="fas fa-shuttle-van"></i>
+                                </div>
+                                <div class="vehicle-option-name" data-es="Van 8 Pax" data-en="Van 8 Pax">Van 8 Pax</div>
+                                <div class="vehicle-option-capacity" data-es="Máx 8 personas" data-en="Max 8 people">Máx 8 personas</div>
+                            </div>
+                            <div class="vehicle-option vip" data-type="suv" data-price="850">
+                                <div class="vehicle-option-icon">
+                                    <i class="fas fa-car"></i>
+                                </div>
+                                <div class="vehicle-option-name">SUV VIP</div>
+                                <div class="vehicle-option-capacity" data-es="Máx 4 personas" data-en="Max 4 people">Máx 4 personas</div>
+                            </div>
+                            <div class="vehicle-option" data-type="van15" data-price="950">
+                                <div class="vehicle-option-icon">
+                                    <i class="fas fa-bus"></i>
+                                </div>
+                                <div class="vehicle-option-name" data-es="Van 15 Pax" data-en="Van 15 Pax">Van 15 Pax</div>
+                                <div class="vehicle-option-capacity" data-es="Máx 15 personas" data-en="Max 15 people">Máx 15 personas</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="https://wa.me/529981901967?text=Hola,%20quiero%20reservar%20un%20traslado%20desde%20el%20aeropuerto%20de%20Cancún%20hacia%20la%20Zona%20Hotelera%20en%20Van%208%20pasajeros." class="route-btn" target="_blank">
+                        <i class="fab fa-whatsapp"></i>
+                        <span data-es="Reservar por WhatsApp" data-en="Book via WhatsApp">Reservar por WhatsApp</span>
+                    </a>
+                </div>
+
+                <div class="route-card">
+                    <div class="route-header">
+                        <h3 class="route-name" data-es="Playa del Carmen" data-en="Playa del Carmen">Playa del Carmen</h3>
+                        <div class="route-price">
+                            <span class="price-label" data-es="Desde" data-en="From">Desde</span> 
+                            $950 MXN
+                        </div>
+                    </div>
+                    <p class="route-details">
+                        <i class="fas fa-clock"></i>
+                        <span data-es="Tiempo estimado: 60-70 minutos" data-en="Estimated time: 60-70 minutes">
+                            Tiempo estimado: 60-70 minutos
+                        </span>
+                    </p>
+                    
+                    <div class="vehicle-selector">
+                        <div class="selector-title">
+                            <i class="fas fa-car"></i>
+                            <span data-es="Seleccione tipo de vehículo:" data-en="Select vehicle type:">Seleccione tipo de vehículo:</span>
+                        </div>
+                        <div class="vehicle-options">
+                            <div class="vehicle-option" data-type="van8" data-price="950">
+                                <div class="vehicle-option-icon">
+                                    <i class="fas fa-shuttle-van"></i>
+                                </div>
+                                <div class="vehicle-option-name" data-es="Van 8 Pax" data-en="Van 8 Pax">Van 8 Pax</div>
+                                <div class="vehicle-option-capacity" data-es="Máx 8 personas" data-en="Max 8 people">Máx 8 personas</div>
+                            </div>
+                            <div class="vehicle-option vip" data-type="suv" data-price="1250">
+                                <div class="vehicle-option-icon">
+                                    <i class="fas fa-car"></i>
+                                </div>
+                                <div class="vehicle-option-name">SUV VIP</div>
+                                <div class="vehicle-option-capacity" data-es="Máx 4 personas" data-en="Max 4 people">Máx 4 personas</div>
+                            </div>
+                            <div class="vehicle-option" data-type="van15" data-price="1400">
+                                <div class="vehicle-option-icon">
+                                    <i class="fas fa-bus"></i>
+                                </div>
+                                <div class="vehicle-option-name" data-es="Van 15 Pax" data-en="Van 15 Pax">Van 15 Pax</div>
+                                <div class="vehicle-option-capacity" data-es="Máx 15 personas" data-en="Max 15 people">Máx 15 personas</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="https://wa.me/529981901967?text=Hola,%20quiero%20reservar%20un%20traslado%20desde%20el%20aeropuerto%20de%20Cancún%20hacia%20Playa%20del%20Carmen%20en%20Van%208%20pasajeros." class="route-btn" target="_blank">
+                        <i class="fab fa-whatsapp"></i>
+                        <span data-es="Reservar por WhatsApp" data-en="Book via WhatsApp">Reservar por WhatsApp</span>
+                    </a>
+                </div>
+
+                <div class="route-card">
+                    <div class="route-header">
+                        <h3 class="route-name">Tulum</h3>
+                        <div class="route-price">
+                            <span class="price-label" data-es="Desde" data-en="From">Desde</span> 
+                            $1,400 MXN
+                        </div>
+                    </div>
+                    <p class="route-details">
+                        <i class="fas fa-clock"></i>
+                        <span data-es="Tiempo estimado: 90-120 minutos" data-en="Estimated time: 90-120 minutes">
+                            Tiempo estimado: 90-120 minutos
+                        </span>
+                    </p>
+                    
+                    <div class="vehicle-selector">
+                        <div class="selector-title">
+                            <i class="fas fa-car"></i>
+                            <span data-es="Seleccione tipo de vehículo:" data-en="Select vehicle type:">Seleccione tipo de vehículo:</span>
+                        </div>
+                        <div class="vehicle-options">
+                            <div class="vehicle-option" data-type="van8" data-price="1400">
+                                <div class="vehicle-option-icon">
+                                    <i class="fas fa-shuttle-van"></i>
+                                </div>
+                                <div class="vehicle-option-name" data-es="Van 8 Pax" data-en="Van 8 Pax">Van 8 Pax</div>
+                                <div class="vehicle-option-capacity" data-es="Máx 8 personas" data-en="Max 8 people">Máx 8 personas</div>
+                            </div>
+                            <div class="vehicle-option vip" data-type="suv" data-price="1850">
+                                <div class="vehicle-option-icon">
+                                    <i class="fas fa-car"></i>
+                                </div>
+                                <div class="vehicle-option-name">SUV VIP</div>
+                                <div class="vehicle-option-capacity" data-es="Máx 4 personas" data-en="Max 4 people">Máx 4 personas</div>
+                            </div>
+                            <div class="vehicle-option" data-type="van15" data-price="2100">
+                                <div class="vehicle-option-icon">
+                                    <i class="fas fa-bus"></i>
+                                </div>
+                                <div class="vehicle-option-name" data-es="Van 15 Pax" data-en="Van 15 Pax">Van 15 Pax</div>
+                                <div class="vehicle-option-capacity" data-es="Máx 15 personas" data-en="Max 15 people">Máx 15 personas</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="https://wa.me/529981901967?text=Hola,%20quiero%20reservar%20un%20traslado%20desde%20el%20aeropuerto%20de%20Cancún%20hacia%20Tulum%20en%20Van%208%20pasajeros." class="route-btn" target="_blank">
+                        <i class="fab fa-whatsapp"></i>
+                        <span data-es="Reservar por WhatsApp" data-en="Book via WhatsApp">Reservar por WhatsApp</span>
+                    </a>
+                </div>
+
+                <div class="route-card">
+                    <div class="route-header">
+                        <h3 class="route-name">Holbox</h3>
+                        <div class="route-price" data-es="Cotizar" data-en="Quote">Cotizar</div>
+                    </div>
+                    <p class="route-details">
+                        <i class="fas fa-clock"></i>
+                        <span data-es="Traslado Privado" data-en="Private Shuttle">
+                            Traslado Privado
+                        </span>
+                    </p>
+                    <p class="route-details">
+                        <i class="fas fa-users"></i>
+                        <span data-es="Especifique número de personas" data-en="Specify number of passengers">
+                            Especifique número de personas
+                        </span>
+                    </p>
+                    
+                    <a href="https://wa.me/529981901967?text=Hola,%20quiero%20cotizar%20un%20traslado%20desde%20el%20aeropuerto%20de%20Cancún%20hacia%20Holbox.%20Por%20favor,%20indique%20el%20número%20de%20personas%20y%20tipo%20de%20vehículo%20deseado%20(SUV%20VIP,%20van%208%20pasajeros,%20van%2015%20pasajeros)." class="route-btn quote-btn" target="_blank">
+                        <i class="fab fa-whatsapp"></i>
+                        <span data-es="Cotizar por WhatsApp" data-en="Quote via WhatsApp">Cotizar por WhatsApp</span>
+                    </a>
+                </div>
+
+                <div class="route-card">
+                    <div class="route-header">
+                        <h3 class="route-name">Mérida</h3>
+                        <div class="route-price" data-es="Cotizar" data-en="Quote">Cotizar</div>
+                    </div>
+                    <p class="route-details">
+                        <i class="fas fa-clock"></i>
+                        <span data-es="Tiempo estimado: 4-5 horas" data-en="Estimated time: 4-5 hours">
+                            Tiempo estimado: 4-5 horas
+                        </span>
+                    </p>
+                    <p class="route-details">
+                        <i class="fas fa-users"></i>
+                        <span data-es="Especifique número de personas" data-en="Specify number of passengers">
+                            Especifique número de personas
+                        </span>
+                    </p>
+                    
+                    <a href="https://wa.me/529981901967?text=Hola,%20quiero%20cotizar%20un%20traslado%20desde%20el%20aeropuerto%20de%20Cancún%20hacia%20Mérida.%20Por%20favor,%20indique%20el%20número%20de%20personas%20y%20tipo%20de%20vehículo%20deseado%20(SUV%20VIP,%20van%208%20pasajeros,%20van%2015%20pasajeros)." class="route-btn quote-btn" target="_blank">
+                        <i class="fab fa-whatsapp"></i>
+                        <span data-es="Cotizar por WhatsApp" data-en="Quote via WhatsApp">Cotizar por WhatsApp</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How it Works -->
+    <section class="section how-it-works" id="how-it-works">
+        <div class="container">
+            <h2 class="section-title" data-es="¿Cómo funciona eKab?" data-en="How does eKab work?">¿Cómo funciona eKab?</h2>
+            <p class="section-subtitle" data-es="Reserva tu transporte privado en 4 sencillos pasos" data-en="Book your private transport in 4 simple steps">
+                Reserva tu transporte privado en 4 sencillos pasos
+            </p>
+            
+            <div class="steps-grid">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3 class="step-title" data-es="Escribes por WhatsApp" data-en="Message us on WhatsApp">Escribes por WhatsApp</h3>
+                    <p class="step-description" data-es="Envías un mensaje con tu destino, fecha y número de pasajeros" data-en="Send a message with your destination, date and number of passengers">
+                        Envías un mensaje con tu destino, fecha y número de pasajeros
+                    </p>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3 class="step-title" data-es="Verificamos disponibilidad" data-en="We check availability">Verificamos disponibilidad</h3>
+                    <p class="step-description" data-es="Confirmamos disponibilidad para tu fecha y tipo de vehículo" data-en="We confirm availability for your date and vehicle type">
+                        Confirmamos disponibilidad para tu fecha y tipo de vehículo
+                    </p>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3 class="step-title" data-es="Precio y transferencia" data-en="Price and transfer">Precio y transferencia</h3>
+                    <p class="step-description" data-es="Te enviamos el precio final y datos para hacer la transferencia" data-en="We send you the final price and data to make the transfer">
+                        Te enviamos el precio final y datos para hacer la transferencia
+                    </p>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3 class="step-title" data-es="Datos del conductor" data-en="Driver information">Datos del conductor</h3>
+                    <p class="step-description" data-es="Recibes foto, nombre y contacto de tu conductor asignado" data-en="You receive photo, name and contact of your assigned driver">
+                        Recibes foto, nombre y contacto de tu conductor asignado
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits -->
+    <section class="section benefits" id="benefits">
+        <div class="container">
+            <h2 class="section-title" data-es="Ventajas de elegir eKab" data-en="Advantages of choosing eKab">Ventajas de elegir eKab</h2>
+            <p class="section-subtitle" data-es="Por qué somos la mejor opción para tu transporte en Cancún" data-en="Why we are the best option for your transport in Cancun">
+                Por qué somos la mejor opción para tu transporte en Cancún
+            </p>
+            
+            <div class="benefits-grid">
+                <div class="benefit">
+                    <div class="benefit-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3 class="benefit-title" data-es="Sin apps ni tarjetas" data-en="No apps or cards">Sin apps ni tarjetas</h3>
+                    <p class="benefit-description" data-es="Solo necesitas WhatsApp. No descargas, no registros complicados." data-en="You only need WhatsApp. No downloads, no complicated registrations.">
+                        Solo necesitas WhatsApp. No descargas, no registros complicados.
+                    </p>
+                </div>
+
+                <div class="benefit">
+                    <div class="benefit-icon">
+                        <i class="fas fa-dollar-sign"></i>
+                    </div>
+                    <h3 class="benefit-title" data-es="Precios justos" data-en="Fair prices">Precios justos</h3>
+                    <p class="benefit-description" data-es="Sin comisiones ocultas ni tarifas dinámicas. Precio fijo y transparente." data-en="No hidden fees or dynamic rates. Fixed and transparent pricing.">
+                        Sin comisiones ocultas ni tarifas dinámicas. Precio fijo y transparente.
+                    </p>
+                </div>
+
+                <div class="benefit">
+                    <div class="benefit-icon">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <h3 class="benefit-title" data-es="Opciones VIP" data-en="VIP Options">Opciones VIP</h3>
+                    <p class="benefit-description" data-es="Servicio exclusivo en SUV para 4 pasajeros con comodidades premium." data-en="Exclusive SUV service for 4 passengers with premium amenities.">
+                        Servicio exclusivo en SUV para 4 pasajeros con comodidades premium.
+                    </p>
+                </div>
+
+                <div class="benefit">
+                    <div class="benefit-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="benefit-title" data-es="Grupos grandes" data-en="Large Groups">Grupos grandes</h3>
+                    <p class="benefit-description" data-es="Vans para 8 y 15 pasajeros para grupos familiares o corporativos." data-en="Vans for 8 and 15 passengers for family or corporate groups.">
+                        Vans para 8 y 15 pasajeros para grupos familiares o corporativos.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section testimonials" id="testimonials">
+        <div class="container">
+            <h2 class="section-title" data-es="Opiniones de nuestros clientes" data-en="Customer Reviews">Opiniones de nuestros clientes</h2>
+            <p class="section-subtitle" data-es="Experiencias reales de viajeros que confiaron en eKab" data-en="Real experiences from travelers who trusted eKab">
+                Experiencias reales de viajeros que confiaron en eKab
+            </p>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text" data-es="Excelente servicio VIP. El SUV era lujoso y cómodo para nuestro grupo de 4 personas. El conductor fue puntual y muy profesional." data-en="Excellent VIP service. The SUV was luxurious and comfortable for our group of 4 people. The driver was punctual and very professional.">
+                        "Excelente servicio VIP. El SUV era lujoso y cómodo para nuestro grupo de 4 personas. El conductor fue puntual y muy profesional."
+                    </p>
+                    <div class="testimonial-author" data-es="María González - Ciudad de México" data-en="Maria Gonzalez - Mexico City">María González - Ciudad de México</div>
+                </div>
+
+                <div class="testimonial">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text" data-es="Reservamos una van para 15 personas para nuestro grupo de trabajo. El espacio era perfecto y el precio muy razonable. ¡Altamente recomendado!" data-en="We booked a van for 15 people for our work group. The space was perfect and the price very reasonable. Highly recommended!">
+                        "Reservamos una van para 15 personas para nuestro grupo de trabajo. El espacio era perfecto y el precio muy razonable. ¡Altamente recomendado!"
+                    </p>
+                    <div class="testimonial-author" data-es="Carlos Mendoza - Guadalajara" data-en="Carlos Mendoza - Guadalajara">Carlos Mendoza - Guadalajara</div>
+                </div>
+
+                <div class="testimonial">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text" data-es="El servicio de Van para 8 personas fue perfecto para nuestra familia. Confortable, puntual y con un conductor muy amable. ¡Volveremos a usar eKab!" data-en="The Van service for 8 people was perfect for our family. Comfortable, punctual and with a very friendly driver. We will use eKab again!">
+                        "El servicio de Van para 8 personas fue perfecto para nuestra familia. Confortable, puntual y con un conductor muy amable. ¡Volveremos a usar eKab!"
+                    </p>
+                    <div class="testimonial-author" data-es="Ana Rodríguez - Monterrey" data-en="Ana Rodriguez - Monterrey">Ana Rodríguez - Monterrey</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section faq" id="faq">
+        <div class="container">
+            <h2 class="section-title" data-es="Preguntas Frecuentes" data-en="Frequently Asked Questions">Preguntas Frecuentes</h2>
+            <p class="section-subtitle" data-es="Todo lo que necesitas saber sobre nuestro servicio" data-en="Everything you need to know about our service">
+                Todo lo que necesitas saber sobre nuestro servicio
+            </p>
+            
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span data-es="¿Cómo reservo mi transporte con eKab?" data-en="How do I book my transport with eKab?">¿Cómo reservo mi transporte con eKab?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p data-es="Reservar con eKab es muy sencillo. Solo necesitas enviarnos un mensaje por WhatsApp con tu destino, fecha y hora de llegada, número de pasajeros y tipo de vehículo deseado. Te responderemos en minutos con la confirmación y los detalles de pago." data-en="Booking with eKab is very simple. You just need to send us a WhatsApp message with your destination, arrival date and time, number of passengers, and desired vehicle type. We'll respond within minutes with confirmation and payment details.">
+                            Reservar con eKab es muy sencillo. Solo necesitas enviarnos un mensaje por WhatsApp con tu destino, fecha y hora de llegada, número de pasajeros y tipo de vehículo deseado. Te responderemos en minutos con la confirmación y los detalles de pago.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span data-es="¿Qué incluye el precio del transporte?" data-en="What is included in the transport price?">¿Qué incluye el precio del transporte?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p data-es="Nuestros precios incluyen: transporte privado desde el aeropuerto hasta tu destino, conductor profesional, seguro de viaje, agua embotellada, y en el servicio VIP, snacks adicionales. No incluye propinas para el conductor (opcionales) ni peajes en ciertas rutas (se informan previamente)." data-en="Our prices include: private transport from the airport to your destination, professional driver, travel insurance, bottled water, and in the VIP service, additional snacks. It does not include driver tips (optional) or tolls on certain routes (informed in advance).">
+                            Nuestros precios incluyen: transporte privado desde el aeropuerto hasta tu destino, conductor profesional, seguro de viaje, agua embotellada, y en el servicio VIP, snacks adicionales. No incluye propinas para el conductor (opcionales) ni peajes en ciertas rutas (se informan previamente).
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span data-es="¿Cuánto tiempo debo esperar en el aeropuerto?" data-en="How long should I wait at the airport?">¿Cuánto tiempo debo esperar en el aeropuerto?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p data-es="Nuestros conductores monitorean tu vuelo en tiempo real. Estarán esperándote en la sala de llegadas con un cartel con tu nombre, independientemente de los retrasos del vuelo. No cobramos cargos adicionales por espera en caso de retrasos." data-en="Our drivers monitor your flight in real time. They will be waiting for you at the arrivals hall with a sign with your name, regardless of flight delays. We do not charge additional fees for waiting in case of delays.">
+                            Nuestros conductores monitorean tu vuelo en tiempo real. Estarán esperándote en la sala de llegadas con un cartel con tu nombre, independientemente de los retrasos del vuelo. No cobramos cargos adicionales por espera en caso de retrasos.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span data-es="¿Puedo cancelar o modificar mi reserva?" data-en="Can I cancel or modify my booking?">¿Puedo cancelar o modificar mi reserva?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p data-es="Sí, puedes modificar o cancelar tu reserva sin costo hasta 24 horas antes de tu servicio. Dentro de las 24 horas previas, aplica un cargo por cancelación del 20%. Para modificaciones o cancelaciones, contáctanos por WhatsApp." data-en="Yes, you can modify or cancel your booking at no cost up to 24 hours before your service. Within 24 hours prior, a 20% cancellation fee applies. For modifications or cancellations, contact us via WhatsApp.">
+                            Sí, puedes modificar o cancelar tu reserva sin costo hasta 24 horas antes de tu servicio. Dentro de las 24 horas previas, aplica un cargo por cancelación del 20%. Para modificaciones o cancelaciones, contáctanos por WhatsApp.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4 data-es="Contacto eKab" data-en="Contact eKab">Contacto eKab</h4>
+                    <p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/529981901967" target="_blank">+52 998 190 1967</a></p>
+                    <p><i class="fas fa-envelope"></i> <a href="mailto:reservaciones@ekab.mx">reservaciones@ekab.mx</a></p>
+                    <p><i class="fas fa-clock"></i> <span data-es="Atención 24/7" data-en="24/7 Support">Atención 24/7</span></p>
+                    <p><i class="fas fa-map-marker-alt"></i> <span data-es="Aeropuerto Internacional de Cancún" data-en="Cancun International Airport">Aeropuerto Internacional de Cancún</span></p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/ekabtransporte" class="social-link" aria-label="Facebook eKab">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.instagram.com/ekabtransporte" class="social-link" aria-label="Instagram eKab">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://twitter.com/ekabtransporte" class="social-link" aria-label="Twitter eKab">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 data-es="Servicios eKab" data-en="eKab Services">Servicios eKab</h4>
+                    <a href="#vehicles" class="footer-link" data-es="Tipos de vehículos" data-en="Vehicle types">Tipos de vehículos</a>
+                    <a href="#routes" class="footer-link" data-es="Rutas populares" data-en="Popular routes">Rutas populares</a>
+                    <a href="#how-it-works" class="footer-link" data-es="Cómo funciona" data-en="How it works">Cómo funciona</a>
+                    <a href="#benefits" class="footer-link" data-es="Ventajas" data-en="Benefits">Ventajas</a>
+                    <a href="#faq" class="footer-link" data-es="Preguntas frecuentes" data-en="FAQ">Preguntas frecuentes</a>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 data-es="Destinos desde Cancún" data-en="Destinations from Cancun">Destinos desde Cancún</h4>
+                    <p data-es="Cancún y Zona Hotelera" data-en="Cancun and Hotel Zone">Cancún y Zona Hotelera</p>
+                    <p data-es="Playa del Carmen" data-en="Playa del Carmen">Playa del Carmen</p>
+                    <p data-es="Tulum" data-en="Tulum">Tulum</p>
+                    <p data-es="Holbox" data-en="Holbox">Holbox</p>
+                    <p data-es="Mérida" data-en="Merida">Mérida</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 data-es="Legal" data-en="Legal">Legal</h4>
+                    <a href="politica-privacidad.html" class="footer-link" data-es="Política de privacidad" data-en="Privacy Policy">Política de privacidad</a>
+                    <a href="terminos-condiciones.html" class="footer-link" data-es="Términos y condiciones" data-en="Terms and conditions">Términos y condiciones</a>
+                    <p data-es="Transporte seguro y confiable" data-en="Safe and reliable transport">Transporte seguro y confiable</p>
+                    <p data-es="Permisos oficiales SCT" data-en="Official SCT permits">Permisos oficiales SCT</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p data-es="© 2024 eKab Transporte Privado. Todos los derechos reservados. Servicio de transporte privado en Quintana Roo y Yucatán." data-en="© 2024 eKab Private Transport. All rights reserved. Private transport service in Quintana Roo and Yucatan.">
+                    © 2024 eKab Transporte Privado. Todos los derechos reservados. Servicio de transporte privado en Quintana Roo y Yucatán.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/529981901967?text=Hola,%20acabo%20de%20visitar%20eKab%20y%20quiero%20cotizar%20un%20traslado%20VIP%20desde%20el%20aeropuerto." class="whatsapp-float" target="_blank" aria-label="Contactar por WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS animations
+        AOS.init({
+            duration: 800,
+            once: true,
+            easing: 'ease-in-out'
+        });
+
+        // Language switching functionality
+        let currentLanguage = 'es';
+        
+        function switchLanguage(lang) {
+            currentLanguage = lang;
+            
+            // Update active button
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            document.querySelector(`[onclick="switchLanguage('${lang}')"]`).classList.add('active');
+            
+            // Update all translatable elements
+            document.querySelectorAll('[data-es][data-en]').forEach(element => {
+                if (element.tagName === 'META') {
+                    if (element.name === 'description') {
+                        element.content = lang === 'en' ? 
+                            'VIP private transport from Cancun Airport. SUV for 4 passengers, vans for 8 and 15 passengers. Easy booking via WhatsApp. Fixed prices, no hidden fees.' : 
+                            'Servicio de transporte privado VIP desde Aeropuerto de Cancún. SUV para 4 pasajeros, vans para 8 y 15 personas. Reserva fácil por WhatsApp. Precios fijos, sin tarifas ocultas.';
+                    }
+                } else {
+                    element.textContent = element.getAttribute(`data-${lang}`);
+                }
+            });
+            
+            // Update document language
+            document.documentElement.lang = lang;
+            
+            // Update page title
+            document.title = lang === 'en' ? 
+                'eKab - VIP Private Transport from Cancun Airport | SUVs and Vans' : 
+                'eKab - Transporte Privado VIP desde Aeropuerto de Cancún | SUV y Vans';
+            
+            // Update vehicle options in routes
+            updateAllRouteCards();
+        }
+        
+        // Mobile menu toggle
+        document.getElementById('mobileToggle').addEventListener('click', function() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.add('active');
+            document.body.style.overflow = 'hidden'; // Prevent scrolling when menu is open
+        });
+        
+        // Close mobile menu
+        document.querySelector('.close-menu').addEventListener('click', function() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.remove('active');
+            document.body.style.overflow = ''; // Restore scrolling
+        });
+        
+        // Close menu when clicking on a link
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', function() {
+                const navLinks = document.querySelector('.nav-links');
+                navLinks.classList.remove('active');
+                document.body.style.overflow = ''; // Restore scrolling
+            });
+        });
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    // Close mobile menu if open
+                    document.querySelector('.nav-links').classList.remove('active');
+                    document.body.style.overflow = ''; // Restore scrolling
+                    
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+        
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(255, 255, 255, 0.95)';
+                header.style.backdropFilter = 'blur(10px)';
+                header.style.boxShadow = '0 4px 6px -1px rgba(0, 0, 0, 0.1)';
+            } else {
+                header.style.background = 'var(--white)';
+                header.style.backdropFilter = 'none';
+                header.style.boxShadow = 'none';
+            }
+        });
+        
+        // Vehicle selection functionality
+        function setupVehicleSelection() {
+            document.querySelectorAll('.vehicle-option').forEach(option => {
+                option.addEventListener('click', function() {
+                    const card = this.closest('.route-card');
+                    const optionsContainer = this.closest('.vehicle-options');
+                    
+                    // Remove selected class from all options in this container
+                    optionsContainer.querySelectorAll('.vehicle-option').forEach(opt => {
+                        opt.classList.remove('selected');
+                    });
+                    
+                    // Add selected class to clicked option
+                    this.classList.add('selected');
+                    
+                    // Update price and WhatsApp link
+                    updateRouteCard(card);
+                });
+            });
+        }
+        
+        // Update route card with selected vehicle
+        function updateRouteCard(card) {
+            const selectedOption = card.querySelector('.vehicle-option.selected');
+            if (!selectedOption) return;
+            
+            const price = selectedOption.dataset.price;
+            const vehicleType = selectedOption.dataset.type;
+            const destination = card.querySelector('.route-name').textContent;
+            
+            // Update price display
+            const priceElement = card.querySelector('.route-price');
+            const priceLabel = priceElement.querySelector('.price-label');
+            priceElement.innerHTML = `<span class="price-label">${priceLabel.textContent}</span> $${price} MXN`;
+            
+            // Update WhatsApp link
+            const button = card.querySelector('.route-btn');
+            let vehicleName = '';
+            
+            if (vehicleType === 'van8') {
+                vehicleName = currentLanguage === 'es' ? 'Van 8 pasajeros' : 'Van 8 passengers';
+            } else if (vehicleType === 'suv') {
+                vehicleName = 'SUV VIP';
+            } else if (vehicleType === 'van15') {
+                vehicleName = currentLanguage === 'es' ? 'Van 15 pasajeros' : 'Van 15 passengers';
+            }
+            
+            let message = '';
+            if (currentLanguage === 'es') {
+                message = `Hola, quiero reservar un traslado con eKab desde el aeropuerto de Cancún hacia ${destination} en un ${vehicleName}.`;
+            } else {
+                message = `Hello, I want to book a transfer with eKab from Cancun Airport to ${destination} in a ${vehicleName}.`;
+            }
+            
+            // Codificar el mensaje para URL
+            const encodedMessage = encodeURIComponent(message);
+            button.href = `https://wa.me/529981901967?text=${encodedMessage}`;
+        }
+        
+        // Update all route cards
+        function updateAllRouteCards() {
+            document.querySelectorAll('.route-card').forEach(card => {
+                // Select first option by default if none selected
+                if (!card.querySelector('.vehicle-option.selected')) {
+                    const firstOption = card.querySelector('.vehicle-option');
+                    if (firstOption) {
+                        firstOption.classList.add('selected');
+                    }
+                }
+                
+                updateRouteCard(card);
+            });
+        }
+        
+        // FAQ Toggle
+        function toggleFAQ(element) {
+            const faqItem = element.closest('.faq-item');
+            const answer = faqItem.querySelector('.faq-answer');
+            const icon = element.querySelector('i');
+            
+            answer.classList.toggle('active');
+            if (answer.classList.contains('active')) {
+                icon.classList.remove('fa-chevron-down');
+                icon.classList.add('fa-chevron-up');
+            } else {
+                icon.classList.remove('fa-chevron-up');
+                icon.classList.add('fa-chevron-down');
+            }
+        }
+        
+        // Initialize page
+        document.addEventListener('DOMContentLoaded', function() {
+            // Set initial language
+            switchLanguage('es');
+            
+            // Setup vehicle selection
+            setupVehicleSelection();
+            updateAllRouteCards();
+            
+            // Initialize all FAQ items
+            document.querySelectorAll('.faq-answer').forEach(answer => {
+                answer.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>
