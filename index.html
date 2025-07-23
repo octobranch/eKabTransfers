@@ -510,7 +510,7 @@
 
         /* Routes Section */
         .routes {
-            padding: 5rem 1.5rem;
+            padding: 4rem 1.5rem;
             background: var(--white);
         }
 
@@ -522,13 +522,13 @@
         .routes-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 2.5rem;
+            gap: 1.5rem;
         }
 
         .route-card {
             background: var(--white);
             border-radius: var(--border-radius);
-            padding: 2.5rem;
+            padding: 1.5rem;
             box-shadow: var(--shadow);
             transition: var(--transition);
             border: 1px solid rgba(37, 99, 235, 0.1);
@@ -536,76 +536,79 @@
         }
 
         .route-card:hover {
-            transform: translateY(-8px);
+            transform: translateY(-5px);
             box-shadow: var(--shadow-lg);
         }
 
         .route-header {
             display: flex;
             justify-content: space-between;
-            align-items: center;
-            margin-bottom: 1.5rem;
-            flex-wrap: wrap;
-            gap: 0.75rem;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+            gap: 1rem;
         }
 
         .route-name {
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             font-weight: 700;
             color: var(--text-dark);
+            line-height: 1.3;
         }
 
         .route-price {
-            font-size: 1.8rem;
+            font-size: 1.5rem;
             font-weight: 800;
             color: var(--primary-color);
             display: flex;
-            align-items: center;
-            gap: 0.5rem;
+            flex-direction: column;
+            align-items: flex-end;
+            text-align: right;
+            flex-shrink: 0;
         }
 
         .route-price .price-label {
-            font-size: 0.9rem;
+            font-size: 0.8rem;
             font-weight: 500;
             color: var(--text-light);
+            margin-top: 0.2rem;
         }
 
         .route-details {
             color: var(--text-light);
-            margin-bottom: 1.5rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .vehicle-selector {
-            margin: 1.5rem 0;
-            padding: 1.5rem;
-            background: var(--background-light);
-            border-radius: 12px;
-        }
-
-        .selector-title {
-            font-weight: 600;
             margin-bottom: 1rem;
             display: flex;
             align-items: center;
             gap: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        .vehicle-selector {
+            margin: 1rem 0;
+            padding: 1rem;
+            background: var(--background-light);
+            border-radius: 8px;
+        }
+
+        .selector-title {
+            font-weight: 600;
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
             color: var(--text-dark);
+            font-size: 0.9rem;
         }
 
         .vehicle-options {
-            display: flex;
-            gap: 1rem;
-            flex-wrap: wrap;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+            gap: 0.8rem;
         }
 
         .vehicle-option {
-            flex: 1;
-            min-width: 120px;
-            padding: 1rem;
+            padding: 0.8rem 0.5rem;
             border: 2px solid #e5e7eb;
-            border-radius: 10px;
+            border-radius: 8px;
             cursor: pointer;
             transition: var(--transition);
             text-align: center;
@@ -634,8 +637,8 @@
         }
 
         .vehicle-option-icon {
-            font-size: 1.5rem;
-            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+            margin-bottom: 0.3rem;
             color: var(--primary-color);
         }
 
@@ -645,11 +648,12 @@
 
         .vehicle-option-name {
             font-weight: 600;
-            margin-bottom: 0.25rem;
+            margin-bottom: 0.2rem;
+            font-size: 0.85rem;
         }
 
         .vehicle-option-capacity {
-            font-size: 0.85rem;
+            font-size: 0.75rem;
             color: var(--text-light);
         }
 
@@ -657,24 +661,24 @@
             width: 100%;
             background: var(--primary-color);
             color: var(--white);
-            padding: 1.1rem 1.5rem;
+            padding: 0.9rem 1.2rem;
             border: none;
-            border-radius: 12px;
+            border-radius: 8px;
             font-weight: 600;
             cursor: pointer;
             transition: var(--transition);
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 0.75rem;
+            gap: 0.5rem;
             text-decoration: none;
-            font-size: 1.1rem;
+            font-size: 1rem;
         }
 
         .route-btn:hover {
             background: var(--primary-dark);
             transform: translateY(-2px);
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 8px 15px -3px rgba(0, 0, 0, 0.1);
         }
 
         .quote-btn {
