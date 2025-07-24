@@ -385,8 +385,8 @@
                 eKab
             </a>
             <div class="language-toggle">
-                <button class="lang-btn active" onclick="switchLanguage('es')">ES</button>
-                <button class="lang-btn" onclick="switchLanguage('en')">EN</button>
+                <button class="lang-btn active" data-lang="es">ES</button>
+                <button class="lang-btn" data-lang="en">EN</button>
             </div>
         </nav>
     </header>
@@ -495,7 +495,7 @@
     </main>
 
     <!-- WhatsApp Float Button -->
-    <a href="https://wa.me/529981901967" class="whatsapp-float" target="_blank" aria-label="Contactar por WhatsApp">
+    <a href="https://wa.me/529981901967" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
 
@@ -504,18 +504,18 @@
         <div class="footer-content">
             <div class="footer-section">
                 <h4 data-es="Contacto eKab" data-en="Contact eKab">Contacto eKab</h4>
-                <p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/529981901967" target="_blank">+52 998 190 1967</a></p>
+                <p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/529981901967" target="_blank" rel="noopener">+52 998 190 1967</a></p>
                 <p><i class="fas fa-envelope"></i> <a href="mailto:reservaciones@ekab.mx">reservaciones@ekab.mx</a></p>
                 <p><i class="fas fa-clock"></i> <span data-es="Atención 24/7" data-en="24/7 Support">Atención 24/7</span></p>
                 <p><i class="fas fa-map-marker-alt"></i> <span data-es="Aeropuerto Internacional de Cancún" data-en="Cancun International Airport">Aeropuerto Internacional de Cancún</span></p>
                 <div class="social-links">
-                    <a href="https://www.facebook.com/ekabtransporte" class="social-link" aria-label="Facebook eKab">
+                    <a href="https://www.facebook.com/ekabtransporte" class="social-link" aria-label="Facebook eKab" rel="noopener">
                         <i class="fab fa-facebook-f"></i>
                     </a>
-                    <a href="https://www.instagram.com/ekabtransporte" class="social-link" aria-label="Instagram eKab">
+                    <a href="https://www.instagram.com/ekabtransporte" class="social-link" aria-label="Instagram eKab" rel="noopener">
                         <i class="fab fa-instagram"></i>
                     </a>
-                    <a href="https://twitter.com/ekabtransporte" class="social-link" aria-label="Twitter eKab">
+                    <a href="https://twitter.com/ekabtransporte" class="social-link" aria-label="Twitter eKab" rel="noopener">
                         <i class="fab fa-twitter"></i>
                     </a>
                 </div>
@@ -563,8 +563,10 @@
             // Update active button
             document.querySelectorAll('.lang-btn').forEach(btn => {
                 btn.classList.remove('active');
+                if (btn.dataset.lang === lang) {
+                    btn.classList.add('active');
+                }
             });
-            document.querySelector(`[onclick="switchLanguage('${lang}')"]`).classList.add('active');
             
             // Update all translatable elements
             document.querySelectorAll('[data-es][data-en]').forEach(element => {
@@ -584,6 +586,13 @@
         document.addEventListener('DOMContentLoaded', function() {
             // Set initial language
             switchLanguage('es');
+            
+            // Set up language button events
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    switchLanguage(this.dataset.lang);
+                });
+            });
         });
     </script>
 </body>
