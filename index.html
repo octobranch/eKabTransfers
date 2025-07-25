@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>eKab - Transporte Privado LOCAL desde Aeropuerto de Cancún | SUV y Vans</title>
-    <meta name="description" content="Servicio de transporte privado LOCAL desde Aeropuerto de Cancún. SUV para 4 pasajeros, vans para 8 y 15 personas. Reserva fácil por WhatsApp. Precios fijos, sin tarifas ocultas.">
+    <title>eKab | Transporte Privado LOCAL desde Aeropuerto de Cancún | SUV y Vans</title>
+    <meta name="description" content="Reserva tu transporte privado LOCAL en Cancún. SUV para 4 pasajeros, vans para 8 y 15 personas. Precios fijos, sin tarifas ocultas. ¡Reserva ahora por WhatsApp!">
     <meta name="keywords" content="transporte local cancún, traslado aeropuerto cancún, taxi local cancún, suv aeropuerto cancún, van cancún, transporte privado cancún, van 15 pasajeros, traslado grupal cancún, eKab transporte">
     <meta name="author" content="eKab Transporte Privado">
     <meta name="robots" content="index, follow">
@@ -26,6 +26,10 @@
     
     <!-- Favicon -->
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚕</text></svg>">
+    
+    <!-- Preconnect for Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
@@ -120,6 +124,7 @@
             font-family: 'Montserrat', sans-serif;
             font-weight: 700;
             margin-bottom: 0.75rem;
+            line-height: 1.2;
         }
 
         p {
@@ -278,17 +283,14 @@
             font-weight: 500;
             border-bottom: 1px solid rgba(0,0,0,0.05);
             transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
         }
         
         .mobile-links a:hover {
             color: var(--primary-color);
             padding-left: 10px;
-        }
-        
-        .mobile-links a i {
-            margin-right: 10px;
-            width: 20px;
-            text-align: center;
         }
 
         /* Hero Section */
@@ -321,7 +323,7 @@
         }
 
         .hero h1 {
-            font-size: 3.5rem;
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
             font-weight: 800;
             margin-bottom: 1rem;
             animation: fadeInUp 1s ease;
@@ -332,17 +334,18 @@
             display: inline-block;
             background: var(--local-color);
             color: white;
-            padding: 0.25rem 1rem;
+            padding: 0.4rem 1.2rem;
             border-radius: 20px;
             font-size: 0.9rem;
             font-weight: 600;
             margin-top: 0.5rem;
             vertical-align: middle;
             animation: pulse 2s infinite;
+            box-shadow: 0 4px 10px rgba(139, 92, 246, 0.3);
         }
 
         .hero-subtitle {
-            font-size: 1.35rem;
+            font-size: clamp(1.15rem, 2.5vw, 1.35rem);
             margin-bottom: 2.5rem;
             opacity: 0.92;
             max-width: 700px;
@@ -389,7 +392,7 @@
 
         .section-title {
             text-align: center;
-            font-size: 2.75rem;
+            font-size: clamp(2.25rem, 4vw, 2.75rem);
             font-weight: 800;
             margin-bottom: 1rem;
             color: var(--text-dark);
@@ -411,7 +414,7 @@
 
         .section-subtitle {
             text-align: center;
-            font-size: 1.2rem;
+            font-size: clamp(1.1rem, 2vw, 1.2rem);
             color: var(--text-light);
             margin-bottom: 3.5rem;
             max-width: 700px;
@@ -1089,14 +1092,6 @@
                 padding: 8rem 1.5rem 4rem;
             }
             
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-            
-            .hero-subtitle {
-                font-size: 1.15rem;
-            }
-            
             .section-title {
                 font-size: 2.25rem;
             }
@@ -1167,7 +1162,7 @@
     <!-- Header -->
     <header class="header">
         <nav class="nav">
-            <a href="#" class="logo">
+            <a href="#" class="logo" aria-label="eKab Transporte Privado">
                 <i class="fas fa-taxi"></i>
                 eKab
             </a>
@@ -1187,7 +1182,7 @@
                     <button class="lang-btn" data-lang="en">EN</button>
                 </div>
                 
-                <button class="nav-toggle" id="navToggle">
+                <button class="nav-toggle" id="navToggle" aria-label="Menú de navegación">
                     <i class="fas fa-bars"></i>
                 </button>
             </div>
@@ -1413,7 +1408,7 @@
                                 <div class="vehicle-option-icon">
                                     <i class="fas fa-shuttle-van"></i>
                                 </div>
-                                <div class="vehicle-option-name" data-es="Van 8 Pax" data-en="Van 8 Pax">Van 8 Pax</div>
+                                <div class="vehicle-option-name" data-es="Van Estándar" data-en="Standard Van">Van Estándar</div>
                                 <div class="vehicle-option-capacity" data-es="Máx 8 personas" data-en="Max 8 people">Máx 8 personas</div>
                             </div>
                             <div class="vehicle-option local" data-type="suv" data-price="750">
@@ -1427,7 +1422,7 @@
                                 <div class="vehicle-option-icon">
                                     <i class="fas fa-bus"></i>
                                 </div>
-                                <div class="vehicle-option-name" data-es="Van 15 Pax" data-en="Van 15 Pax">Van 15 Pax</div>
+                                <div class="vehicle-option-name" data-es="Van Grande" data-en="Large Van">Van Grande</div>
                                 <div class="vehicle-option-capacity" data-es="Máx 15 personas" data-en="Max 15 people">Máx 15 personas</div>
                             </div>
                         </div>
@@ -1465,7 +1460,7 @@
                                 <div class="vehicle-option-icon">
                                     <i class="fas fa-shuttle-van"></i>
                                 </div>
-                                <div class="vehicle-option-name" data-es="Van 8 Pax" data-en="Van 8 Pax">Van 8 Pax</div>
+                                <div class="vehicle-option-name" data-es="Van Estándar" data-en="Standard Van">Van Estándar</div>
                                 <div class="vehicle-option-capacity" data-es="Máx 8 personas" data-en="Max 8 people">Máx 8 personas</div>
                             </div>
                             <div class="vehicle-option local" data-type="suv" data-price="700">
@@ -1479,7 +1474,7 @@
                                 <div class="vehicle-option-icon">
                                     <i class="fas fa-bus"></i>
                                 </div>
-                                <div class="vehicle-option-name" data-es="Van 15 Pax" data-en="Van 15 Pax">Van 15 Pax</div>
+                                <div class="vehicle-option-name" data-es="Van Grande" data-en="Large Van">Van Grande</div>
                                 <div class="vehicle-option-capacity" data-es="Máx 15 personas" data-en="Max 15 people">Máx 15 personas</div>
                             </div>
                         </div>
@@ -1517,7 +1512,7 @@
                                 <div class="vehicle-option-icon">
                                     <i class="fas fa-shuttle-van"></i>
                                 </div>
-                                <div class="vehicle-option-name" data-es="Van 8 Pax" data-en="Van 8 Pax">Van 8 Pax</div>
+                                <div class="vehicle-option-name" data-es="Van Estándar" data-en="Standard Van">Van Estándar</div>
                                 <div class="vehicle-option-capacity" data-es="Máx 8 personas" data-en="Max 8 people">Máx 8 personas</div>
                             </div>
                             <div class="vehicle-option local" data-type="suv" data-price="900">
@@ -1531,7 +1526,7 @@
                                 <div class="vehicle-option-icon">
                                     <i class="fas fa-bus"></i>
                                 </div>
-                                <div class="vehicle-option-name" data-es="Van 15 Pax" data-en="Van 15 Pax">Van 15 Pax</div>
+                                <div class="vehicle-option-name" data-es="Van Grande" data-en="Large Van">Van Grande</div>
                                 <div class="vehicle-option-capacity" data-es="Máx 15 personas" data-en="Max 15 people">Máx 15 personas</div>
                             </div>
                         </div>
@@ -1569,7 +1564,7 @@
                                 <div class="vehicle-option-icon">
                                     <i class="fas fa-shuttle-van"></i>
                                 </div>
-                                <div class="vehicle-option-name" data-es="Van 8 Pax" data-en="Van 8 Pax">Van 8 Pax</div>
+                                <div class="vehicle-option-name" data-es="Van Estándar" data-en="Standard Van">Van Estándar</div>
                                 <div class="vehicle-option-capacity" data-es="Máx 8 personas" data-en="Max 8 people">Máx 8 personas</div>
                             </div>
                             <div class="vehicle-option local" data-type="suv" data-price="720">
@@ -1583,7 +1578,7 @@
                                 <div class="vehicle-option-icon">
                                     <i class="fas fa-bus"></i>
                                 </div>
-                                <div class="vehicle-option-name" data-es="Van 15 Pax" data-en="Van 15 Pax">Van 15 Pax</div>
+                                <div class="vehicle-option-name" data-es="Van Grande" data-en="Large Van">Van Grande</div>
                                 <div class="vehicle-option-capacity" data-es="Máx 15 personas" data-en="Max 15 people">Máx 15 personas</div>
                             </div>
                         </div>
@@ -1621,7 +1616,7 @@
                                 <div class="vehicle-option-icon">
                                     <i class="fas fa-shuttle-van"></i>
                                 </div>
-                                <div class="vehicle-option-name" data-es="Van 8 Pax" data-en="Van 8 Pax">Van 8 Pax</div>
+                                <div class="vehicle-option-name" data-es="Van Estándar" data-en="Standard Van">Van Estándar</div>
                                 <div class="vehicle-option-capacity" data-es="Máx 8 personas" data-en="Max 8 people">Máx 8 personas</div>
                             </div>
                             <div class="vehicle-option local" data-type="suv" data-price="750">
@@ -1635,7 +1630,7 @@
                                 <div class="vehicle-option-icon">
                                     <i class="fas fa-bus"></i>
                                 </div>
-                                <div class="vehicle-option-name" data-es="Van 15 Pax" data-en="Van 15 Pax">Van 15 Pax</div>
+                                <div class="vehicle-option-name" data-es="Van Grande" data-en="Large Van">Van Grande</div>
                                 <div class="vehicle-option-capacity" data-es="Máx 15 personas" data-en="Max 15 people">Máx 15 personas</div>
                             </div>
                         </div>
@@ -1673,7 +1668,7 @@
                                 <div class="vehicle-option-icon">
                                     <i class="fas fa-shuttle-van"></i>
                                 </div>
-                                <div class="vehicle-option-name" data-es="Van 8 Pax" data-en="Van 8 Pax">Van 8 Pax</div>
+                                <div class="vehicle-option-name" data-es="Van Estándar" data-en="Standard Van">Van Estándar</div>
                                 <div class="vehicle-option-capacity" data-es="Máx 8 personas" data-en="Max 8 people">Máx 8 personas</div>
                             </div>
                             <div class="vehicle-option local" data-type="suv" data-price="1250">
@@ -1687,7 +1682,7 @@
                                 <div class="vehicle-option-icon">
                                     <i class="fas fa-bus"></i>
                                 </div>
-                                <div class="vehicle-option-name" data-es="Van 15 Pax" data-en="Van 15 Pax">Van 15 Pax</div>
+                                <div class="vehicle-option-name" data-es="Van Grande" data-en="Large Van">Van Grande</div>
                                 <div class="vehicle-option-capacity" data-es="Máx 15 personas" data-en="Max 15 people">Máx 15 personas</div>
                             </div>
                         </div>
@@ -1725,7 +1720,7 @@
                                 <div class="vehicle-option-icon">
                                     <i class="fas fa-shuttle-van"></i>
                                 </div>
-                                <div class="vehicle-option-name" data-es="Van 8 Pax" data-en="Van 8 Pax">Van 8 Pax</div>
+                                <div class="vehicle-option-name" data-es="Van Estándar" data-en="Standard Van">Van Estándar</div>
                                 <div class="vehicle-option-capacity" data-es="Máx 8 personas" data-en="Max 8 people">Máx 8 personas</div>
                             </div>
                             <div class="vehicle-option local" data-type="suv" data-price="1350">
@@ -1739,7 +1734,7 @@
                                 <div class="vehicle-option-icon">
                                     <i class="fas fa-bus"></i>
                                 </div>
-                                <div class="vehicle-option-name" data-es="Van 15 Pax" data-en="Van 15 Pax">Van 15 Pax</div>
+                                <div class="vehicle-option-name" data-es="Van Grande" data-en="Large Van">Van Grande</div>
                                 <div class="vehicle-option-capacity" data-es="Máx 15 personas" data-en="Max 15 people">Máx 15 personas</div>
                             </div>
                         </div>
@@ -1777,7 +1772,7 @@
                                 <div class="vehicle-option-icon">
                                     <i class="fas fa-shuttle-van"></i>
                                 </div>
-                                <div class="vehicle-option-name" data-es="Van 8 Pax" data-en="Van 8 Pax">Van 8 Pax</div>
+                                <div class="vehicle-option-name" data-es="Van Estándar" data-en="Standard Van">Van Estándar</div>
                                 <div class="vehicle-option-capacity" data-es="Máx 8 personas" data-en="Max 8 people">Máx 8 personas</div>
                             </div>
                             <div class="vehicle-option local" data-type="suv" data-price="1450">
@@ -1791,7 +1786,7 @@
                                 <div class="vehicle-option-icon">
                                     <i class="fas fa-bus"></i>
                                 </div>
-                                <div class="vehicle-option-name" data-es="Van 15 Pax" data-en="Van 15 Pax">Van 15 Pax</div>
+                                <div class="vehicle-option-name" data-es="Van Grande" data-en="Large Van">Van Grande</div>
                                 <div class="vehicle-option-capacity" data-es="Máx 15 personas" data-en="Max 15 people">Máx 15 personas</div>
                             </div>
                         </div>
@@ -1829,7 +1824,7 @@
                                 <div class="vehicle-option-icon">
                                     <i class="fas fa-shuttle-van"></i>
                                 </div>
-                                <div class="vehicle-option-name" data-es="Van 8 Pax" data-en="Van 8 Pax">Van 8 Pax</div>
+                                <div class="vehicle-option-name" data-es="Van Estándar" data-en="Standard Van">Van Estándar</div>
                                 <div class="vehicle-option-capacity" data-es="Máx 8 personas" data-en="Max 8 people">Máx 8 personas</div>
                             </div>
                             <div class="vehicle-option local" data-type="suv" data-price="1450">
@@ -1843,7 +1838,7 @@
                                 <div class="vehicle-option-icon">
                                     <i class="fas fa-bus"></i>
                                 </div>
-                                <div class="vehicle-option-name" data-es="Van 15 Pax" data-en="Van 15 Pax">Van 15 Pax</div>
+                                <div class="vehicle-option-name" data-es="Van Grande" data-en="Large Van">Van Grande</div>
                                 <div class="vehicle-option-capacity" data-es="Máx 15 personas" data-en="Max 15 people">Máx 15 personas</div>
                             </div>
                         </div>
@@ -1881,7 +1876,7 @@
                                 <div class="vehicle-option-icon">
                                     <i class="fas fa-shuttle-van"></i>
                                 </div>
-                                <div class="vehicle-option-name" data-es="Van 8 Pax" data-en="Van 8 Pax">Van 8 Pax</div>
+                                <div class="vehicle-option-name" data-es="Van Estándar" data-en="Standard Van">Van Estándar</div>
                                 <div class="vehicle-option-capacity" data-es="Máx 8 personas" data-en="Max 8 people">Máx 8 personas</div>
                             </div>
                             <div class="vehicle-option local" data-type="suv" data-price="1850">
@@ -1895,7 +1890,7 @@
                                 <div class="vehicle-option-icon">
                                     <i class="fas fa-bus"></i>
                                 </div>
-                                <div class="vehicle-option-name" data-es="Van 15 Pax" data-en="Van 15 Pax">Van 15 Pax</div>
+                                <div class="vehicle-option-name" data-es="Van Grande" data-en="Large Van">Van Grande</div>
                                 <div class="vehicle-option-capacity" data-es="Máx 15 personas" data-en="Max 15 people">Máx 15 personas</div>
                             </div>
                         </div>
@@ -1933,7 +1928,7 @@
                                 <div class="vehicle-option-icon">
                                     <i class="fas fa-shuttle-van"></i>
                                 </div>
-                                <div class="vehicle-option-name" data-es="Van 8 Pax" data-en="Van 8 Pax">Van 8 Pax</div>
+                                <div class="vehicle-option-name" data-es="Van Estándar" data-en="Standard Van">Van Estándar</div>
                                 <div class="vehicle-option-capacity" data-es="Máx 8 personas" data-en="Max 8 people">Máx 8 personas</div>
                             </div>
                             <div class="vehicle-option local" data-type="suv" data-price="1900">
@@ -1947,7 +1942,7 @@
                                 <div class="vehicle-option-icon">
                                     <i class="fas fa-bus"></i>
                                 </div>
-                                <div class="vehicle-option-name" data-es="Van 15 Pax" data-en="Van 15 Pax">Van 15 Pax</div>
+                                <div class="vehicle-option-name" data-es="Van Grande" data-en="Large Van">Van Grande</div>
                                 <div class="vehicle-option-capacity" data-es="Máx 15 personas" data-en="Max 15 people">Máx 15 personas</div>
                             </div>
                         </div>
@@ -1967,8 +1962,8 @@
                     </div>
                     <p class="route-details">
                         <i class="fas fa-clock"></i>
-                        <span data-es="Incluye traslado + ferry" data-en="Includes transfer + ferry">
-                            Incluye traslado + ferry
+                        <span data-es="Solo traslado - Sin peajes" data-en="Transfer only - No tolls">
+                            Solo traslado - Sin peajes
                         </span>
                     </p>
                     <p class="route-details">
@@ -2034,7 +2029,7 @@
 
                 <div class="route-card fade-in">
                     <div class="route-header">
-                        <h3 class="route-name">Otras Zonas</h3>
+                        <h3 class="route-name">Inter Zonas</h3>
                         <div class="route-price" data-es="Cotizar" data-en="Quote">Cotizar</div>
                     </div>
                     <p class="route-details">
@@ -2136,7 +2131,7 @@
                     <div class="benefit-icon">
                         <i class="fas fa-car"></i>
                     </div>
-                    <h3 class="benefit-title" data-es="Opciones LOCAL" data-en="LOCAL Options">Opciones LOCAL</h3>
+                    <h3 class="benefit-title" data-es="Opciones SUV" data-en="SUV Options">Opciones SUV</h3>
                     <p class="benefit-description" data-es="Servicio exclusivo en SUV para 4 pasajeros con comodidades premium." data-en="Exclusive SUV service for 4 passengers with premium amenities.">
                         Servicio exclusivo en SUV para 4 pasajeros con comodidades premium.
                     </p>
@@ -2274,15 +2269,15 @@
         <div class="footer-content">
             <div class="footer-section">
                 <h4 data-es="Contacto eKab" data-en="Contact eKab">Contacto eKab</h4>
-                <p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/529981901967" target="_blank" rel="noopener">+52 998 190 1967</a></p>
+                <p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/529981901967" target="_blank" rel="noopener noreferrer">+52 998 190 1967</a></p>
                 <p><i class="fas fa-envelope"></i> <a href="mailto:reservaciones@ekab.mx">reservaciones@ekab.mx</a></p>
                 <p><i class="fas fa-clock"></i> <span data-es="Atención 24/7" data-en="24/7 Support">Atención 24/7</span></p>
                 <p><i class="fas fa-map-marker-alt"></i> <span data-es="Aeropuerto Internacional de Cancún" data-en="Cancun International Airport">Aeropuerto Internacional de Cancún</span></p>
                 <div class="social-links">
-                    <a href="https://www.facebook.com/ekabtransporte" class="social-link" aria-label="Facebook eKab" rel="noopener">
+                    <a href="https://www.facebook.com/ekabtransporte" class="social-link" aria-label="Facebook eKab" rel="noopener noreferrer">
                         <i class="fab fa-facebook-f"></i>
                     </a>
-                    <a href="https://www.instagram.com/ekabtransporte" class="social-link" aria-label="Instagram eKab" rel="noopener">
+                    <a href="https://www.instagram.com/ekabtransporte" class="social-link" aria-label="Instagram eKab" rel="noopener noreferrer">
                         <i class="fab fa-instagram"></i>
                     </a>
                 </div>
@@ -2322,7 +2317,7 @@
     </footer>
 
     <!-- WhatsApp Float Button -->
-    <a href="https://wa.me/529981901967?text=Hola,%20acabo%20de%20visitar%20eKab%20y%20quiero%20cotizar%20un%20traslado%20LOCAL%20desde%20el%20aeropuerto." class="whatsapp-float" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
+    <a href="https://wa.me/529981901967?text=Hola,%20acabo%20de%20visitar%20eKab%20y%20quiero%20cotizar%20un%20traslado%20LOCAL%20desde%20el%20aeropuerto." class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
 
