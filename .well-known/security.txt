@@ -1,0 +1,8 @@
+Contact: mailto:ekabshuttles@gmail.com
+Contact: https://www.ekab.mx#contact
+Encryption: https://www.ekab.mx/security.txt
+Acknowledgements: https://www.ekab.mx/security
+Policy: https://www.ekab.mx/privacy
+Canonical: https://www.ekab.mx/.well-known/security.txt
+Expires: 2025-12-31T23:00:00.000Z
+Preferred-Languages: es, en
