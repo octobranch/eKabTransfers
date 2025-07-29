@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía de Traslados desde Aeropuerto de Cancún | eKab Blog</title>
+    <meta name="description" content="Todo lo que necesitas saber para elegir el mejor transporte desde el aeropuerto a tu destino en Quintana Roo.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+          :root {
+            --primary-color: #2563eb;
+            --primary-dark: #1d4ed8;
+            --local-color: #8b5cf6;
+            --secondary-color: #1f2937;
+            --accent-color: #f59e0b;
+            --text-dark: #1f2937;
+            --text-light: #6b7280;
+            --background-light: #f9fafb;
+            --white: #ffffff;
+            --border-radius: 16px;
+            --max-width: 1200px;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background: var(--background-light);
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+            line-height: 1.2;
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        .container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        /* Header */
+        .header {
+            background: rgba(255, 255, 255, 0.92);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+            padding: 0.5rem 0;
+            transition: var(--transition);
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 1.5rem;
+        }
+
+        .logo {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .logo i {
+            color: var(--local-color);
+        }
+        
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .language-toggle {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .lang-btn {
+            padding: 0.5rem 1rem;
+            border: 2px solid var(--primary-color);
+            background: transparent;
+            color: var(--primary-color);
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .lang-btn.active {
+            background: var(--primary-color);
+            color: var(--white);
+        }
+
+        .lang-btn:hover {
+            background: var(--primary-color);
+            color: var(--white);
+        }
+        
+        .nav-toggle {
+            display: none;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            font-size: 1.5rem;
+            color: var(--text-dark);
+            padding: 0.5rem;
+            transition: var(--transition);
+        }
+        
+        .nav-toggle:hover {
+            color: var(--primary-color);
+        }
+        
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 70px;
+            left: 0;
+            right: 0;
+            background: var(--white);
+            z-index: 999;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease;
+        }
+        
+        .mobile-menu.active {
+            max-height: 400px;
+        }
+        
+        .mobile-links {
+            display: flex;
+            flex-direction: column;
+            padding: 1.5rem;
+        }
+        
+        .mobile-links a {
+            padding: 1rem 0;
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+        
+        .mobile-links a:hover {
+            color: var(--primary-color);
+            padding-left: 10px;
+        }
+
+        /* Blog Hero */
+        .blog-hero {
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+            color: var(--white);
+            padding: 9rem 1.5rem 5rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            margin-top: 70px;
+        }
+
+        .blog-hero h1 {
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            font-weight: 800;
+            margin-bottom: 1rem;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .blog-meta {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+            font-size: 0.95rem;
+            opacity: 0.9;
+        }
+
+        .blog-author {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .blog-date {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        /* Blog Content */
+        .blog-content {
+            padding: 5rem 1.5rem;
+            background: var(--white);
+        }
+
+        .blog-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .featured-image {
+            width: 100%;
+            border-radius: var(--border-radius);
+            margin-bottom: 2.5rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            height: 400px;
+            object-fit: cover;
+        }
+
+        .blog-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .blog-text p {
+            margin-bottom: 1.5rem;
+        }
+
+        .blog-text h2 {
+            font-size: 1.8rem;
+            margin: 3rem 0 1.5rem;
+            color: var(--primary-color);
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        .blog-text h2:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0.6rem;
+            height: 2rem;
+            width: 8px;
+            background: var(--primary-color);
+            border-radius: 4px;
+        }
+
+        .blog-text h3 {
+            font-size: 1.4rem;
+            margin: 2rem 0 1rem;
+            color: var(--local-color);
+        }
+
+        .benefit-card {
+            background: var(--background-light);
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            margin: 2rem 0;
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .benefit-card.local {
+            border-left: 4px solid var(--local-color);
+        }
+
+        .benefit-card h4 {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .benefit-card h4 i {
+            color: var(--primary-color);
+        }
+
+        .benefit-card.local h4 i {
+            color: var(--local-color);
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, #f0fdf4 0%, #eff6ff 100%);
+            padding: 4rem 1.5rem;
+            margin: 3rem 0;
+            border-radius: var(--border-radius);
+            text-align: center;
+        }
+
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            background: var(--primary-color);
+            color: var(--white);
+            padding: 1.1rem 2.5rem;
+            border-radius: var(--border-radius);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.15rem;
+            transition: var(--transition);
+            border: 2px solid transparent;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-4px);
+            background: var(--primary-dark);
+        }
+
+        /* Related Articles */
+        .related-articles {
+            padding: 4rem 1.5rem;
+            background: var(--background-light);
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: clamp(2rem, 4vw, 2.5rem);
+            font-weight: 800;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+            position: relative;
+            display: inline-block;
+            left: 50%;
+            transform: translateX(-50%);
+            margin-bottom: 3rem;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: var(--primary-color);
+            margin: 0.5rem auto;
+            border-radius: 2px;
+        }
+
+        .articles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .article-card {
+            background: var(--white);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: var(--transition);
+        }
+
+        .article-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+
+        .article-image {
+            height: 200px;
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2rem;
+        }
+
+        .article-content {
+            padding: 1.5rem;
+        }
+
+        .article-title {
+            font-size: 1.3rem;
+            margin-bottom: 0.8rem;
+            color: var(--text-dark);
+        }
+
+        .article-excerpt {
+            color: var(--text-light);
+            margin-bottom: 1.2rem;
+            font-size: 0.95rem;
+        }
+
+        .article-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--primary-color);
+            font-weight: 600;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .article-link:hover {
+            gap: 0.7rem;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--secondary-color);
+            color: var(--white);
+            padding: 4rem 1.5rem 2rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2.5rem;
+            max-width: var(--max-width);
+            margin: 0 auto;
+        }
+
+        .footer-section h4 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            color: var(--primary-color);
+        }
+
+        .footer-section p, .footer-section a {
+            color: #d1d5db;
+            text-decoration: none;
+            margin-bottom: 0.75rem;
+            display: block;
+            transition: var(--transition);
+        }
+
+        .footer-section a:hover {
+            color: var(--primary-color);
+            transform: translateX(5px);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-link {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: #374151;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+
+        .social-link:hover {
+            background: var(--primary-color);
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 3rem;
+            margin-top: 3rem;
+            border-top: 1px solid #374151;
+            color: #9ca3af;
+            max-width: var(--max-width);
+            margin: 3rem auto 0;
+        }
+
+        .certified-text {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 1rem;
+            border-radius: 8px;
+            margin-top: 1.5rem;
+            font-size: 0.9rem;
+        }
+
+        /* WhatsApp Float Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 65px;
+            height: 65px;
+            background: #25d366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            transition: var(--transition);
+            text-decoration: none;
+            color: var(--white);
+            font-size: 1.8rem;
+            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.3);
+            animation: bounce 2s infinite;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            background: #128c7e;
+            box-shadow: 0 15px 30px rgba(37, 211, 102, 0.4);
+        }
+
+        /* Animations */
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-12px);
+            }
+            60% {
+                transform: translateY(-7px);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 900px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .nav-toggle {
+                display: block;
+            }
+            
+            .mobile-menu {
+                display: block;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .blog-hero {
+                padding: 8rem 1.5rem 3rem;
+            }
+            
+            .featured-image {
+                height: 300px;
+            }
+            
+            .blog-meta {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <a href="../index.html" class="logo" aria-label="eKab Transporte Privado">
+                <i class="fas fa-taxi"></i>
+                eKab
+            </a>
+            
+            <div class="nav-right">
+                <div class="language-toggle">
+                    <button class="lang-btn active" data-lang="es">ES</button>
+                    <button class="lang-btn" data-lang="en">EN</button>
+                </div>
+                
+                <button class="nav-toggle" id="navToggle" aria-label="Menú de navegación">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </nav>
+        
+        <div class="mobile-menu" id="mobileMenu">
+            <div class="mobile-links">
+                <a href="../index.html#vehicles"><i class="fas fa-shuttle-van"></i> <span data-es="Vehículos" data-en="Vehicles">Vehículos</span></a>
+                <a href="../index.html#routes"><i class="fas fa-route"></i> <span data-es="Rutas" data-en="Routes">Rutas</span></a>
+                <a href="../index.html#how-it-works"><i class="fas fa-cogs"></i> <span data-es="Cómo funciona" data-en="How it works">Cómo funciona</span></a>
+                <a href="../index.html#benefits"><i class="fas fa-star"></i> <span data-es="Ventajas" data-en="Benefits">Ventajas</span></a>
+                <a href="../index.html#testimonials"><i class="fas fa-comments"></i> <span data-es="Testimonios" data-en="Testimonials">Testimonios</span></a>
+                <a href="../index.html#faq"><i class="fas fa-question-circle"></i> <span data-es="Preguntas" data-en="FAQ">Preguntas</span></a>
+                <a href="../index.html#blog"><i class="fas fa-blog"></i> <span data-es="Blog" data-en="Blog">Blog</span></a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Blog Hero -->
+    <section class="blog-hero">
+        <div class="container">
+            <h1 data-es="Guía completa de traslados desde el Aeropuerto de Cancún" data-en="Complete Guide to Transfers from Cancun Airport">Guía completa de traslados desde el Aeropuerto de Cancún</h1>
+            <div class="blog-meta">
+                <div class="blog-author">
+                    <i class="fas fa-user"></i>
+                    <span data-es="Por Equipo eKab" data-en="By eKab Team">Por Equipo eKab</span>
+                </div>
+                <div class="blog-date">
+                    <i class="fas fa-calendar"></i>
+                    <span data-es="Publicado el 15 de Mayo, 2024" data-en="Published on May 15, 2024">Publicado el 15 de Mayo, 2024</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Content -->
+    <section class="blog-content">
+        <div class="blog-container">
+            <img src="https://images.unsplash.com/photo-1590523278191-995cbcda646b?q=80&w=1200" alt="Aeropuerto Internacional de Cancún" class="featured-image" loading="lazy">
+            
+            <div class="blog-text">
+                <p data-es="Llegar al Aeropuerto Internacional de Cancún (CUN) es el primer paso de tus vacaciones en el Caribe mexicano. Con más de 25 millones de pasajeros al año, es uno de los aeropuertos más transitados de América Latina. Elegir el transporte adecuado desde el aeropuerto a tu hotel puede marcar la diferencia en tu experiencia de viaje. Esta guía te ayudará a navegar por las opciones disponibles y tomar la mejor decisión para tu traslado." data-en="Arriving at Cancun International Airport (CUN) is the first step of your vacation in the Mexican Caribbean. With over 25 million passengers per year, it's one of the busiest airports in Latin America. Choosing the right transportation from the airport to your hotel can make a big difference in your travel experience. This guide will help you navigate the available options and make the best decision for your transfer.">
+                    Llegar al Aeropuerto Internacional de Cancún (CUN) es el primer paso de tus vacaciones en el Caribe mexicano. Con más de 25 millones de pasajeros al año, es uno de los aeropuertos más transitados de América Latina. Elegir el transporte adecuado desde el aeropuerto a tu hotel puede marcar la diferencia en tu experiencia de viaje. Esta guía te ayudará a navegar por las opciones disponibles y tomar la mejor decisión para tu traslado.
+                </p>
+                
+                <h2 data-es="Opciones de transporte disponibles" data-en="Available transportation options">Opciones de transporte disponibles</h2>
+                
+                <h3 data-es="1. Transporte privado" data-en="1. Private transportation">1. Transporte privado</h3>
+                <p data-es="El servicio más cómodo y eficiente. Un vehículo exclusivo para ti y tu grupo, con conductor profesional que te espera en el aeropuerto y te lleva directamente a tu destino. Ideal para familias, grupos o quienes valoran la comodidad y privacidad." data-en="The most comfortable and efficient service. An exclusive vehicle for you and your group, with a professional driver waiting for you at the airport and taking you directly to your destination. Ideal for families, groups, or those who value comfort and privacy.">
+                    El servicio más cómodo y eficiente. Un vehículo exclusivo para ti y tu grupo, con conductor profesional que te espera en el aeropuerto y te lleva directamente a tu destino. Ideal para familias, grupos o quienes valoran la comodidad y privacidad.
+                </p>
+                
+                <div class="benefit-card">
+                    <h4><i class="fas fa-car"></i> <span data-es="Ventajas:" data-en="Advantages:">Ventajas:</span></h4>
+                    <ul>
+                        <li data-es="Sin esperas ni paradas intermedias" data-en="No waiting or intermediate stops">Sin esperas ni paradas intermedias</li>
+                        <li data-es="Servicio puerta a puerta" data-en="Door-to-door service">Servicio puerta a puerta</li>
+                        <li data-es="Conductor profesional que habla tu idioma" data-en="Professional driver who speaks your language">Conductor profesional que habla tu idioma</li>
+                        <li data-es="Espacio suficiente para equipaje" data-en="Ample space for luggage">Espacio suficiente para equipaje</li>
+                    </ul>
+                </div>
+                
+                <h3 data-es="2. Transporte compartido" data-en="2. Shared transportation">2. Transporte compartido</h3>
+                <p data-es="Una opción más económica donde compartes el vehículo con otros pasajeros que viajan a destinos cercanos. Suele tener paradas intermedias y puede tomar más tiempo llegar a tu hotel." data-en="A more economical option where you share the vehicle with other passengers traveling to nearby destinations. Usually has intermediate stops and may take longer to reach your hotel.">
+                    Una opción más económica donde compartes el vehículo con otros pasajeros que viajan a destinos cercanos. Suele tener paradas intermedias y puede tomar más tiempo llegar a tu hotel.
+                </p>
+                
+                <h3 data-es="3. Taxis oficiales" data-en="3. Official taxis">3. Taxis oficiales</h3>
+                <p data-es="Disponibles en el aeropuerto, son una opción conveniente pero generalmente más costosa que el transporte privado reservado con anticipación. Los precios son fijos por zona, pero asegúrate de tomar solo taxis autorizados." data-en="Available at the airport, they are a convenient option but generally more expensive than pre-booked private transport. Prices are fixed by zone, but make sure to take only authorized taxis.">
+                    Disponibles en el aeropuerto, son una opción conveniente pero generalmente más costosa que el transporte privado reservado con anticipación. Los precios son fijos por zona, pero asegúrate de tomar solo taxis autorizados.
+                </p>
+                
+                <h3 data-es="4. Autobuses públicos" data-en="4. Public buses">4. Autobuses públicos</h3>
+                <p data-es="La opción más económica, pero solo recomendada para viajeros con poco equipaje y que se alojen cerca del aeropuerto. No es práctico para la mayoría de los turistas, especialmente con maletas." data-en="The most economical option, but only recommended for travelers with little luggage staying near the airport. Not practical for most tourists, especially with suitcases.">
+                    La opción más económica, pero solo recomendada para viajeros con poco equipaje y que se alojen cerca del aeropuerto. No es práctico para la mayoría de los turistas, especialmente con maletas.
+                </p>
+                
+                <h2 data-es="Cómo elegir el mejor transporte para ti" data-en="How to choose the best transportation for you">Cómo elegir el mejor transporte para ti</h2>
+                
+                <div class="benefit-card local">
+                    <h4><i class="fas fa-users"></i> <span data-es="Por tamaño de grupo:" data-en="By group size:">Por tamaño de grupo:</span></h4>
+                    <ul>
+                        <li data-es="1-4 personas: SUV privado" data-en="1-4 people: Private SUV">1-4 personas: SUV privado</li>
+                        <li data-es="5-8 personas: Van estándar" data-en="5-8 people: Standard van">5-8 personas: Van estándar</li>
+                        <li data-es="9-15 personas: Van grande" data-en="9-15 people: Large van">9-15 personas: Van grande</li>
+                        <li data-es="16+ personas: Múltiples vehículos o autobús" data-en="16+ people: Multiple vehicles or bus">16+ personas: Múltiples vehículos o autobús</li>
+                    </ul>
+                </div>
+                
+                <p data-es="Considera también la cantidad de equipaje, la hora de llegada, y si viajas con niños o personas con movilidad reducida. El transporte privado ofrece la mayor flexibilidad y comodidad en todos estos casos." data-en="Also consider the amount of luggage, arrival time, and if you're traveling with children or people with reduced mobility. Private transportation offers the greatest flexibility and comfort in all these cases.">
+                    Considera también la cantidad de equipaje, la hora de llegada, y si viajas con niños o personas con movilidad reducida. El transporte privado ofrece la mayor flexibilidad y comodidad en todos estos casos.
+                </p>
+                
+                <h2 data-es="Proceso de reserva con eKab" data-en="Booking process with eKab">Proceso de reserva con eKab</h2>
+                <p data-es="Reservar tu transporte privado con eKab es rápido y sencillo. Solo necesitas enviarnos un mensaje por WhatsApp con los detalles de tu vuelo, número de pasajeros, equipaje y destino. Te confirmaremos disponibilidad inmediata y te enviaremos los detalles de tu reserva y conductor asignado." data-en="Booking your private transport with eKab is quick and easy. You just need to send us a WhatsApp message with your flight details, number of passengers, luggage, and destination. We'll confirm immediate availability and send you the details of your reservation and assigned driver.">
+                    Reservar tu transporte privado con eKab es rápido y sencillo. Solo necesitas enviarnos un mensaje por WhatsApp con los detalles de tu vuelo, número de pasajeros, equipaje y destino. Te confirmaremos disponibilidad inmediata y te enviaremos los detalles de tu reserva y conductor asignado.
+                </p>
+                
+                <div class="cta-section">
+                    <h3 data-es="¿Listo para reservar tu traslado perfecto?" data-en="Ready to book your perfect transfer?">¿Listo para reservar tu traslado perfecto?</h3>
+                    <p data-es="En eKab ofrecemos transporte privado con proveedores locales certificados a los mejores destinos de Quintana Roo. Con precios transparentes y servicio personalizado, haremos que tu llegada a Cancún sea perfecta desde el primer momento." data-en="At eKab, we offer private transportation with certified local providers to the best destinations in Quintana Roo. With transparent prices and personalized service, we'll make your arrival in Cancun perfect from the first moment.">
+                        En eKab ofrecemos transporte privado con proveedores locales certificados a los mejores destinos de Quintana Roo. Con precios transparentes y servicio personalizado, haremos que tu llegada a Cancún sea perfecta desde el primer momento.
+                    </p>
+                    <a href="https://wa.me/529999908811" class="cta-button" target="_blank" rel="noopener">
+                        <i class="fab fa-whatsapp"></i>
+                        <span data-es="Reservar traslado ahora" data-en="Book transfer now">Reservar traslado ahora</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Articles -->
+<!-- Related Articles -->
+<section class="related-articles">
+    <h2 class="section-title" data-es="Artículos Relacionados" data-en="Related Articles">Artículos Relacionados</h2>
+    <div class="articles-grid">
+        <div class="article-card">
+            <div class="article-image" style="background: linear-gradient(135deg, #3b82f6, #2563eb);">
+                <i class="fas fa-certificate"></i>
+            </div>
+            <div class="article-content">
+                <h3 class="article-title" data-es="5 razones para elegir transporte con proveedores locales certificados en Cancún" data-en="5 Reasons to Choose Certified Local Transportation Providers in Cancun">5 razones para elegir transporte con proveedores locales certificados en Cancún</h3>
+                <p class="article-excerpt" data-es="Descubre por qué los proveedores locales certificados ofrecen la mejor experiencia de transporte en Cancún y cómo benefician a la comunidad." data-en="Discover why certified local providers offer the best transportation experience in Cancun and how they benefit the community.">
+                    Descubre por qué los proveedores locales certificados ofrecen la mejor experiencia de transporte en Cancún y cómo benefician a la comunidad.
+                </p>
+                <a href="5-razones-proveedores-certificados.html" class="article-link">
+                    <span data-es="Leer más" data-en="Read more">Leer más</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+        
+        <div class="article-card">
+            <div class="article-image" style="background: linear-gradient(135deg, #f59e0b, #d97706);">
+                <i class="fas fa-suitcase-rolling"></i>
+            </div>
+            <div class="article-content">
+                <h3 class="article-title" data-es="Cómo ahorrar en transporte durante tus vacaciones en Cancún" data-en="How to Save on Transport During Your Cancun Vacation">Cómo ahorrar en transporte durante tus vacaciones en Cancún</h3>
+                <p class="article-excerpt" data-es="Consejos prácticos para optimizar tu presupuesto de viaje sin sacrificar comodidad y seguridad." data-en="Practical tips to optimize your travel budget without sacrificing comfort and safety.">
+                    Consejos prácticos para optimizar tu presupuesto de viaje sin sacrificar comodidad y seguridad.
+                </p>
+                <a href="ahorrar-transporte-cancun.html" class="article-link">
+                    <span data-es="Leer más" data-en="Read more">Leer más</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4 data-es="Contacto eKab" data-en="Contact eKab">Contacto eKab</h4>
+                <p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/529999908811" target="_blank" rel="noopener noreferrer">+52 999 990 8811</a></p>
+                <p><i class="fas fa-envelope"></i> <a href="mailto:ekabshuttles@gmail.com">ekabshuttles@gmail.com</a></p>
+                <p><i class="fas fa-clock"></i> <span data-es="Atención 24/7" data-en="24/7 Support">Atención 24/7</span></p>
+                <p><i class="fas fa-map-marker-alt"></i> <span data-es="Aeropuerto Internacional de Cancún" data-en="Cancun International Airport">Aeropuerto Internacional de Cancún</span></p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/ekabtransporte" class="social-link" aria-label="Facebook eKab" rel="noopener noreferrer">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.instagram.com/ekabtransporte" class="social-link" aria-label="Instagram eKab" rel="noopener noreferrer">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h4 data-es="Servicios eKab" data-en="eKab Services">Servicios eKab</h4>
+                <a href="../index.html#vehicles" data-es="Tipos de vehículos" data-en="Vehicle types">Tipos de vehículos</a>
+                <a href="../index.html#routes" data-es="Rutas populares" data-en="Popular routes">Rutas populares</a>
+                <a href="../index.html#how-it-works" data-es="Cómo funciona" data-en="How it works">Cómo funciona</a>
+                <a href="../index.html#benefits" data-es="Ventajas" data-en="Benefits">Ventajas</a>
+                <a href="../index.html#blog" data-es="Consejos de viaje" data-en="Travel tips">Consejos de viaje</a>
+                <a href="../index.html#faq" data-es="Preguntas frecuentes" data-en="FAQ">Preguntas frecuentes</a>
+            </div>
+            
+            <div class="footer-section">
+                <h4 data-es="Destinos desde Cancún" data-en="Destinations from Cancun">Destinos desde Cancún</h4>
+                <p data-es="Cancún y Zona Hotelera" data-en="Cancun and Hotel Zone">Cancún y Zona Hotelera</p>
+                <p data-es="Playa del Carmen" data-en="Playa del Carmen">Playa del Carmen</p>
+                <p data-es="Tulum" data-en="Tulum">Tulum</p>
+                <p data-es="Holbox" data-en="Holbox">Holbox</p>
+                <p data-es="Mérida" data-en="Merida">Mérida</p>
+            </div>
+            
+            <div class="footer-section">
+                <h4 data-es="Legal" data-en="Legal">Legal</h4>
+                <a href="privacy.html" data-es="Política de privacidad" data-en="Privacy Policy">Política de privacidad</a>
+                <a href="terms.html" data-es="Términos y condiciones" data-en="Terms and conditions">Términos y condiciones</a>
+                <p data-es="Transporte seguro y confiable" data-en="Safe and reliable transport">Transporte seguro y confiable</p>
+                
+                <div class="certified-text">
+                    <i class="fas fa-shield-alt"></i> 
+                    <span data-es="Todos nuestros proveedores cuentan con permisos oficiales emitidos por la Secretaría de Turismo de Quintana Roo." data-en="All our providers have official permits issued by the Quintana Roo Tourism Secretariat.">
+                        Todos nuestros proveedores cuentan con permisos oficiales emitidos por la Secretaría de Turismo de Quintana Roo.
+                    </span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p data-es="© 2024 eKab Transporte Privado. Todos los derechos reservados. Servicio de transporte privado en Quintana Roo y Yucatán." data-en="© 2024 eKab Private Transport. All rights reserved. Private transport service in Quintana Roo and Yucatan.">
+                © 2024 eKab Transporte Privado. Todos los derechos reservados. Servicio de transporte privado en Quintana Roo y Yucatán.
+            </p>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/529999908811" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+        // Language switching functionality
+        let currentLanguage = 'es';
+        
+        function switchLanguage(lang) {
+            currentLanguage = lang;
+            
+            // Update active button
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.remove('active');
+                if (btn.dataset.lang === lang) {
+                    btn.classList.add('active');
+                }
+            });
+            
+            // Update all translatable elements
+            document.querySelectorAll('[data-es][data-en]').forEach(element => {
+                element.textContent = element.getAttribute(`data-${lang}`);
+            });
+            
+            // Update document language
+            document.documentElement.lang = lang;
+        }
+        
+        // Mobile menu toggle
+        const navToggle = document.getElementById('navToggle');
+        const mobileMenu = document.getElementById('mobileMenu');
+        
+        navToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+            
+            // Change icon based on menu state
+            if (mobileMenu.classList.contains('active')) {
+                navToggle.innerHTML = '<i class="fas fa-times"></i>';
+            } else {
+                navToggle.innerHTML = '<i class="fas fa-bars"></i>';
+            }
+        });
+        
+        // Set up language buttons
+        document.querySelectorAll('.lang-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                switchLanguage(this.dataset.lang);
+            });
+        });
+    </script>
+</body>
+</html>
