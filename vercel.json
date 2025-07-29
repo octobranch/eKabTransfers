@@ -47,3 +47,17 @@
   "trailingSlash": false,
   "cleanUrls": true
 }
+
+{
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Content-Security-Policy",
+          "value": "font-src 'self' cdnjs.cloudflare.com use.fontawesome.com"
+        }
+      ]
+    }
+  ]
+}
