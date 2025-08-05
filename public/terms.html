@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eKab - Términos y Condiciones | Transporte Privado LOCAL</title>
+    <meta name="description" content="Términos y Condiciones de eKab Transporte Privado LOCAL. Conoce las condiciones de uso de nuestros servicios de transporte LOCAL.">
+    <meta name="keywords" content="transporte local cancún, términos condiciones ekab, transporte aeropuerto cancún, suv local cancún">
+    <meta name="author" content="eKab Transporte Privado">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚕</text></svg>">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary-color: #2563eb;      /* Azul eKab */
+            --primary-dark: #1d4ed8;       /* Azul oscuro eKab */
+            --local-color: #8b5cf6;        /* Violeta LOCAL eKab */
+            --secondary-color: #1f2937;    /* Gris oscuro */
+            --accent-color: #f59e0b;       /* Ámbar eKab */
+            --text-dark: #1f2937;
+            --text-light: #6b7280;
+            --background-light: #f9fafb;
+            --white: #ffffff;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            --border-radius: 16px;
+            --max-width: 1200px;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background: linear-gradient(135deg, #f0fdf4 0%, #eff6ff 100%);
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+        }
+
+        /* Header */
+        .header {
+            background: rgba(255, 255, 255, 0.92);
+            box-shadow: var(--shadow);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+            padding: 0.5rem 0;
+            transition: var(--transition);
+        }
+
+        .nav {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 1.5rem;
+        }
+
+        .logo {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .logo i {
+            color: var(--local-color);
+        }
+
+        .language-toggle {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .lang-btn {
+            padding: 0.5rem 1rem;
+            border: 2px solid var(--primary-color);
+            background: transparent;
+            color: var(--primary-color);
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .lang-btn.active {
+            background: var(--primary-color);
+            color: var(--white);
+        }
+
+        .lang-btn:hover {
+            background: var(--primary-color);
+            color: var(--white);
+        }
+
+        /* Main Content */
+        .legal-container {
+            max-width: var(--max-width);
+            margin: 8rem auto 3rem;
+            padding: 0 1.5rem;
+        }
+
+        .legal-title {
+            text-align: center;
+            font-size: 2.75rem;
+            font-weight: 800;
+            margin-bottom: 2rem;
+            color: var(--text-dark);
+            position: relative;
+        }
+
+        .legal-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: var(--primary-color);
+            margin: 1rem auto;
+            border-radius: 2px;
+        }
+
+        .legal-content {
+            background: var(--white);
+            border-radius: var(--border-radius);
+            padding: 3rem;
+            box-shadow: var(--shadow);
+            border-top: 4px solid var(--local-color);
+        }
+
+        .legal-section {
+            margin-bottom: 2.5rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .legal-section:last-child {
+            border-bottom: none;
+        }
+
+        .legal-section h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary-dark);
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .legal-section h3 {
+            font-size: 1.4rem;
+            margin: 1.5rem 0 1rem;
+            color: var(--text-dark);
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .legal-section p {
+            margin-bottom: 1rem;
+            color: var(--text-light);
+            padding-left: 2.25rem;
+        }
+
+        .legal-section ul {
+            padding-left: 3rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .legal-section li {
+            margin-bottom: 0.75rem;
+            color: var(--text-light);
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        .legal-section li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: var(--local-color);
+            font-size: 1.2rem;
+        }
+
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--primary-color);
+            color: var(--white);
+            padding: 0.8rem 1.5rem;
+            border-radius: var(--border-radius);
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            margin-top: 1rem;
+            box-shadow: var(--shadow);
+        }
+
+        .back-btn:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        /* WhatsApp Float Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 65px;
+            height: 65px;
+            background: #25d366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.3);
+            z-index: 1000;
+            transition: var(--transition);
+            text-decoration: none;
+            color: var(--white);
+            font-size: 1.8rem;
+            animation: bounce 2s infinite;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            background: #128c7e;
+            box-shadow: 0 15px 30px rgba(37, 211, 102, 0.4);
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--secondary-color);
+            color: var(--white);
+            padding: 4rem 1.5rem 2rem;
+            clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 100%);
+        }
+
+        .footer-content {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .footer-section h4 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            color: var(--primary-color);
+        }
+
+        .footer-section p, .footer-section a {
+            color: #d1d5db;
+            text-decoration: none;
+            margin-bottom: 0.75rem;
+            display: block;
+            transition: var(--transition);
+        }
+
+        .footer-section a:hover {
+            color: var(--primary-color);
+            transform: translateX(5px);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-link {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: #374151;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+
+        .social-link:hover {
+            background: var(--primary-color);
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 3rem;
+            margin-top: 3rem;
+            border-top: 1px solid #374151;
+            color: #9ca3af;
+            max-width: var(--max-width);
+            margin: 3rem auto 0;
+        }
+
+        /* Animations */
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-12px);
+            }
+            60% {
+                transform: translateY(-7px);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .legal-container {
+                margin-top: 6rem;
+            }
+            
+            .legal-title {
+                font-size: 2.25rem;
+            }
+            
+            .legal-content {
+                padding: 2rem 1.5rem;
+            }
+            
+            .legal-section h2, .legal-section h3 {
+                font-size: 1.5rem;
+            }
+            
+            .legal-section p {
+                padding-left: 0;
+            }
+            
+            .legal-section ul {
+                padding-left: 1.5rem;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .whatsapp-float {
+                bottom: 1.5rem;
+                right: 1.5rem;
+                width: 55px;
+                height: 55px;
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <a href="/index.html" class="logo">
+                <i class="fas fa-taxi"></i>
+                eKab
+            </a>
+            <div class="language-toggle">
+                <button class="lang-btn active" data-lang="es">ES</button>
+                <button class="lang-btn" data-lang="en">EN</button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Legal Content - Términos y Condiciones -->
+    <main class="legal-container">
+        <h1 class="legal-title" data-es="Términos y Condiciones" data-en="Terms and Conditions">Términos y Condiciones</h1>
+        
+        <div class="legal-content">
+            <div class="legal-section">
+                <h2><i class="fas fa-file-contract"></i> <span data-es="Aceptación de los Términos" data-en="Acceptance of Terms">Aceptación de los Términos</span></h2>
+                <p data-es="Al utilizar nuestros servicios, usted acepta estar sujeto a estos Términos y Condiciones. Si no está de acuerdo con alguna parte de estos términos, no debe utilizar nuestros servicios." data-en="By using our services, you agree to be bound by these Terms and Conditions. If you do not agree with any part of these terms, you should not use our services.">
+                    Al utilizar nuestros servicios, usted acepta estar sujeto a estos Términos y Condiciones. Si no está de acuerdo con alguna parte de estos términos, no debe utilizar nuestros servicios.
+                </p>
+            </div>
+            
+            <div class="legal-section">
+                <h2><i class="fas fa-taxi"></i> <span data-es="Descripción del Servicio" data-en="Service Description">Descripción del Servicio</span></h2>
+                <p data-es="eKab proporciona servicios de transporte privado LOCAL desde el Aeropuerto de Cancún hacia diversos destinos en Quintana Roo y Yucatán. Los servicios incluyen traslados en SUV LOCAL, vans para 8 pasajeros y vans para 15 pasajeros." data-en="eKab provides LOCAL private transportation services from Cancun Airport to various destinations in Quintana Roo and Yucatan. Services include transfers in LOCAL SUV, vans for 8 passengers, and vans for 15 passengers.">
+                    eKab proporciona servicios de transporte privado LOCAL desde el Aeropuerto de Cancún hacia diversos destinos en Quintana Roo y Yucatán. Los servicios incluyen traslados en SUV LOCAL, vans para 8 pasajeros y vans para 15 pasajeros.
+                </p>
+            </div>
+            
+            <div class="legal-section">
+                <h2><i class="fab fa-whatsapp"></i> <span data-es="Reservas y Pagos" data-en="Bookings and Payments">Reservas y Pagos</span></h2>
+                <ul>
+                    <li data-es="Las reservas se realizan exclusivamente a través de WhatsApp." data-en="Bookings are made exclusively through WhatsApp.">
+                        <strong data-es="Reservas:" data-en="Bookings:">Reservas:</strong> Las reservas se realizan exclusivamente a través de WhatsApp.
+                    </li>
+                    <li data-es="El prepago se realiza mediante transferencia bancaria o en efectivo al conductor." data-en="Prepayment is made by bank transfer or cash to the driver.">
+                        <strong data-es="Pagos:" data-en="Payments:">Pagos:</strong> El prepago se realiza mediante transferencia bancaria o en efectivo al conductor.
+                    </li>
+                    <li data-es="Se requiere confirmación de pago para garantizar la reserva." data-en="Payment confirmation is required to guarantee the booking.">
+                        <strong data-es="Confirmación:" data-en="Confirmation:">Confirmación:</strong> Se requiere confirmación de pago para garantizar la reserva.
+                    </li>
+                    <li data-es="Last Minute : Los servicios en Last Minute tienen un recargo del 10% sobre las tarifas estándar." data-en="Last Minute services are subject to a 10% surcharge on standard rates.">
+                        <strong data-es="Last Minute:" data-en="Last Minute:">Last Minute:</strong> Los servicios en Last Minute tienen un recargo del 10% sobre las tarifas estándar.
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="legal-section">
+                <h2><i class="fas fa-ban"></i> <span data-es="Política de Cancelación" data-en="Cancellation Policy">Política de Cancelación</span></h2>
+                <ul>
+                    <li data-es="Cambios deben ser solicitados con más de 24 horas de anticipación: Contactar vía WhatsApp." data-en="Changes must be requested more than 24 hours in advance: Contact us via WhatsApp.">
+                        Cambios deben ser solicitados con más de 24 horas de anticipación: Contactar vía WhatsApp.
+                    </li>
+                    <li data-es="Cancelaciones: Retención del 30% del pago." data-en="Cancellations : 30% of payment retained.">
+                        Cancelaciones : Retención del 30% del pago.
+                    </li>
+                    <li data-es="No shows: No reembolsable." data-en="No shows: Non-refundable.">
+                        No shows: No reembolsable.
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="legal-section">
+                <h2><i class="fas fa-user-tie"></i> <span data-es="Responsabilidades del Cliente" data-en="Customer Responsibilities">Responsabilidades del Cliente</span></h2>
+                <ul>
+                    <li data-es="Proporcionar información precisa de vuelo y contacto." data-en="Provide accurate flight and contact information.">
+                        Proporcionar información precisa de vuelo y contacto.
+                    </li>
+                    <li data-es="Estar en el punto de encuentro a la hora acordada." data-en="Be at the meeting point at the agreed time.">
+                        Estar en el punto de encuentro a la hora acordada.
+                    </li>
+                    <li data-es="Informar sobre cambios en los planes de viaje con la mayor anticipación posible." data-en="Inform about travel plan changes as soon as possible.">
+                        Informar sobre cambios en los planes de viaje con la mayor anticipación posible.
+                    </li>
+         </ul>
+            </div>
+            
+            <div class="legal-section">
+                <h2><i class="fas fa-exclamation-triangle"></i> <span data-es="Limitación de Responsabilidad" data-en="Limitation of Liability">Limitación de Responsabilidad</span></h2>
+                <p data-es="eKab no será responsable por retrasos o incumplimientos causados por circunstancias fuera de nuestro control razonable, tales como condiciones climáticas adversas, accidentes de tráfico, problemas mecánicos, o eventos de fuerza mayor." data-en="eKab shall not be liable for delays or failures caused by circumstances beyond our reasonable control, such as adverse weather conditions, traffic accidents, mechanical problems, or force majeure events.">
+                    eKab no será responsable por retrasos o incumplimientos causados por circunstancias fuera de nuestro control razonable, tales como condiciones climáticas adversas, accidentes de tráfico, problemas mecánicos, o eventos de fuerza mayor.
+                </p>
+            </div>
+            
+            <div class="legal-section">
+                <h2><i class="fas fa-edit"></i> <span data-es="Cambios en los Términos" data-en="Changes to Terms">Cambios en los Términos</span></h2>
+                <p data-es="Nos reservamos el derecho de modificar estos Términos y Condiciones en cualquier momento. Las versiones actualizadas serán publicadas en nuestro sitio web." data-en="We reserve the right to modify these Terms and Conditions at any time. Updated versions will be published on our website.">
+                    Nos reservamos el derecho de modificar estos Términos y Condiciones en cualquier momento. Las versiones actualizadas serán publicadas en nuestro sitio web.
+                </p>
+            </div>
+            
+            <div class="legal-section">
+                <p>
+                    <i class="fas fa-calendar-alt"></i> 
+                    <span data-es="Última actualización: 12 de Julio, 2024" data-en="Last updated: July 12, 2024">
+                        Última actualización: 12 de Julio, 2024
+                    </span>
+                </p>
+            </div>
+            
+            <a href="/index.html" class="back-btn">
+                <i class="fas fa-arrow-left"></i>
+                <span data-es="Volver al inicio" data-en="Back to Home">Volver al inicio</span>
+            </a>
+        </div>
+    </main>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/529999908811" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4 data-es="Contacto eKab" data-en="Contact eKab">Contacto eKab</h4>
+                <p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/529999908811" target="_blank" rel="noopener">+52 999 990 8811</a></p>
+                <p><i class="fas fa-envelope"></i> <a href="mailto:ekabshuttles@gmail.com">ekabshuttles@gmail.com</a></p>
+                <p><i class="fas fa-clock"></i> <span data-es="Atención 24/7" data-en="24/7 Support">Atención 24/7</span></p>
+                <p><i class="fas fa-map-marker-alt"></i> <span data-es="Aeropuerto Internacional de Cancún" data-en="Cancun International Airport">Aeropuerto Internacional de Cancún</span></p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/ekabtransporte" class="social-link" aria-label="Facebook eKab" rel="noopener">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.instagram.com/ekabtransporte" class="social-link" aria-label="Instagram eKab" rel="noopener">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h4 data-es="Servicios eKab" data-en="eKab Services">Servicios eKab</h4>
+                <a href="/index.html#vehicles" data-es="Nuestros vehículos" data-en="Our Vehicles">Nuestros vehículos</a>
+                <a href="/index.html#routes" data-es="Rutas populares" data-en="Popular Routes">Rutas populares</a>
+                <a href="/index.html#benefits" data-es="Ventajas" data-en="Benefits">Ventajas</a>
+                <a href="/index.html#faq" data-es="Preguntas frecuentes" data-en="FAQ">Preguntas frecuentes</a>
+            </div>
+            
+            <div class="footer-section">
+                <h4 data-es="Legal" data-en="Legal">Legal</h4>
+                <a href="/privacy.html" data-es="Aviso de Privacidad" data-en="Privacy Policy">Aviso de Privacidad</a>
+                <a href="/terms.html" data-es="Términos y Condiciones" data-en="Terms and Conditions">Términos y Condiciones</a>
+                <p data-es="Transporte seguro y confiable" data-en="Safe and reliable transport">Transporte seguro y confiable</p>
+                <p data-es="Permisos oficiales SCT" data-en="Official SCT permits">Permisos oficiales SCT</p>
+            </div>
+            
+            <div class="footer-section">
+                <h4 data-es="Destinos desde Cancún" data-en="Destinations from Cancun">Destinos desde Cancún</h4>
+                <p data-es="Cancún y Zona Hotelera" data-en="Cancun and Hotel Zone">Cancún y Zona Hotelera</p>
+                <p data-es="Playa del Carmen" data-en="Playa del Carmen">Playa del Carmen</p>
+                <p data-es="Tulum" data-en="Tulum">Tulum</p>
+                <p data-es="Holbox" data-en="Holbox">Holbox</p>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p data-es="© 2024 eKab Transporte Privado LOCAL. Todos los derechos reservados. Servicio de transporte privado en Quintana Roo y Yucatán." data-en="© 2024 eKab Private LOCAL Transport. All rights reserved. Private transport service in Quintana Roo and Yucatan.">
+                © 2024 eKab Transporte Privado LOCAL. Todos los derechos reservados. Servicio de transporte privado en Quintana Roo y Yucatán.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Language switching functionality
+        let currentLanguage = 'es';
+        
+        function switchLanguage(lang) {
+            currentLanguage = lang;
+            
+            // Update active button
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.remove('active');
+                if (btn.dataset.lang === lang) {
+                    btn.classList.add('active');
+                }
+            });
+            
+            // Update all translatable elements
+            document.querySelectorAll('[data-es][data-en]').forEach(element => {
+                element.textContent = element.getAttribute(`data-${lang}`);
+            });
+            
+            // Update document language
+            document.documentElement.lang = lang;
+            
+            // Update page title
+            document.title = currentLanguage === 'es' 
+                ? 'eKab - Términos y Condiciones | Transporte Privado LOCAL' 
+                : 'eKab - Terms and Conditions | LOCAL Private Transport';
+        }
+        
+        // Initialize page
+        document.addEventListener('DOMContentLoaded', function() {
+            // Set initial language
+            switchLanguage('es');
+            
+            // Set up language button events
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    switchLanguage(this.dataset.lang);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
