@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>eKab | Transporte Privado LOCAL desde Aeropuerto de Cancún | SUV y Vans con Proveedores Certificados</title>
     <meta name="description" content="Reserva tu transporte privado LOCAL en Cancún con proveedores certificados. SUV para 4 pasajeros, vans para 8 y 15 personas. Solo pagas 30% para reservar. Servicio garantizado o cambio de proveedor en 20 minutos.">
-    <meta name="keywords" content="transporte local cancún, traslado aeropuerto cancún, taxi local cancún, suv aeropuerto cancún, van cancún, transporte privado cancún, van 15 pasajeros, traslado grupal cancún, eKab transporte, proveedores locales certificados cancún">
+    <meta name="keywords" content="transporte local cancún, traslado aeropuerto cancún, taxi local cancún, suv aeropuerto cancún, van cancún, shuttle cancun, taxi cancun, local providers, transporte privado cancún, van 15 pasajeros, traslado grupal cancún, eKab transporte, proveedores locales certificados cancún">
     <meta name="author" content="eKab Transporte Privado">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://www.ekab.mx">   
@@ -32,20 +32,6 @@
     
     <!-- Favicon -->
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚕</text></svg>">
-    
-    <!-- Preconnect para Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-    
-    <!-- Font Awesome para iconos -->
- <link rel="stylesheet" 
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" 
-  integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" 
-  crossorigin="anonymous" 
-  referrerpolicy="no-referrer" />
     
     <!-- Schema.org Structured Data -->
     <script type="application/ld+json">
@@ -92,8 +78,7 @@
       },
       "sameAs": [
         "https://www.facebook.com/ekabtransporte",
-        "https://www.instagram.com/ekabtransporte",
-        "https://twitter.com/ekabtransporte"
+        "https://www.instagram.com/ekabtransporte"
       ]
     }
     </script>
@@ -123,7 +108,7 @@
         }
 
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
             line-height: 1.6;
             color: var(--text-dark);
             background: linear-gradient(135deg, #f0fdf4 0%, #eff6ff 100%);
@@ -131,7 +116,6 @@
         }
 
         h1, h2, h3, h4, h5, h6 {
-            font-family: 'Montserrat', sans-serif;
             font-weight: 700;
             margin-bottom: 0.75rem;
             line-height: 1.2;
@@ -172,11 +156,11 @@
             display: flex;
             align-items: center;
             gap: 0.5rem;
-            font-family: 'Montserrat', sans-serif;
         }
-
-        .logo i {
-            color: var(--local-color);
+        
+        .logo-image {
+            width: 40px;
+            height: 40px;
         }
         
         /* Navbar Links */
@@ -251,9 +235,9 @@
             background: transparent;
             border: none;
             cursor: pointer;
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             color: var(--text-dark);
-            padding: 0.5rem;
+            padding: 0.4rem;
             transition: var(--transition);
         }
         
@@ -291,7 +275,7 @@
             text-decoration: none;
             color: var(--text-dark);
             font-weight: 500;
-            border-bottom: 1px solid rgba(0,0,0,0.05);
+            border-bottom: 0.5px solid rgba(0,0,0,0.05);
             transition: var(--transition);
             display: flex;
             align-items: center;
@@ -372,11 +356,6 @@
             border: 1px solid rgba(255, 255, 255, 0.2);
         }
 
-        .benefit-badge i {
-            color: var(--accent-color);
-            font-size: 1.2rem;
-        }
-
         .local-badge {
             display: inline-block;
             background: var(--local-color);
@@ -416,7 +395,7 @@
             border-color: white;
         }
 
-        /* Sección de blog con contenido SEO */
+        /* Sección de blog */
         .blog-section {
             padding: 5rem 1.5rem;
             background: var(--white);
@@ -563,16 +542,6 @@
             transform: translateY(-15px);
         }
 
-        .vehicle-icon {
-            font-size: 3.5rem;
-            color: var(--primary-color);
-            margin-bottom: 1.5rem;
-        }
-
-        .vehicle-card.local .vehicle-icon {
-            color: var(--local-color);
-        }
-
         .vehicle-name {
             font-size: 1.6rem;
             font-weight: 700;
@@ -619,12 +588,19 @@
             color: var(--local-color);
         }
 
+        /* Iconos para vehículos */
+        .icon-image {
+            width: 60px;
+            height: 60px;
+            margin-bottom: 1rem;
+        }
+
         /* Routes Section */
         .routes {
             padding: 4rem 1.5rem;
             background: var(--white);
         }
-
+        
         .routes-content {
             max-width: var(--max-width);
             margin: 0 auto;
@@ -745,16 +721,6 @@
         .vehicle-option.local.selected {
             border-color: var(--local-color);
             background: rgba(139, 92, 246, 0.05);
-        }
-
-        .vehicle-option-icon {
-            font-size: 1.2rem;
-            margin-bottom: 0.3rem;
-            color: var(--primary-color);
-        }
-
-        .vehicle-option.local .vehicle-option-icon {
-            color: var(--local-color);
         }
 
         .vehicle-option-name {
@@ -897,26 +863,6 @@
             box-shadow: var(--shadow-lg);
         }
 
-        .benefit-icon {
-            width: 80px;
-            height: 80px;
-            background: rgba(37, 99, 235, 0.1);
-            color: var(--primary-color);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 1.5rem;
-            font-size: 2.5rem;
-            transition: var(--transition);
-        }
-
-        .benefit:hover .benefit-icon {
-            background: var(--primary-color);
-            color: white;
-            transform: rotateY(180deg);
-        }
-
         .benefit-title {
             font-size: 1.4rem;
             font-weight: 700;
@@ -926,6 +872,13 @@
 
         .benefit-description {
             color: var(--text-light);
+        }
+
+        /* Iconos para beneficios */
+        .benefit img {
+            width: 60px;
+            height: 60px;
+            margin-bottom: 1rem;
         }
 
         /* Testimonials */
@@ -1146,6 +1099,13 @@
             box-shadow: 0 15px 30px rgba(37, 211, 102, 0.4);
         }
 
+        /* WhatsApp SVG */
+        .whatsapp-svg {
+            width: 35px;
+            height: 35px;
+            fill: white;
+        }
+
         /* Animations */
         @keyframes fadeInUp {
             from {
@@ -1285,7 +1245,7 @@
     <header class="header">
         <nav class="nav">
             <a href="#" class="logo" aria-label="eKab Transporte Privado">
-                <i class="fas fa-taxi"></i>
+                <img src="images/logo.svg" alt="eKab Logo" class="logo-image">
                 eKab
             </a>
             
@@ -1306,20 +1266,24 @@
                 </div>
                 
                 <button class="nav-toggle" id="navToggle" aria-label="Menú de navegación">
-                    <i class="fas fa-bars"></i>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
                 </button>
             </div>
         </nav>
         
         <div class="mobile-menu" id="mobileMenu">
             <div class="mobile-links">
-                <a href="#vehicles"><i class="fas fa-shuttle-van"></i> <span data-es="Vehículos" data-en="Vehicles">Vehículos</span></a>
-                <a href="#routes"><i class="fas fa-route"></i> <span data-es="Rutas" data-en="Routes">Rutas</span></a>
-                <a href="#how-it-works"><i class="fas fa-cogs"></i> <span data-es="Cómo funciona" data-en="How it works">Cómo funciona</span></a>
-                <a href="#benefits"><i class="fas fa-star"></i> <span data-es="Ventajas" data-en="Benefits">Ventajas</span></a>
-                <a href="#testimonials"><i class="fas fa-comments"></i> <span data-es="Testimonios" data-en="Testimonials">Testimonios</span></a>
-                <a href="#faq"><i class="fas fa-question-circle"></i> <span data-es="Preguntas" data-en="FAQ">Preguntas</span></a>
-                <a href="#blog"><i class="fas fa-blog"></i> <span data-es="Blog" data-en="Blog">Blog</span></a>
+                <a href="#vehicles"><span data-es="Vehículos" data-en="Vehicles">Vehículos</span></a>
+                <a href="#routes"><span data-es="Rutas" data-en="Routes">Rutas</span></a>
+                <a href="#how-it-works"><span data-es="Cómo funciona" data-en="How it works">Cómo funciona</span></a>
+                <a href="#benefits"><span data-es="Ventajas" data-en="Benefits">Ventajas</span></a>
+                <a href="#testimonials"><span data-es="Testimonios" data-en="Testimonials">Testimonios</span></a>
+                <a href="#faq"><span data-es="Preguntas" data-en="FAQ">Preguntas</span></a>
+                <a href="#blog"><span data-es="Blog" data-en="Blog">Blog</span></a>
             </div>
         </div>
     </header>
@@ -1327,30 +1291,25 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
-            <h1 data-es="Transporte Privado LOCAL desde Aeropuerto de Cancún" data-en="LOCAL Private Transport from Cancun Airport">Transporte Privado LOCAL desde Aeropuerto de Cancún</h1>
-            <p class="hero-subtitle" data-es="Servicio exclusivo con proveedores locales certificados. SUV para 4 personas o vans para 8 y 15 personas. Reserva directa por WhatsApp sin aplicaciones ni tarifas ocultas." data-en="Exclusive service with certified local providers. SUV for 4 people or vans for 8 and 15 people. Direct booking via WhatsApp without apps or hidden fees.">
-                Servicio exclusivo con proveedores locales certificados. SUV para 4 personas o vans para 8 y 15 personas. Reserva directa por WhatsApp sin aplicaciones ni tarifas ocultas.
+            <h1 data-es="Transporte Privado LOCAL desde Aeropuerto de Cancún" data-en="LOCAL Private Transfer from Cancun Airport">Transporte Privado LOCAL desde Aeropuerto de Cancún</h1>
+            <p class="hero-subtitle" data-es="Traslados privados en Cancún y Riviera Maya con proveedores locales certificados. Viaja en SUV para hasta 4 pasajeros o en Vans cómodas para 8 y 15 personas. Reserva fácil y directa por WhatsApp, sin aplicaciones ni cargos ocultos." data-en="Private transfers in Cancun and the Riviera Maya with certified local providers. Travel in a comfortable SUV for up to 4 passengers or spacious vans for 8 and 15 people. Book easily and directly via WhatsApp — no apps, no hidden fees.">
+                Traslados privados en Cancún y Riviera Maya con proveedores locales certificados. Viaja en SUV para hasta 4 pasajeros o en Vans cómodas para 8 y 15 personas. Reserva fácil y directa por WhatsApp, sin aplicaciones ni cargos ocultos.
             </p>
             
             <div class="benefits-container">
                 <div class="benefit-badge">
-                    <i class="fas fa-percentage"></i>
-                    <span data-es="Solo pagas 30% para reservar" data-en="Only pay 30% to reserve">Solo pagas 30% para reservar</span>
+                  <span data-es="Solo Pagas 30% Para Reservar" data-en="Only Pay 30% To Reserve">Solo Pagas 30% Para Reservar</span>
                 </div>
-                <div class="benefit-badge">
-                    <i class="fas fa-clock"></i>
-                    <span data-es="Servicio garantizado o cambio en 20 min" data-en="Guaranteed service or change in 20 min">Servicio garantizado o cambio en 20 min</span>
+                <div class="benefit-badge">                 
+                    <span data-es="Servicio Garantizado o Reasignación Sin Costo" data-en="Guaranteed Service Or Free Reassignment">Servicio Garantizado o Reasignación Sin Costo</span>
                 </div>
-                <div class="benefit-badge">
-                    <i class="fas fa-certificate"></i>
-                    <span data-es="Proveedores locales certificados" data-en="Certified local providers">Proveedores locales certificados</span>
+                <div class="benefit-badge">                 
+                    <span data-es="Proveedores Locales Certificados" data-en="Certified Local Providers">Proveedores Locales Certificados</span>
                 </div>
-            </div>
-            
+            </div>          
             <div class="local-badge" data-es="NUEVO SERVICIO LOCAL" data-en="NEW LOCAL SERVICE">NUEVO SERVICIO LOCAL</div>
             <a href="https://wa.me/529999908811?text=Hola,%20acabo%20de%20visitar%20eKab%20y%20quiero%20cotizar%20un%20traslado%20LOCAL%20desde%20el%20aeropuerto." class="cta-button" target="_blank" rel="noopener" aria-label="Cotizar por WhatsApp">
-                <i class="fab fa-whatsapp"></i>
-                <span data-es="Reservar con un experto local" data-en="Book with a local expert">Reservar con un experto local</span>
+                <span data-es="Reserva con un Experto Local" data-en="Book with a Local Expert">Reserva con un Experto Local</span>
             </a>
         </div>
     </section>
@@ -1366,7 +1325,9 @@
             <div class="blog-grid">
                 <div class="blog-card fade-in">
                     <div class="blog-image">
-                        <i class="fas fa-certificate"></i>
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                        </svg>
                     </div>
                     <div class="blog-content-text">
                         <h3 class="blog-title" data-es="5 razones para elegir transporte con proveedores locales certificados en Cancún" data-en="5 Reasons to Choose Certified Local Transportation Providers in Cancun">5 razones para elegir transporte con proveedores locales certificados en Cancún</h3>
@@ -1375,14 +1336,19 @@
                         </p>
                         <a href="/blog/por-que-proveedores-certificados.html" class="blog-link">
                             <span data-es="Leer más" data-en="Read more">Leer más</span>
-                            <i class="fas fa-arrow-right"></i>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M5 12h14M12 5l7 7-7 7"></path>
+                            </svg>
                         </a>
                     </div>
                 </div>
                 
                 <div class="blog-card fade-in">
                     <div class="blog-image">
-                        <i class="fas fa-map-marked-alt"></i>
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
                     </div>
                     <div class="blog-content-text">
                         <h3 class="blog-title" data-es="Guía completa de traslados desde el Aeropuerto de Cancún" data-en="Complete Guide to Transfers from Cancun Airport">Guía completa de traslados desde el Aeropuerto de Cancún</h3>
@@ -1391,14 +1357,18 @@
                         </p>
                         <a href="/blog/guia-traslados-cancun.html" class="blog-link">
                             <span data-es="Leer más" data-en="Read more">Leer más</span>
-                            <i class="fas fa-arrow-right"></i>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M5 12h14M12 5l7 7-7 7"></path>
+                            </svg>
                         </a>
                     </div>
                 </div>
                 
                 <div class="blog-card fade-in">
                     <div class="blog-image">
-                        <i class="fas fa-suitcase-rolling"></i>
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 20h9M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path>
+                        </svg>
                     </div>
                     <div class="blog-content-text">
                         <h3 class="blog-title" data-es="Cómo ahorrar en transporte durante tus vacaciones en Cancún" data-en="How to Save on Transport During Your Cancun Vacation">Cómo ahorrar en transporte durante tus vacaciones en Cancún</h3>
@@ -1407,7 +1377,9 @@
                         </p>
                         <a href="/blog/ahorrar-transporte-cancun.html" class="blog-link">
                             <span data-es="Leer más" data-en="Read more">Leer más</span>
-                            <i class="fas fa-arrow-right"></i>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M5 12h14M12 5l7 7-7 7"></path>
+                            </svg>
                         </a>
                     </div>
                 </div>
@@ -1423,11 +1395,9 @@
                 Elige el vehículo perfecto para tu grupo con eKab
             </p>
             
-            <div class="vehicles-grid">
+            <div class="vehicles-grid">              
                 <div class="vehicle-card">
-                    <div class="vehicle-icon">
-                        <i class="fas fa-shuttle-van"></i>
-                    </div>
+                 <img src="images/van-standard.svg" alt="Van Standar" class="icon-image">                
                     <h3 class="vehicle-name" data-es="Van Estándar" data-en="Standard Van">Van Estándar</h3>
                     <div class="vehicle-capacity" data-es="Máximo 8 pasajeros" data-en="Up to 8 passengers">Máximo 8 pasajeros</div>
                     <ul class="vehicle-features">
@@ -1439,11 +1409,9 @@
                 </div>
                 
                 <div class="vehicle-card local">
-                    <div class="vehicle-icon">
-                        <i class="fas fa-car"></i>
-                    </div>
-                    <h3 class="vehicle-name" data-es="SUV" data-en="SUV">SUV</h3>
-                    <div class="vehicle-capacity" data-es="Máximo 4 pasajeros" data-en="Up to 4 passengers">Máximo 4 pasajeros</div>
+                  <img src="images/suv.svg" alt="SUV" class="icon-image">        
+                  <h3 class="vehicle-name" data-es="SUV" data-en="SUV">SUV</h3>             
+                  <div class="vehicle-capacity" data-es="Máximo 4 pasajeros" data-en="Up to 4 passengers">Máximo 4 pasajeros</div>
                     <ul class="vehicle-features">
                         <li data-es="Servicio exclusivo" data-en="Exclusive service">Servicio exclusivo</li>
                         <li data-es="Asientos de lujo" data-en="Luxury seats">Asientos de lujo</li>
@@ -1453,9 +1421,7 @@
                 </div>
                 
                 <div class="vehicle-card">
-                    <div class="vehicle-icon">
-                        <i class="fas fa-bus"></i>
-                    </div>
+                  <img src="images/van-grande.svg" alt="Van Grande" class="icon-image">                 
                     <h3 class="vehicle-name" data-es="Van Grande" data-en="Large Van">Van Grande</h3>
                     <div class="vehicle-capacity" data-es="Máximo 15 pasajeros" data-en="Up to 15 passengers">Máximo 15 pasajeros</div>
                     <ul class="vehicle-features">
@@ -1469,790 +1435,713 @@
         </div>
     </section>
 
-      <!-- Routes Section -->
-<section class="routes" id="routes">
-    <div class="routes-content">
-        <h2 class="section-title" data-es="Rutas Populares desde Aeropuerto de Cancún" data-en="Popular Routes from Cancun Airport">Rutas Populares desde Aeropuerto de Cancún</h2>
-        <p class="section-subtitle" data-es="Servicio de transporte privado a los principales destinos de Quintana Roo" data-en="Private transport service to main destinations in Quintana Roo">
-            Servicio de transporte privado a los principales destinos de Quintana Roo
-        </p>
-        
-        <div class="routes-grid">
-            <!-- CUN Centro -->
-            <div class="route-card fade-in">
-                <div class="route-header">
-                    <h3 class="route-name">Cancún Centro</h3>
-                    <div class="route-price">
-                        <span class="price-label" data-es="Desde" data-en="From">Desde</span> 
-                        $700 MXN
+    <!-- Routes Section -->
+    <section class="routes" id="routes">
+        <div class="routes-content">
+            <h2 class="section-title" data-es="Rutas Populares desde Aeropuerto de Cancún" data-en="Popular Routes from Cancun Airport">Rutas Populares desde Aeropuerto de Cancún</h2>
+            <p class="section-subtitle" data-es="Servicio de transporte privado a los principales destinos de Quintana Roo" data-en="Private transport service to main destinations in Quintana Roo">
+                Servicio de transporte privado a los principales destinos de Quintana Roo
+            </p>
+            
+            <div class="routes-grid">
+                <!-- CUN Centro -->
+                <div class="route-card fade-in">
+                    <div class="route-header">
+                        <h3 class="route-name">Cancún Centro</h3>
+                        <div class="route-price">
+                            <span class="price-label" data-es="Desde" data-en="From">Desde</span> 
+                            $700 MXN
+                        </div>
                     </div>
+                    <p class="route-details">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12 6 12 12 16 14"></polyline>
+                        </svg>
+                        <span data-es="Tiempo estimado: 25-35 minutos" data-en="Estimated time: 25-35 minutes">
+                            Tiempo estimado: 25-35 minutos
+                        </span>
+                    </p>
+                    
+                    <div class="vehicle-selector">
+                        <div class="selector-title">
+                            <span data-es="Seleccione tipo de vehículo:" data-en="Select vehicle type:">Seleccione tipo de vehículo:</span>
+                        </div>
+                        <div class="vehicle-options">
+                            <div class="vehicle-option" data-type="van8" data-price="700">
+                                <div class="vehicle-option-name" data-es="Van Estándar" data-en="Standard Van">Van Estándar</div>
+                                <div class="vehicle-option-capacity" data-es="Máx 8 personas" data-en="Max 8 people">Máx 8 personas</div>
+                            </div>
+                            <div class="vehicle-option local" data-type="suv" data-price="1700">
+                                <div class="vehicle-option-name">SUV</div>
+                                <div class="vehicle-option-capacity" data-es="Máx 4 personas" data-en="Max 4 people">Máx 4 personas</div>
+                            </div>
+                            <div class="vehicle-option" data-type="van15" data-price="1500">
+                                <div class="vehicle-option-name" data-es="Van Grande" data-en="Large Van">Van Grande</div>
+                                <div class="vehicle-option-capacity" data-es="Máx 15 personas" data-en="Max 15 people">Máx 15 personas</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="https://wa.me/529999908811?text=Hola,%20quiero%20reservar%20un%20traslado%20desde%20el%20aeropuerto%20de%20Cancún%20hacia%20Cancún%20Centro%20en%20Van%208%20pasajeros." class="route-btn" target="_blank" rel="noopener">
+                        <span data-es="Reservar por WhatsApp" data-en="Book via WhatsApp">Reservar por WhatsApp</span>
+                    </a>
                 </div>
-                <p class="route-details">
-                    <i class="fas fa-clock"></i>
-                    <span data-es="Tiempo estimado: 25-35 minutos" data-en="Estimated time: 25-35 minutes">
-                        Tiempo estimado: 25-35 minutos
-                    </span>
-                </p>
-                
-                <div class="vehicle-selector">
-                    <div class="selector-title">
-                        <i class="fas fa-car"></i>
-                        <span data-es="Seleccione tipo de vehículo:" data-en="Select vehicle type:">Seleccione tipo de vehículo:</span>
-                    </div>
-                    <div class="vehicle-options">
-                        <div class="vehicle-option" data-type="van8" data-price="700">
-                            <div class="vehicle-option-icon">
-                                <i class="fas fa-shuttle-van"></i>
-                            </div>
-                            <div class="vehicle-option-name" data-es="Van Estándar" data-en="Standard Van">Van Estándar</div>
-                            <div class="vehicle-option-capacity" data-es="Máx 8 personas" data-en="Max 8 people">Máx 8 personas</div>
-                        </div>
-                        <div class="vehicle-option local" data-type="suv" data-price="1700">
-                            <div class="vehicle-option-icon">
-                                <i class="fas fa-car"></i>
-                            </div>
-                            <div class="vehicle-option-name">SUV</div>
-                            <div class="vehicle-option-capacity" data-es="Máx 4 personas" data-en="Max 4 people">Máx 4 personas</div>
-                        </div>
-                        <div class="vehicle-option" data-type="van15" data-price="1500">
-                            <div class="vehicle-option-icon">
-                                <i class="fas fa-bus"></i>
-                            </div>
-                            <div class="vehicle-option-name" data-es="Van Grande" data-en="Large Van">Van Grande</div>
-                            <div class="vehicle-option-capacity" data-es="Máx 15 personas" data-en="Max 15 people">Máx 15 personas</div>
-                        </div>
-                    </div>
-                </div>
-                
-                <a href="https://wa.me/529999908811?text=Hola,%20quiero%20reservar%20un%20traslado%20desde%20el%20aeropuerto%20de%20Cancún%20hacia%20Cancún%20Centro%20en%20Van%208%20pasajeros." class="route-btn" target="_blank" rel="noopener">
-                    <i class="fab fa-whatsapp"></i>
-                    <span data-es="Reservar por WhatsApp" data-en="Book via WhatsApp">Reservar por WhatsApp</span>
-                </a>
-            </div>
 
-            <!-- CUN Zona Hotelera -->
-            <div class="route-card fade-in">
-                <div class="route-header">
-                    <h3 class="route-name">Zona Hotelera Cancún</h3>
-                    <div class="route-price">
-                        <span class="price-label" data-es="Desde" data-en="From">Desde</span> 
-                        $750 MXN
+                <!-- CUN Zona Hotelera -->
+                <div class="route-card fade-in">
+                    <div class="route-header">
+                        <h3 class="route-name">Zona Hotelera Cancún</h3>
+                        <div class="route-price">
+                            <span class="price-label" data-es="Desde" data-en="From">Desde</span> 
+                            $750 MXN
+                        </div>
                     </div>
+                    <p class="route-details">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12 6 12 12 16 14"></polyline>
+                        </svg>
+                        <span data-es="Tiempo estimado: 30-40 minutos" data-en="Estimated time: 30-40 minutes">
+                            Tiempo estimado: 30-40 minutos
+                        </span>
+                    </p>
+                    
+                    <div class="vehicle-selector">
+                        <div class="selector-title">
+                            <span data-es="Seleccione tipo de vehículo:" data-en="Select vehicle type:">Seleccione tipo de vehículo:</span>
+                        </div>
+                        <div class="vehicle-options">
+                            <div class="vehicle-option" data-type="van8" data-price="750">
+                                <div class="vehicle-option-name" data-es="Van Estándar" data-en="Standard Van">Van Estándar</div>
+                                <div class="vehicle-option-capacity" data-es="Máx 8 personas" data-en="Max 8 people">Máx 8 personas</div>
+                            </div>
+                            <div class="vehicle-option local" data-type="suv" data-price="1800">
+                                <div class="vehicle-option-name">SUV</div>
+                                <div class="vehicle-option-capacity" data-es="Máx 4 personas" data-en="Max 4 people">Máx 4 personas</div>
+                            </div>
+                            <div class="vehicle-option" data-type="van15" data-price="1650">
+                                <div class="vehicle-option-name" data-es="Van Grande" data-en="Large Van">Van Grande</div>
+                                <div class="vehicle-option-capacity" data-es="Máx 15 personas" data-en="Max 15 people">Máx 15 personas</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="https://wa.me/529999908811?text=Hola,%20quiero%20reservar%20un%20traslado%20desde%20el%20aeropuerto%20de%20Cancún%20hacia%20la%20Zona%20Hotelera%20en%20Van%208%20pasajeros." class="route-btn" target="_blank" rel="noopener">
+                        <span data-es="Reservar por WhatsApp" data-en="Book via WhatsApp">Reservar por WhatsApp</span>
+                    </a>
                 </div>
-                <p class="route-details">
-                    <i class="fas fa-clock"></i>
-                    <span data-es="Tiempo estimado: 30-40 minutos" data-en="Estimated time: 30-40 minutes">
-                        Tiempo estimado: 30-40 minutos
-                    </span>
-                </p>
-                
-                <div class="vehicle-selector">
-                    <div class="selector-title">
-                        <i class="fas fa-car"></i>
-                        <span data-es="Seleccione tipo de vehículo:" data-en="Select vehicle type:">Seleccione tipo de vehículo:</span>
-                    </div>
-                    <div class="vehicle-options">
-                        <div class="vehicle-option" data-type="van8" data-price="750">
-                            <div class="vehicle-option-icon">
-                                <i class="fas fa-shuttle-van"></i>
-                            </div>
-                            <div class="vehicle-option-name" data-es="Van Estándar" data-en="Standard Van">Van Estándar</div>
-                            <div class="vehicle-option-capacity" data-es="Máx 8 personas" data-en="Max 8 people">Máx 8 personas</div>
-                        </div>
-                        <div class="vehicle-option local" data-type="suv" data-price="1800">
-                            <div class="vehicle-option-icon">
-                                <i class="fas fa-car"></i>
-                            </div>
-                            <div class="vehicle-option-name">SUV</div>
-                            <div class="vehicle-option-capacity" data-es="Máx 4 personas" data-en="Max 4 people">Máx 4 personas</div>
-                        </div>
-                        <div class="vehicle-option" data-type="van15" data-price="1650">
-                            <div class="vehicle-option-icon">
-                                <i class="fas fa-bus"></i>
-                            </div>
-                            <div class="vehicle-option-name" data-es="Van Grande" data-en="Large Van">Van Grande</div>
-                            <div class="vehicle-option-capacity" data-es="Máx 15 personas" data-en="Max 15 people">Máx 15 personas</div>
-                        </div>
-                    </div>
-                </div>
-                
-                <a href="https://wa.me/529999908811?text=Hola,%20quiero%20reservar%20un%20traslado%20desde%20el%20aeropuerto%20de%20Cancún%20hacia%20la%20Zona%20Hotelera%20en%20Van%208%20pasajeros." class="route-btn" target="_blank" rel="noopener">
-                    <i class="fab fa-whatsapp"></i>
-                    <span data-es="Reservar por WhatsApp" data-en="Book via WhatsApp">Reservar por WhatsApp</span>
-                </a>
-            </div>
 
-            <!-- Moon Palace -->
-            <div class="route-card fade-in">
-                <div class="route-header">
-                    <h3 class="route-name">Moon Palace</h3>
-                    <div class="route-price">
-                        <span class="price-label" data-es="Desde" data-en="From">Desde</span> 
-                        $650 MXN
+                <!-- Moon Palace -->
+                <div class="route-card fade-in">
+                    <div class="route-header">
+                        <h3 class="route-name">Moon Palace</h3>
+                        <div class="route-price">
+                            <span class="price-label" data-es="Desde" data-en="From">Desde</span> 
+                            $650 MXN
+                        </div>
                     </div>
+                    <p class="route-details">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12 6 12 12 16 14"></polyline>
+                        </svg>
+                        <span data-es="Tiempo estimado: 20-25 minutos" data-en="Estimated time: 20-25 minutes">
+                            Tiempo estimado: 20-25 minutos
+                        </span>
+                    </p>
+                    
+                    <div class="vehicle-selector">
+                        <div class="selector-title">
+                            <span data-es="Seleccione tipo de vehículo:" data-en="Select vehicle type:">Seleccione tipo de vehículo:</span>
+                        </div>
+                        <div class="vehicle-options">
+                            <div class="vehicle-option" data-type="van8" data-price="650">
+                                <div class="vehicle-option-name" data-es="Van Estándar" data-en="Standard Van">Van Estándar</div>
+                                <div class="vehicle-option-capacity" data-es="Máx 8 personas" data-en="Max 8 people">Máx 8 personas</div>
+                            </div>
+                            <div class="vehicle-option local" data-type="suv" data-price="1600">
+                                <div class="vehicle-option-name">SUV</div>
+                                <div class="vehicle-option-capacity" data-es="Máx 4 personas" data-en="Max 4 people">Máx 4 personas</div>
+                            </div>
+                            <div class="vehicle-option" data-type="van15" data-price="1300">
+                                <div class="vehicle-option-name" data-es="Van Grande" data-en="Large Van">Van Grande</div>
+                                <div class="vehicle-option-capacity" data-es="Máx 15 personas" data-en="Max 15 people">Máx 15 personas</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="https://wa.me/529999908811?text=Hola,%20quiero%20reservar%20un%20traslado%20desde%20el%20aeropuerto%20de%20Cancún%20hacia%20Moon%20Palace%20en%20Van%208%20pasajeros." class="route-btn" target="_blank" rel="noopener">
+                        <span data-es="Reservar por WhatsApp" data-en="Book via WhatsApp">Reservar por WhatsApp</span>
+                    </a>
                 </div>
-                <p class="route-details">
-                    <i class="fas fa-clock"></i>
-                    <span data-es="Tiempo estimado: 20-25 minutos" data-en="Estimated time: 20-25 minutes">
-                        Tiempo estimado: 20-25 minutos
-                    </span>
-                </p>
-                
-                <div class="vehicle-selector">
-                    <div class="selector-title">
-                        <i class="fas fa-car"></i>
-                        <span data-es="Seleccione tipo de vehículo:" data-en="Select vehicle type:">Seleccione tipo de vehículo:</span>
-                    </div>
-                    <div class="vehicle-options">
-                        <div class="vehicle-option" data-type="van8" data-price="650">
-                            <div class="vehicle-option-icon">
-                                <i class="fas fa-shuttle-van"></i>
-                            </div>
-                            <div class="vehicle-option-name" data-es="Van Estándar" data-en="Standard Van">Van Estándar</div>
-                            <div class="vehicle-option-capacity" data-es="Máx 8 personas" data-en="Max 8 people">Máx 8 personas</div>
-                        </div>
-                        <div class="vehicle-option local" data-type="suv" data-price="1600">
-                            <div class="vehicle-option-icon">
-                                <i class="fas fa-car"></i>
-                            </div>
-                            <div class="vehicle-option-name">SUV</div>
-                            <div class="vehicle-option-capacity" data-es="Máx 4 personas" data-en="Max 4 people">Máx 4 personas</div>
-                        </div>
-                        <div class="vehicle-option" data-type="van15" data-price="1300">
-                            <div class="vehicle-option-icon">
-                                <i class="fas fa-bus"></i>
-                            </div>
-                            <div class="vehicle-option-name" data-es="Van Grande" data-en="Large Van">Van Grande</div>
-                            <div class="vehicle-option-capacity" data-es="Máx 15 personas" data-en="Max 15 people">Máx 15 personas</div>
-                        </div>
-                    </div>
-                </div>
-                
-                <a href="https://wa.me/529999908811?text=Hola,%20quiero%20reservar%20un%20traslado%20desde%20el%20aeropuerto%20de%20Cancún%20hacia%20Moon%20Palace%20en%20Van%208%20pasajeros." class="route-btn" target="_blank" rel="noopener">
-                    <i class="fab fa-whatsapp"></i>
-                    <span data-es="Reservar por WhatsApp" data-en="Book via WhatsApp">Reservar por WhatsApp</span>
-                </a>
-            </div>
 
-            <!-- Costa Mujeres -->
-            <div class="route-card fade-in">
-                <div class="route-header">
-                    <h3 class="route-name">Costa Mujeres</h3>
-                    <div class="route-price">
-                        <span class="price-label" data-es="Desde" data-en="From">Desde</span> 
-                        $1,300 MXN
+                <!-- Costa Mujeres -->
+                <div class="route-card fade-in">
+                    <div class="route-header">
+                        <h3 class="route-name">Costa Mujeres</h3>
+                        <div class="route-price">
+                            <span class="price-label" data-es="Desde" data-en="From">Desde</span> 
+                            $1,300 MXN
+                        </div>
                     </div>
+                    <p class="route-details">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12 6 12 12 16 14"></polyline>
+                        </svg>
+                        <span data-es="Tiempo estimado: 35-45 minutos" data-en="Estimated time: 35-45 minutes">
+                            Tiempo estimado: 35-45 minutos
+                        </span>
+                    </p>
+                    
+                    <div class="vehicle-selector">
+                        <div class="selector-title">
+                            <span data-es="Seleccione tipo de vehículo:" data-en="Select vehicle type:">Seleccione tipo de vehículo:</span>
+                        </div>
+                        <div class="vehicle-options">
+                            <div class="vehicle-option" data-type="van8" data-price="1300">
+                                <div class="vehicle-option-name" data-es="Van Estándar" data-en="Standard Van">Van Estándar</div>
+                                <div class="vehicle-option-capacity" data-es="Máx 8 personas" data-en="Max 8 people">Máx 8 personas</div>
+                            </div>
+                            <div class="vehicle-option local" data-type="suv" data-price="2800">
+                                <div class="vehicle-option-name">SUV</div>
+                                <div class="vehicle-option-capacity" data-es="Máx 4 personas" data-en="Max 4 people">Máx 4 personas</div>
+                            </div>
+                            <div class="vehicle-option" data-type="van15" data-price="2470">
+                                <div class="vehicle-option-name" data-es="Van Grande" data-en="Large Van">Van Grande</div>
+                                <div class="vehicle-option-capacity" data-es="Máx 15 personas" data-en="Max 15 people">Máx 15 personas</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="https://wa.me/529999908811?text=Hola,%20quiero%20reservar%20un%20traslado%20desde%20el%20aeropuerto%20de%20Cancún%20hacia%20Costa%20Mujeres%20en%20Van%208%20pasajeros." class="route-btn" target="_blank" rel="noopener">
+                        <span data-es="Reservar por WhatsApp" data-en="Book via WhatsApp">Reservar por WhatsApp</span>
+                    </a>
                 </div>
-                <p class="route-details">
-                    <i class="fas fa-clock"></i>
-                    <span data-es="Tiempo estimado: 35-45 minutos" data-en="Estimated time: 35-45 minutes">
-                        Tiempo estimado: 35-45 minutos
-                    </span>
-                </p>
-                
-                <div class="vehicle-selector">
-                    <div class="selector-title">
-                        <i class="fas fa-car"></i>
-                        <span data-es="Seleccione tipo de vehículo:" data-en="Select vehicle type:">Seleccione tipo de vehículo:</span>
-                    </div>
-                    <div class="vehicle-options">
-                        <div class="vehicle-option" data-type="van8" data-price="1300">
-                            <div class="vehicle-option-icon">
-                                <i class="fas fa-shuttle-van"></i>
-                            </div>
-                            <div class="vehicle-option-name" data-es="Van Estándar" data-en="Standard Van">Van Estándar</div>
-                            <div class="vehicle-option-capacity" data-es="Máx 8 personas" data-en="Max 8 people">Máx 8 personas</div>
-                        </div>
-                        <div class="vehicle-option local" data-type="suv" data-price="2800">
-                            <div class="vehicle-option-icon">
-                                <i class="fas fa-car"></i>
-                            </div>
-                            <div class="vehicle-option-name">SUV</div>
-                            <div class="vehicle-option-capacity" data-es="Máx 4 personas" data-en="Max 4 people">Máx 4 personas</div>
-                        </div>
-                        <div class="vehicle-option" data-type="van15" data-price="2470">
-                            <div class="vehicle-option-icon">
-                                <i class="fas fa-bus"></i>
-                            </div>
-                            <div class="vehicle-option-name" data-es="Van Grande" data-en="Large Van">Van Grande</div>
-                            <div class="vehicle-option-capacity" data-es="Máx 15 personas" data-en="Max 15 people">Máx 15 personas</div>
-                        </div>
-                    </div>
-                </div>
-                
-                <a href="https://wa.me/529999908811?text=Hola,%20quiero%20reservar%20un%20traslado%20desde%20el%20aeropuerto%20de%20Cancún%20hacia%20Costa%20Mujeres%20en%20Van%208%20pasajeros." class="route-btn" target="_blank" rel="noopener">
-                    <i class="fab fa-whatsapp"></i>
-                    <span data-es="Reservar por WhatsApp" data-en="Book via WhatsApp">Reservar por WhatsApp</span>
-                </a>
-            </div>
 
-            <!-- Puerto Juárez -->
-            <div class="route-card fade-in">
-                <div class="route-header">
-                    <h3 class="route-name">Puerto Juárez</h3>
-                    <div class="route-price">
-                        <span class="price-label" data-es="Desde" data-en="From">Desde</span> 
-                        $990 MXN
+                <!-- Puerto Juárez -->
+                <div class="route-card fade-in">
+                    <div class="route-header">
+                        <h3 class="route-name">Puerto Juárez</h3>
+                        <div class="route-price">
+                            <span class="price-label" data-es="Desde" data-en="From">Desde</span> 
+                            $990 MXN
+                        </div>
                     </div>
+                    <p class="route-details">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12 6 12 12 16 14"></polyline>
+                        </svg>
+                        <span data-es="Tiempo estimado: 25-30 minutos" data-en="Estimated time: 25-30 minutes">
+                            Tiempo estimado: 25-30 minutos
+                        </span>
+                    </p>
+                    
+                    <div class="vehicle-selector">
+                        <div class="selector-title">
+                            <span data-es="Seleccione tipo de vehículo:" data-en="Select vehicle type:">Seleccione tipo de vehículo:</span>
+                        </div>
+                        <div class="vehicle-options">
+                            <div class="vehicle-option" data-type="van8" data-price="990">
+                                <div class="vehicle-option-name" data-es="Van Estándar" data-en="Standard Van">Van Estándar</div>
+                                <div class="vehicle-option-capacity" data-es="Máx 8 personas" data-en="Max 8 people">Máx 8 personas</div>
+                            </div>
+                            <div class="vehicle-option local" data-type="suv" data-price="2100">
+                                <div class="vehicle-option-name">SUV</div>
+                                <div class="vehicle-option-capacity" data-es="Máx 4 personas" data-en="Max 4 people">Máx 4 personas</div>
+                            </div>
+                            <div class="vehicle-option" data-type="van15" data-price="1900">
+                                <div class="vehicle-option-name" data-es="Van Grande" data-en="Large Van">Van Grande</div>
+                                <div class="vehicle-option-capacity" data-es="Máx 15 personas" data-en="Max 15 people">Máx 15 personas</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="https://wa.me/529999908811?text=Hola,%20quiero%20reservar%20un%20traslado%20desde%20el%20aeropuerto%20de%20Cancún%20hacia%20Puerto%20Juárez%20en%20Van%208%20pasajeros." class="route-btn" target="_blank" rel="noopener">
+                        <span data-es="Reservar por WhatsApp" data-en="Book via WhatsApp">Reservar por WhatsApp</span>
+                    </a>
                 </div>
-                <p class="route-details">
-                    <i class="fas fa-clock"></i>
-                    <span data-es="Tiempo estimado: 25-30 minutos" data-en="Estimated time: 25-30 minutes">
-                        Tiempo estimado: 25-30 minutos
-                    </span>
-                </p>
-                
-                <div class="vehicle-selector">
-                    <div class="selector-title">
-                        <i class="fas fa-car"></i>
-                        <span data-es="Seleccione tipo de vehículo:" data-en="Select vehicle type:">Seleccione tipo de vehículo:</span>
-                    </div>
-                    <div class="vehicle-options">
-                        <div class="vehicle-option" data-type="van8" data-price="990">
-                            <div class="vehicle-option-icon">
-                                <i class="fas fa-shuttle-van"></i>
-                            </div>
-                            <div class="vehicle-option-name" data-es="Van Estándar" data-en="Standard Van">Van Estándar</div>
-                            <div class="vehicle-option-capacity" data-es="Máx 8 personas" data-en="Max 8 people">Máx 8 personas</div>
-                        </div>
-                        <div class="vehicle-option local" data-type="suv" data-price="2100">
-                            <div class="vehicle-option-icon">
-                                <i class="fas fa-car"></i>
-                            </div>
-                            <div class="vehicle-option-name">SUV</div>
-                            <div class="vehicle-option-capacity" data-es="Máx 4 personas" data-en="Max 4 people">Máx 4 personas</div>
-                        </div>
-                        <div class="vehicle-option" data-type="van15" data-price="1900">
-                            <div class="vehicle-option-icon">
-                                <i class="fas fa-bus"></i>
-                            </div>
-                            <div class="vehicle-option-name" data-es="Van Grande" data-en="Large Van">Van Grande</div>
-                            <div class="vehicle-option-capacity" data-es="Máx 15 personas" data-en="Max 15 people">Máx 15 personas</div>
-                        </div>
-                    </div>
-                </div>
-                
-                <a href="https://wa.me/529999908811?text=Hola,%20quiero%20reservar%20un%20traslado%20desde%20el%20aeropuerto%20de%20Cancún%20hacia%20Puerto%20Juárez%20en%20Van%208%20pasajeros." class="route-btn" target="_blank" rel="noopener">
-                    <i class="fab fa-whatsapp"></i>
-                    <span data-es="Reservar por WhatsApp" data-en="Book via WhatsApp">Reservar por WhatsApp</span>
-                </a>
-            </div>
 
-            <!-- Bahia Petempich -->
-            <div class="route-card fade-in">
-                <div class="route-header">
-                    <h3 class="route-name">Bahia Petempich</h3>
-                    <div class="route-price">
-                        <span class="price-label" data-es="Desde" data-en="From">Desde</span> 
-                        $950 MXN
+                <!-- Bahia Petempich -->
+                <div class="route-card fade-in">
+                    <div class="route-header">
+                        <h3 class="route-name">Bahia Petempich</h3>
+                        <div class="route-price">
+                            <span class="price-label" data-es="Desde" data-en="From">Desde</span> 
+                            $950 MXN
+                        </div>
                     </div>
+                    <p class="route-details">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12 6 12 12 16 14"></polyline>
+                        </svg>
+                        <span data-es="Tiempo estimado: 20-25 minutos" data-en="Estimated time: 20-25 minutes">
+                            Tiempo estimado: 20-25 minutos
+                        </span>
+                    </p>
+                    
+                    <div class="vehicle-selector">
+                        <div class="selector-title">
+                            <span data-es="Seleccione tipo de vehículo:" data-en="Select vehicle type:">Seleccione tipo de vehículo:</span>
+                        </div>
+                        <div class="vehicle-options">
+                            <div class="vehicle-option" data-type="van8" data-price="950">
+                                <div class="vehicle-option-name" data-es="Van Estándar" data-en="Standard Van">Van Estándar</div>
+                                <div class="vehicle-option-capacity" data-es="Máx 8 personas" data-en="Max 8 people">Máx 8 personas</div>
+                            </div>
+                            <div class="vehicle-option local" data-type="suv" data-price="2200">
+                                <div class="vehicle-option-name">SUV</div>
+                                <div class="vehicle-option-capacity" data-es="Máx 4 personas" data-en="Max 4 people">Máx 4 personas</div>
+                            </div>
+                            <div class="vehicle-option" data-type="van15" data-price="1900">
+                                <div class="vehicle-option-name" data-es="Van Grande" data-en="Large Van">Van Grande</div>
+                                <div class="vehicle-option-capacity" data-es="Máx 15 personas" data-en="Max 15 people">Máx 15 personas</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="https://wa.me/529999908811?text=Hola,%20quiero%20reservar%20un%20traslado%20desde%20el%20aeropuerto%20de%20Cancún%20hacia%20Bahia%20Petempich%20en%20Van%208%20pasajeros." class="route-btn" target="_blank" rel="noopener">
+                        <span data-es="Reservar por WhatsApp" data-en="Book via WhatsApp">Reservar por WhatsApp</span>
+                    </a>
                 </div>
-                <p class="route-details">
-                    <i class="fas fa-clock"></i>
-                    <span data-es="Tiempo estimado: 20-25 minutos" data-en="Estimated time: 20-25 minutes">
-                        Tiempo estimado: 20-25 minutos
-                    </span>
-                </p>
-                
-                <div class="vehicle-selector">
-                    <div class="selector-title">
-                        <i class="fas fa-car"></i>
-                        <span data-es="Seleccione tipo de vehículo:" data-en="Select vehicle type:">Seleccione tipo de vehículo:</span>
-                    </div>
-                    <div class="vehicle-options">
-                        <div class="vehicle-option" data-type="van8" data-price="950">
-                            <div class="vehicle-option-icon">
-                                <i class="fas fa-shuttle-van"></i>
-                            </div>
-                            <div class="vehicle-option-name" data-es="Van Estándar" data-en="Standard Van">Van Estándar</div>
-                            <div class="vehicle-option-capacity" data-es="Máx 8 personas" data-en="Max 8 people">Máx 8 personas</div>
-                        </div>
-                        <div class="vehicle-option local" data-type="suv" data-price="2200">
-                            <div class="vehicle-option-icon">
-                                <i class="fas fa-car"></i>
-                            </div>
-                            <div class="vehicle-option-name">SUV</div>
-                            <div class="vehicle-option-capacity" data-es="Máx 4 personas" data-en="Max 4 people">Máx 4 personas</div>
-                        </div>
-                        <div class="vehicle-option" data-type="van15" data-price="1900">
-                            <div class="vehicle-option-icon">
-                                <i class="fas fa-bus"></i>
-                            </div>
-                            <div class="vehicle-option-name" data-es="Van Grande" data-en="Large Van">Van Grande</div>
-                            <div class="vehicle-option-capacity" data-es="Máx 15 personas" data-en="Max 15 people">Máx 15 personas</div>
-                        </div>
-                    </div>
-                </div>
-                
-                <a href="https://wa.me/529999908811?text=Hola,%20quiero%20reservar%20un%20traslado%20desde%20el%20aeropuerto%20de%20Cancún%20hacia%20Bahia%20Petempich%20en%20Van%208%20pasajeros." class="route-btn" target="_blank" rel="noopener">
-                    <i class="fab fa-whatsapp"></i>
-                    <span data-es="Reservar por WhatsApp" data-en="Book via WhatsApp">Reservar por WhatsApp</span>
-                </a>
-            </div>
 
-            <!-- Puerto Morelos -->
-            <div class="route-card fade-in">
-                <div class="route-header">
-                    <h3 class="route-name">Puerto Morelos</h3>
-                    <div class="route-price">
-                        <span class="price-label" data-es="Desde" data-en="From">Desde</span> 
-                        $950 MXN
+                <!-- Puerto Morelos -->
+                <div class="route-card fade-in">
+                    <div class="route-header">
+                        <h3 class="route-name">Puerto Morelos</h3>
+                        <div class="route-price">
+                            <span class="price-label" data-es="Desde" data-en="From">Desde</span> 
+                            $950 MXN
+                        </div>
                     </div>
+                    <p class="route-details">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12 6 12 12 16 14"></polyline>
+                        </svg>
+                        <span data-es="Tiempo estimado: 15-20 minutos" data-en="Estimated time: 15-20 minutes">
+                            Tiempo estimado: 15-20 minutos
+                        </span>
+                    </p>
+                    
+                    <div class="vehicle-selector">
+                        <div class="selector-title">
+                            <span data-es="Seleccione tipo de vehículo:" data-en="Select vehicle type:">Seleccione tipo de vehículo:</span>
+                        </div>
+                        <div class="vehicle-options">
+                            <div class="vehicle-option" data-type="van8" data-price="950">
+                                <div class="vehicle-option-name" data-es="Van Estándar" data-en="Standard Van">Van Estándar</div>
+                                <div class="vehicle-option-capacity" data-es="Máx 8 personas" data-en="Max 8 people">Máx 8 personas</div>
+                            </div>
+                            <div class="vehicle-option local" data-type="suv" data-price="2200">
+                                <div class="vehicle-option-name">SUV</div>
+                                <div class="vehicle-option-capacity" data-es="Máx 4 personas" data-en="Max 4 people">Máx 4 personas</div>
+                            </div>
+                            <div class="vehicle-option" data-type="van15" data-price="1900">
+                                <div class="vehicle-option-name" data-es="Van Grande" data-en="Large Van">Van Grande</div>
+                                <div class="vehicle-option-capacity" data-es="Máx 15 personas" data-en="Max 15 people">Máx 15 personas</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="https://wa.me/529999908811?text=Hola,%20quiero%20reservar%20un%20traslado%20desde%20el%20aeropuerto%20de%20Cancún%20hacia%20Puerto%20Morelos%20en%20Van%208%20pasajeros." class="route-btn" target="_blank" rel="noopener">
+                        <span data-es="Reservar por WhatsApp" data-en="Book via WhatsApp">Reservar por WhatsApp</span>
+                    </a>
                 </div>
-                <p class="route-details">
-                    <i class="fas fa-clock"></i>
-                    <span data-es="Tiempo estimado: 15-20 minutos" data-en="Estimated time: 15-20 minutes">
-                        Tiempo estimado: 15-20 minutos
-                    </span>
-                </p>
-                
-                <div class="vehicle-selector">
-                    <div class="selector-title">
-                        <i class="fas fa-car"></i>
-                        <span data-es="Seleccione tipo de vehículo:" data-en="Select vehicle type:">Seleccione tipo de vehículo:</span>
-                    </div>
-                    <div class="vehicle-options">
-                        <div class="vehicle-option" data-type="van8" data-price="950">
-                            <div class="vehicle-option-icon">
-                                <i class="fas fa-shuttle-van"></i>
-                            </div>
-                            <div class="vehicle-option-name" data-es="Van Estándar" data-en="Standard Van">Van Estándar</div>
-                            <div class="vehicle-option-capacity" data-es="Máx 8 personas" data-en="Max 8 people">Máx 8 personas</div>
-                        </div>
-                        <div class="vehicle-option local" data-type="suv" data-price="2200">
-                            <div class="vehicle-option-icon">
-                                <i class="fas fa-car"></i>
-                            </div>
-                            <div class="vehicle-option-name">SUV</div>
-                            <div class="vehicle-option-capacity" data-es="Máx 4 personas" data-en="Max 4 people">Máx 4 personas</div>
-                        </div>
-                        <div class="vehicle-option" data-type="van15" data-price="1900">
-                            <div class="vehicle-option-icon">
-                                <i class="fas fa-bus"></i>
-                            </div>
-                            <div class="vehicle-option-name" data-es="Van Grande" data-en="Large Van">Van Grande</div>
-                            <div class="vehicle-option-capacity" data-es="Máx 15 personas" data-en="Max 15 people">Máx 15 personas</div>
-                        </div>
-                    </div>
-                </div>
-                
-                <a href="https://wa.me/529999908811?text=Hola,%20quiero%20reservar%20un%20traslado%20desde%20el%20aeropuerto%20de%20Cancún%20hacia%20Puerto%20Morelos%20en%20Van%208%20pasajeros." class="route-btn" target="_blank" rel="noopener">
-                    <i class="fab fa-whatsapp"></i>
-                    <span data-es="Reservar por WhatsApp" data-en="Book via WhatsApp">Reservar por WhatsApp</span>
-                </a>
-            </div>
 
-            <!-- Playa del Carmen -->
-            <div class="route-card fade-in">
-                <div class="route-header">
-                    <h3 class="route-name">Playa del Carmen</h3>
-                    <div class="route-price">
-                        <span class="price-label" data-es="Desde" data-en="From">Desde</span> 
-                        $1,400 MXN
+                <!-- Playa del Carmen -->
+                <div class="route-card fade-in">
+                    <div class="route-header">
+                        <h3 class="route-name">Playa del Carmen</h3>
+                        <div class="route-price">
+                            <span class="price-label" data-es="Desde" data-en="From">Desde</span> 
+                            $1,400 MXN
+                        </div>
                     </div>
+                    <p class="route-details">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12 6 12 12 16 14"></polyline>
+                        </svg>
+                        <span data-es="Tiempo estimado: 60-70 minutos" data-en="Estimated time: 60-70 minutes">
+                            Tiempo estimado: 60-70 minutos
+                        </span>
+                    </p>
+                    
+                    <div class="vehicle-selector">
+                        <div class="selector-title">
+                            <span data-es="Seleccione tipo de vehículo:" data-en="Select vehicle type:">Seleccione tipo de vehículo:</span>
+                        </div>
+                        <div class="vehicle-options">
+                            <div class="vehicle-option" data-type="van8" data-price="1400">
+                                <div class="vehicle-option-name" data-es="Van Estándar" data-en="Standard Van">Van Estándar</div>
+                                <div class="vehicle-option-capacity" data-es="Máx 8 personas" data-en="Max 8 people">Máx 8 personas</div>
+                            </div>
+                            <div class="vehicle-option local" data-type="suv" data-price="2850">
+                                <div class="vehicle-option-name">SUV </div>
+                                <div class="vehicle-option-capacity" data-es="Máx 4 personas" data-en="Max 4 people">Máx 4 personas</div>
+                            </div>
+                            <div class="vehicle-option" data-type="van15" data-price="2700">
+                                <div class="vehicle-option-name" data-es="Van Grande" data-en="Large Van">Van Grande</div>
+                                <div class="vehicle-option-capacity" data-es="Máx 15 personas" data-en="Max 15 people">Máx 15 personas</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="https://wa.me/529999908811?text=Hola,%20quiero%20reservar%20un%20traslado%20desde%20el%20aeropuerto%20de%20Cancún%20hacia%20Playa%20del%20Carmen%20en%20Van%208%20pasajeros." class="route-btn" target="_blank" rel="noopener">
+                        <span data-es="Reservar por WhatsApp" data-en="Book via WhatsApp">Reservar por WhatsApp</span>
+                    </a>
                 </div>
-                <p class="route-details">
-                    <i class="fas fa-clock"></i>
-                    <span data-es="Tiempo estimado: 60-70 minutos" data-en="Estimated time: 60-70 minutes">
-                        Tiempo estimado: 60-70 minutos
-                    </span>
-                </p>
-                
-                <div class="vehicle-selector">
-                    <div class="selector-title">
-                        <i class="fas fa-car"></i>
-                        <span data-es="Seleccione tipo de vehículo:" data-en="Select vehicle type:">Seleccione tipo de vehículo:</span>
-                    </div>
-                    <div class="vehicle-options">
-                        <div class="vehicle-option" data-type="van8" data-price="1400">
-                            <div class="vehicle-option-icon">
-                                <i class="fas fa-shuttle-van"></i>
-                            </div>
-                            <div class="vehicle-option-name" data-es="Van Estándar" data-en="Standard Van">Van Estándar</div>
-                            <div class="vehicle-option-capacity" data-es="Máx 8 personas" data-en="Max 8 people">Máx 8 personas</div>
-                        </div>
-                        <div class="vehicle-option local" data-type="suv" data-price="2850">
-                            <div class="vehicle-option-icon">
-                                <i class="fas fa-car"></i>
-                            </div>
-                            <div class="vehicle-option-name">SUV </div>
-                            <div class="vehicle-option-capacity" data-es="Máx 4 personas" data-en="Max 4 people">Máx 4 personas</div>
-                        </div>
-                        <div class="vehicle-option" data-type="van15" data-price="2700">
-                            <div class="vehicle-option-icon">
-                                <i class="fas fa-bus"></i>
-                            </div>
-                            <div class="vehicle-option-name" data-es="Van Grande" data-en="Large Van">Van Grande</div>
-                            <div class="vehicle-option-capacity" data-es="Máx 15 personas" data-en="Max 15 people">Máx 15 personas</div>
-                        </div>
-                    </div>
-                </div>
-                
-                <a href="https://wa.me/529999908811?text=Hola,%20quiero%20reservar%20un%20traslado%20desde%20el%20aeropuerto%20de%20Cancún%20hacia%20Playa%20del%20Carmen%20en%20Van%208%20pasajeros." class="route-btn" target="_blank" rel="noopener">
-                    <i class="fab fa-whatsapp"></i>
-                    <span data-es="Reservar por WhatsApp" data-en="Book via WhatsApp">Reservar por WhatsApp</span>
-                </a>
-            </div>
 
-            <!-- Xcaret -->
-            <div class="route-card fade-in">
-                <div class="route-header">
-                    <h3 class="route-name">Xcaret</h3>
-                    <div class="route-price">
-                        <span class="price-label" data-es="Desde" data-en="From">Desde</span> 
-                        $1,400 MXN
+                <!-- Xcaret -->
+                <div class="route-card fade-in">
+                    <div class="route-header">
+                        <h3 class="route-name">Xcaret</h3>
+                        <div class="route-price">
+                            <span class="price-label" data-es="Desde" data-en="From">Desde</span> 
+                            $1,400 MXN
+                        </div>
                     </div>
+                    <p class="route-details">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12 6 12 12 16 14"></polyline>
+                        </svg>
+                        <span data-es="Tiempo estimado: 65-75 minutos" data-en="Estimated time: 65-75 minutes">
+                            Tiempo estimado: 65-75 minutos
+                        </span>
+                    </p>
+                    
+                    <div class="vehicle-selector">
+                        <div class="selector-title">
+                            <span data-es="Seleccione tipo de vehículo:" data-en="Select vehicle type:">Seleccione tipo de vehículo:</span>
+                        </div>
+                        <div class="vehicle-options">
+                            <div class="vehicle-option" data-type="van8" data-price="1400">
+                                <div class="vehicle-option-name" data-es="Van Estándar" data-en="Standard Van">Van Estándar</div>
+                                <div class="vehicle-option-capacity" data-es="Máx 8 personas" data-en="Max 8 people">Máx 8 personas</div>
+                            </div>
+                            <div class="vehicle-option local" data-type="suv" data-price="2850">
+                                <div class="vehicle-option-name">SUV</div>
+                                <div class="vehicle-option-capacity" data-es="Máx 4 personas" data-en="Max 4 people">Máx 4 personas</div>
+                            </div>
+                            <div class="vehicle-option" data-type="van15" data-price="2700">
+                                <div class="vehicle-option-name" data-es="Van Grande" data-en="Large Van">Van Grande</div>
+                                <div class="vehicle-option-capacity" data-es="Máx 15 personas" data-en="Max 15 people">Máx 15 personas</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="https://wa.me/529999908811?text=Hola,%20quiero%20reservar%20un%20traslado%20desde%20el%20aeropuerto%20de%20Cancún%20hacia%20Xcaret%20en%20Van%208%20pasajeros." class="route-btn" target="_blank" rel="noopener">
+                        <span data-es="Reservar por WhatsApp" data-en="Book via WhatsApp">Reservar por WhatsApp</span>
+                    </a>
                 </div>
-                <p class="route-details">
-                    <i class="fas fa-clock"></i>
-                    <span data-es="Tiempo estimado: 65-75 minutos" data-en="Estimated time: 65-75 minutes">
-                        Tiempo estimado: 65-75 minutos
-                    </span>
-                </p>
-                
-                <div class="vehicle-selector">
-                    <div class="selector-title">
-                        <i class="fas fa-car"></i>
-                        <span data-es="Seleccione tipo de vehículo:" data-en="Select vehicle type:">Seleccione tipo de vehículo:</span>
-                    </div>
-                    <div class="vehicle-options">
-                        <div class="vehicle-option" data-type="van8" data-price="1400">
-                            <div class="vehicle-option-icon">
-                                <i class="fas fa-shuttle-van"></i>
-                            </div>
-                            <div class="vehicle-option-name" data-es="Van Estándar" data-en="Standard Van">Van Estándar</div>
-                            <div class="vehicle-option-capacity" data-es="Máx 8 personas" data-en="Max 8 people">Máx 8 personas</div>
-                        </div>
-                        <div class="vehicle-option local" data-type="suv" data-price="2850">
-                            <div class="vehicle-option-icon">
-                                <i class="fas fa-car"></i>
-                            </div>
-                            <div class="vehicle-option-name">SUV</div>
-                            <div class="vehicle-option-capacity" data-es="Máx 4 personas" data-en="Max 4 people">Máx 4 personas</div>
-                        </div>
-                        <div class="vehicle-option" data-type="van15" data-price="2700">
-                            <div class="vehicle-option-icon">
-                                <i class="fas fa-bus"></i>
-                            </div>
-                            <div class="vehicle-option-name" data-es="Van Grande" data-en="Large Van">Van Grande</div>
-                            <div class="vehicle-option-capacity" data-es="Máx 15 personas" data-en="Max 15 people">Máx 15 personas</div>
-                        </div>
-                    </div>
-                </div>
-                
-                <a href="https://wa.me/529999908811?text=Hola,%20quiero%20reservar%20un%20traslado%20desde%20el%20aeropuerto%20de%20Cancún%20hacia%20Xcaret%20en%20Van%208%20pasajeros." class="route-btn" target="_blank" rel="noopener">
-                    <i class="fab fa-whatsapp"></i>
-                    <span data-es="Reservar por WhatsApp" data-en="Book via WhatsApp">Reservar por WhatsApp</span>
-                </a>
-            </div>
 
-            <!-- Puerto Aventuras -->
-            <div class="route-card fade-in">
-                <div class="route-header">
-                    <h3 class="route-name">Puerto Aventuras</h3>
-                    <div class="route-price">
-                        <span class="price-label" data-es="Desde" data-en="From">Desde</span> 
-                        $1,800 MXN
+                <!-- Puerto Aventuras -->
+                <div class="route-card fade-in">
+                    <div class="route-header">
+                        <h3 class="route-name">Puerto Aventuras</h3>
+                        <div class="route-price">
+                            <span class="price-label" data-es="Desde" data-en="From">Desde</span> 
+                            $1,800 MXN
+                        </div>
                     </div>
+                    <p class="route-details">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12 6 12 12 16 14"></polyline>
+                        </svg>
+                        <span data-es="Tiempo estimado: 70-80 minutos" data-en="Estimated time: 70-80 minutes">
+                            Tiempo estimado: 70-80 minutos
+                        </span>
+                    </p>
+                    
+                    <div class="vehicle-selector">
+                        <div class="selector-title">
+                            <span data-es="Seleccione tipo de vehículo:" data-en="Select vehicle type:">Seleccione tipo de vehículo:</span>
+                        </div>
+                        <div class="vehicle-options">
+                            <div class="vehicle-option" data-type="van8" data-price="1800">
+                                <div class="vehicle-option-name" data-es="Van Estándar" data-en="Standard Van">Van Estándar</div>
+                                <div class="vehicle-option-capacity" data-es="Máx 8 personas" data-en="Max 8 people">Máx 8 personas</div>
+                            </div>
+                            <div class="vehicle-option local" data-type="suv" data-price="3300">
+                                <div class="vehicle-option-name">SUV</div>
+                                <div class="vehicle-option-capacity" data-es="Máx 4 personas" data-en="Max 4 people">Máx 4 personas</div>
+                            </div>
+                            <div class="vehicle-option" data-type="van15" data-price="4200">
+                                <div class="vehicle-option-name" data-es="Van Grande" data-en="Large Van">Van Grande</div>
+                                <div class="vehicle-option-capacity" data-es="Máx 15 personas" data-en="Max 15 people">Máx 15 personas</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="https://wa.me/529999908811?text=Hola,%20quiero%20reservar%20un%20traslado%20desde%20el%20aeropuerto%20de%20Cancún%20hacia%20Puerto%20Aventuras%20en%20Van%208%20pasajeros." class="route-btn" target="_blank" rel="noopener">
+                        <span data-es="Reservar por WhatsApp" data-en="Book via WhatsApp">Reservar por WhatsApp</span>
+                    </a>
                 </div>
-                <p class="route-details">
-                    <i class="fas fa-clock"></i>
-                    <span data-es="Tiempo estimado: 70-80 minutos" data-en="Estimated time: 70-80 minutes">
-                        Tiempo estimado: 70-80 minutos
-                    </span>
-                </p>
-                
-                <div class="vehicle-selector">
-                    <div class="selector-title">
-                        <i class="fas fa-car"></i>
-                        <span data-es="Seleccione tipo de vehículo:" data-en="Select vehicle type:">Seleccione tipo de vehículo:</span>
-                    </div>
-                    <div class="vehicle-options">
-                        <div class="vehicle-option" data-type="van8" data-price="1800">
-                            <div class="vehicle-option-icon">
-                                <i class="fas fa-shuttle-van"></i>
-                            </div>
-                            <div class="vehicle-option-name" data-es="Van Estándar" data-en="Standard Van">Van Estándar</div>
-                            <div class="vehicle-option-capacity" data-es="Máx 8 personas" data-en="Max 8 people">Máx 8 personas</div>
-                        </div>
-                        <div class="vehicle-option local" data-type="suv" data-price="3300">
-                            <div class="vehicle-option-icon">
-                                <i class="fas fa-car"></i>
-                            </div>
-                            <div class="vehicle-option-name">SUV</div>
-                            <div class="vehicle-option-capacity" data-es="Máx 4 personas" data-en="Max 4 people">Máx 4 personas</div>
-                        </div>
-                        <div class="vehicle-option" data-type="van15" data-price="4200">
-                            <div class="vehicle-option-icon">
-                                <i class="fas fa-bus"></i>
-                            </div>
-                            <div class="vehicle-option-name" data-es="Van Grande" data-en="Large Van">Van Grande</div>
-                            <div class="vehicle-option-capacity" data-es="Máx 15 personas" data-en="Max 15 people">Máx 15 personas</div>
-                        </div>
-                    </div>
-                </div>
-                
-                <a href="https://wa.me/529999908811?text=Hola,%20quiero%20reservar%20un%20traslado%20desde%20el%20aeropuerto%20de%20Cancún%20hacia%20Puerto%20Aventuras%20en%20Van%208%20pasajeros." class="route-btn" target="_blank" rel="noopener">
-                    <i class="fab fa-whatsapp"></i>
-                    <span data-es="Reservar por WhatsApp" data-en="Book via WhatsApp">Reservar por WhatsApp</span>
-                </a>
-            </div>
 
-            <!-- Akumal -->
-            <div class="route-card fade-in">
-                <div class="route-header">
-                    <h3 class="route-name">Akumal</h3>
-                    <div class="route-price">
-                        <span class="price-label" data-es="Desde" data-en="From">Desde</span> 
-                        $1,990 MXN
+                <!-- Akumal -->
+                <div class="route-card fade-in">
+                    <div class="route-header">
+                        <h3 class="route-name">Akumal</h3>
+                        <div class="route-price">
+                            <span class="price-label" data-es="Desde" data-en="From">Desde</span> 
+                            $1,990 MXN
+                        </div>
                     </div>
+                    <p class="route-details">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12 6 12 12 16 14"></polyline>
+                        </svg>
+                        <span data-es="Tiempo estimado: 70-80 minutos" data-en="Estimated time: 70-80 minutes">
+                            Tiempo estimado: 70-80 minutos
+                        </span>
+                    </p>
+                    
+                    <div class="vehicle-selector">
+                        <div class="selector-title">
+                            <span data-es="Seleccione tipo de vehículo:" data-en="Select vehicle type:">Seleccione tipo de vehículo:</span>
+                        </div>
+                        <div class="vehicle-options">
+                            <div class="vehicle-option" data-type="van8" data-price="1990">
+                                <div class="vehicle-option-name" data-es="Van Estándar" data-en="Standard Van">Van Estándar</div>
+                                <div class="vehicle-option-capacity" data-es="Máx 8 personas" data-en="Max 8 people">Máx 8 personas</div>
+                            </div>
+                            <div class="vehicle-option local" data-type="suv" data-price="4500">
+                                <div class="vehicle-option-name">SUV</div>
+                                <div class="vehicle-option-capacity" data-es="Máx 4 personas" data-en="Max 4 people">Máx 4 personas</div>
+                            </div>
+                            <div class="vehicle-option" data-type="van15" data-price="4900">
+                                <div class="vehicle-option-name" data-es="Van Grande" data-en="Large Van">Van Grande</div>
+                                <div class="vehicle-option-capacity" data-es="Máx 15 personas" data-en="Max 15 people">Máx 15 personas</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="https://wa.me/529999908811?text=Hola,%20quiero%20reservar%20un%20traslado%20desde%20el%20aeropuerto%20de%20Cancún%20hacia%20Akumal%20en%20Van%208%20pasajeros." class="route-btn" target="_blank" rel="noopener">
+                        <span data-es="Reservar por WhatsApp" data-en="Book via WhatsApp">Reservar por WhatsApp</span>
+                    </a>
                 </div>
-                <p class="route-details">
-                    <i class="fas fa-clock"></i>
-                    <span data-es="Tiempo estimado: 70-80 minutos" data-en="Estimated time: 70-80 minutes">
-                        Tiempo estimado: 70-80 minutos
-                    </span>
-                </p>
-                
-                <div class="vehicle-selector">
-                    <div class="selector-title">
-                        <i class="fas fa-car"></i>
-                        <span data-es="Seleccione tipo de vehículo:" data-en="Select vehicle type:">Seleccione tipo de vehículo:</span>
-                    </div>
-                    <div class="vehicle-options">
-                        <div class="vehicle-option" data-type="van8" data-price="1990">
-                            <div class="vehicle-option-icon">
-                                <i class="fas fa-shuttle-van"></i>
-                            </div>
-                            <div class="vehicle-option-name" data-es="Van Estándar" data-en="Standard Van">Van Estándar</div>
-                            <div class="vehicle-option-capacity" data-es="Máx 8 personas" data-en="Max 8 people">Máx 8 personas</div>
-                        </div>
-                        <div class="vehicle-option local" data-type="suv" data-price="4500">
-                            <div class="vehicle-option-icon">
-                                <i class="fas fa-car"></i>
-                            </div>
-                            <div class="vehicle-option-name">SUV</div>
-                            <div class="vehicle-option-capacity" data-es="Máx 4 personas" data-en="Max 4 people">Máx 4 personas</div>
-                        </div>
-                        <div class="vehicle-option" data-type="van15" data-price="4900">
-                            <div class="vehicle-option-icon">
-                                <i class="fas fa-bus"></i>
-                            </div>
-                            <div class="vehicle-option-name" data-es="Van Grande" data-en="Large Van">Van Grande</div>
-                            <div class="vehicle-option-capacity" data-es="Máx 15 personas" data-en="Max 15 people">Máx 15 personas</div>
-                        </div>
-                    </div>
-                </div>
-                
-                <a href="https://wa.me/529999908811?text=Hola,%20quiero%20reservar%20un%20traslado%20desde%20el%20aeropuerto%20de%20Cancún%20hacia%20Akumal%20en%20Van%208%20pasajeros." class="route-btn" target="_blank" rel="noopener">
-                    <i class="fab fa-whatsapp"></i>
-                    <span data-es="Reservar por WhatsApp" data-en="Book via WhatsApp">Reservar por WhatsApp</span>
-                </a>
-            </div>
 
-            <!-- Tulum Centro -->
-            <div class="route-card fade-in">
-                <div class="route-header">
-                    <h3 class="route-name">Tulum Centro</h3>
-                    <div class="route-price">
-                        <span class="price-label" data-es="Desde" data-en="From">Desde</span> 
-                        $2,500 MXN
+                <!-- Tulum Centro -->
+                <div class="route-card fade-in">
+                    <div class="route-header">
+                        <h3 class="route-name">Tulum Centro</h3>
+                        <div class="route-price">
+                            <span class="price-label" data-es="Desde" data-en="From">Desde</span> 
+                            $2,500 MXN
+                        </div>
                     </div>
+                    <p class="route-details">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12 6 12 12 16 14"></polyline>
+                        </svg>
+                        <span data-es="Tiempo estimado: 90-120 minutos" data-en="Estimated time: 90-120 minutes">
+                            Tiempo estimado: 90-120 minutos
+                        </span>
+                    </p>
+                    
+                    <div class="vehicle-selector">
+                        <div class="selector-title">
+                            <span data-es="Seleccione tipo de vehículo:" data-en="Select vehicle type:">Seleccione tipo de vehículo:</span>
+                        </div>
+                        <div class="vehicle-options">
+                            <div class="vehicle-option" data-type="van8" data-price="2500">
+                                <div class="vehicle-option-name" data-es="Van Estándar" data-en="Standard Van">Van Estándar</div>
+                                <div class="vehicle-option-capacity" data-es="Máx 8 personas" data-en="Max 8 people">Máx 8 personas</div>
+                            </div>
+                            <div class="vehicle-option local" data-type="suv" data-price="5300">
+                                <div class="vehicle-option-name">SUV</div>
+                                <div class="vehicle-option-capacity" data-es="Máx 4 personas" data-en="Max 4 people">Máx 4 personas</div>
+                            </div>
+                            <div class="vehicle-option" data-type="van15" data-price="5500">
+                                <div class="vehicle-option-name" data-es="Van Grande" data-en="Large Van">Van Grande</div>
+                                <div class="vehicle-option-capacity" data-es="Máx 15 personas" data-en="Max 15 people">Máx 15 personas</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="https://wa.me/529999908811?text=Hola,%20quiero%20reservar%20un%20traslado%20desde%20el%20aeropuerto%20de%20Cancún%20hacia%20Tulum%20Centro%20en%20Van%208%20pasajeros." class="route-btn" target="_blank" rel="noopener">
+                        <span data-es="Reservar por WhatsApp" data-en="Book via WhatsApp">Reservar por WhatsApp</span>
+                    </a>
                 </div>
-                <p class="route-details">
-                    <i class="fas fa-clock"></i>
-                    <span data-es="Tiempo estimado: 90-120 minutos" data-en="Estimated time: 90-120 minutes">
-                        Tiempo estimado: 90-120 minutos
-                    </span>
-                </p>
-                
-                <div class="vehicle-selector">
-                    <div class="selector-title">
-                        <i class="fas fa-car"></i>
-                        <span data-es="Seleccione tipo de vehículo:" data-en="Select vehicle type:">Seleccione tipo de vehículo:</span>
-                    </div>
-                    <div class="vehicle-options">
-                        <div class="vehicle-option" data-type="van8" data-price="2500">
-                            <div class="vehicle-option-icon">
-                                <i class="fas fa-shuttle-van"></i>
-                            </div>
-                            <div class="vehicle-option-name" data-es="Van Estándar" data-en="Standard Van">Van Estándar</div>
-                            <div class="vehicle-option-capacity" data-es="Máx 8 personas" data-en="Max 8 people">Máx 8 personas</div>
-                        </div>
-                        <div class="vehicle-option local" data-type="suv" data-price="5300">
-                            <div class="vehicle-option-icon">
-                                <i class="fas fa-car"></i>
-                            </div>
-                            <div class="vehicle-option-name">SUV</div>
-                            <div class="vehicle-option-capacity" data-es="Máx 4 personas" data-en="Max 4 people">Máx 4 personas</div>
-                        </div>
-                        <div class="vehicle-option" data-type="van15" data-price="5500">
-                            <div class="vehicle-option-icon">
-                                <i class="fas fa-bus"></i>
-                            </div>
-                            <div class="vehicle-option-name" data-es="Van Grande" data-en="Large Van">Van Grande</div>
-                            <div class="vehicle-option-capacity" data-es="Máx 15 personas" data-en="Max 15 people">Máx 15 personas</div>
-                        </div>
-                    </div>
-                </div>
-                
-                <a href="https://wa.me/529999908811?text=Hola,%20quiero%20reservar%20un%20traslado%20desde%20el%20aeropuerto%20de%20Cancún%20hacia%20Tulum%20Centro%20en%20Van%208%20pasajeros." class="route-btn" target="_blank" rel="noopener">
-                    <i class="fab fa-whatsapp"></i>
-                    <span data-es="Reservar por WhatsApp" data-en="Book via WhatsApp">Reservar por WhatsApp</span>
-                </a>
-            </div>
 
-            <!-- Tulum Zona Hotelera -->
-            <div class="route-card fade-in">
-                <div class="route-header">
-                    <h3 class="route-name">Tulum Zona Hotelera</h3>
-                    <div class="route-price">
-                        <span class="price-label" data-es="Desde" data-en="From">Desde</span> 
-                        $2,750 MXN
-                    </div>
-                </div>
-                <p class="route-details">
-                    <i class="fas fa-clock"></i>
-                    <span data-es="Tiempo estimado: 95-125 minutos" data-en="Estimated time: 95-125 minutes">
-                        Tiempo estimado: 95-125 minutos
-                    </span>
-                </p>
-                
-                <div class="vehicle-selector">
-                    <div class="selector-title">
-                        <i class="fas fa-car"></i>
-                        <span data-es="Seleccione tipo de vehículo:" data-en="Select vehicle type:">Seleccione tipo de vehículo:</span>
-                    </div>
-                    <div class="vehicle-options">
-                        <div class="vehicle-option" data-type="van8" data-price="2750">
-                            <div class="vehicle-option-icon">
-                                <i class="fas fa-shuttle-van"></i>
-                            </div>
-                            <div class="vehicle-option-name" data-es="Van Estándar" data-en="Standard Van">Van Estándar</div>
-                            <div class="vehicle-option-capacity" data-es="Máx 8 personas" data-en="Max 8 people">Máx 8 personas</div>
-                        </div>
-                        <div class="vehicle-option local" data-type="suv" data-price="5900">
-                            <div class="vehicle-option-icon">
-                                <i class="fas fa-car"></i>
-                            </div>
-                            <div class="vehicle-option-name">SUV</div>
-                            <div class="vehicle-option-capacity" data-es="Máx 4 personas" data-en="Max 4 people">Máx 4 personas</div>
-                        </div>
-                        <div class="vehicle-option" data-type="van15" data-price="6500">
-                            <div class="vehicle-option-icon">
-                                <i class="fas fa-bus"></i>
-                            </div>
-                            <div class="vehicle-option-name" data-es="Van Grande" data-en="Large Van">Van Grande</div>
-                            <div class="vehicle-option-capacity" data-es="Máx 15 personas" data-en="Max 15 people">Máx 15 personas</div>
+                <!-- Tulum Zona Hotelera -->
+                <div class="route-card fade-in">
+                    <div class="route-header">
+                        <h3 class="route-name">Tulum Zona Hotelera</h3>
+                        <div class="route-price">
+                            <span class="price-label" data-es="Desde" data-en="From">Desde</span> 
+                            $2,750 MXN
                         </div>
                     </div>
+                    <p class="route-details">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12 6 12 12 16 14"></polyline>
+                        </svg>
+                        <span data-es="Tiempo estimado: 95-125 minutos" data-en="Estimated time: 95-125 minutes">
+                            Tiempo estimado: 95-125 minutos
+                        </span>
+                    </p>
+                    
+                    <div class="vehicle-selector">
+                        <div class="selector-title">
+                            <span data-es="Seleccione tipo de vehículo:" data-en="Select vehicle type:">Seleccione tipo de vehículo:</span>
+                        </div>
+                        <div class="vehicle-options">
+                            <div class="vehicle-option" data-type="van8" data-price="2750">
+                                <div class="vehicle-option-name" data-es="Van Estándar" data-en="Standard Van">Van Estándar</div>
+                                <div class="vehicle-option-capacity" data-es="Máx 8 personas" data-en="Max 8 people">Máx 8 personas</div>
+                            </div>
+                            <div class="vehicle-option local" data-type="suv" data-price="5900">
+                                <div class="vehicle-option-name">SUV</div>
+                                <div class="vehicle-option-capacity" data-es="Máx 4 personas" data-en="Max 4 people">Máx 4 personas</div>
+                            </div>
+                            <div class="vehicle-option" data-type="van15" data-price="6500">
+                                <div class="vehicle-option-name" data-es="Van Grande" data-en="Large Van">Van Grande</div>
+                                <div class="vehicle-option-capacity" data-es="Máx 15 personas" data-en="Max 15 people">Máx 15 personas</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="https://wa.me/529999908811?text=Hola,%20quiero%20reservar%20un%20traslado%20desde%20el%20aeropuerto%20de%20Cancún%20hacia%20Tulum%20Zona%20Hotelera%20en%20Van%208%20pasajeros." class="route-btn" target="_blank" rel="noopener">
+                        <span data-es="Reservar por WhatsApp" data-en="Book via WhatsApp">Reservar por WhatsApp</span>
+                    </a>
                 </div>
-                
-                <a href="https://wa.me/529999908811?text=Hola,%20quiero%20reservar%20un%20traslado%20desde%20el%20aeropuerto%20de%20Cancún%20hacia%20Tulum%20Zona%20Hotelera%20en%20Van%208%20pasajeros." class="route-btn" target="_blank" rel="noopener">
-                    <i class="fab fa-whatsapp"></i>
-                    <span data-es="Reservar por WhatsApp" data-en="Book via WhatsApp">Reservar por WhatsApp</span>
-                </a>
-            </div>
 
-            <!-- Tarjetas de cotización -->
-            <div class="route-card fade-in">
-                <div class="route-header">
-                    <h3 class="route-name">Chiquilá</h3>
-                    <div class="route-price" data-es="Cotizar" data-en="Quote">Cotizar</div>
+                <!-- Tarjetas de cotización -->
+                <div class="route-card fade-in">
+                    <div class="route-header">
+                        <h3 class="route-name">Chiquilá</h3>
+                        <div class="route-price" data-es="Cotizar" data-en="Quote">Cotizar</div>
+                    </div>
+                    <p class="route-details">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12 6 12 12 16 14"></polyline>
+                        </svg>
+                        <span data-es="Solo Traslado - Aplica Peajes" data-en="Transfer Only - Tolls Apply">
+                            Solo Traslado - Aplica Peajes
+                        </span>
+                    </p>
+                    <p class="route-details">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                        </svg>
+                        <span data-es="Especifique número de personas" data-en="Specify number of passengers">
+                            Especifique número de personas
+                        </span>
+                    </p>
+                    
+                    <a href="https://wa.me/529999908811?text=Hola,%20quiero%20cotizar%20un%20traslado%20desde%20el%20aeropuerto%20de%20Cancún%20hacia%20Chiquilá.%20Por%20favor,%20indique%20el%20número%20de%20personas%20y%20tipo%20de%20vehículo%20deseado%20(SUV%20LOCAL,%20van%208%20pasajeros,%20van%2015%20pasajeros)." class="route-btn quote-btn" target="_blank" rel="noopener">
+                        <span data-es="Cotizar por WhatsApp" data-en="Quote via WhatsApp">Cotizar por WhatsApp</span>
+                    </a>
                 </div>
-                <p class="route-details">
-                    <i class="fas fa-clock"></i>
-                    <span data-es="Solo traslado - Sin peajes" data-en="Transfer only - No tolls">
-                        Solo traslado - Sin peajes
-                    </span>
-                </p>
-                <p class="route-details">
-                    <i class="fas fa-users"></i>
-                    <span data-es="Especifique número de personas" data-en="Specify number of passengers">
-                        Especifique número de personas
-                    </span>
-                </p>
-                
-                <a href="https://wa.me/529999908811?text=Hola,%20quiero%20cotizar%20un%20traslado%20desde%20el%20aeropuerto%20de%20Cancún%20hacia%20Chiquilá.%20Por%20favor,%20indique%20el%20número%20de%20personas%20y%20tipo%20de%20vehículo%20deseado%20(SUV%20LOCAL,%20van%208%20pasajeros,%20van%2015%20pasajeros)." class="route-btn quote-btn" target="_blank" rel="noopener">
-                    <i class="fab fa-whatsapp"></i>
-                    <span data-es="Cotizar por WhatsApp" data-en="Quote via WhatsApp">Cotizar por WhatsApp</span>
-                </a>
-            </div>
 
-            <div class="route-card fade-in">
-                <div class="route-header">
-                    <h3 class="route-name">Valladolid</h3>
-                    <div class="route-price" data-es="Cotizar" data-en="Quote">Cotizar</div>
+                <div class="route-card fade-in">
+                    <div class="route-header">
+                        <h3 class="route-name">Last Minute</h3>
+                        <div class="route-price" data-es="Cotizar" data-en="Quote">Cotizar</div>
+                    </div>
+                    <p class="route-details">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12 6 12 12 16 14"></polyline>
+                        </svg>
+                        <span data-es="Servicio sujeto a disponibilidad - Aplica costo adicional del 10% al precio de página." data-en="Service subject to availability - An additional 10% charge applies to the page price.">  Servicio sujeto a disponibilidad - Aplica costo adicional del 10% al precio de página.
+                        </span>
+                    </p>
+                    <p class="route-details">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                        </svg>
+                        <span data-es="Especifique número de personas, Origen y Destino" data-en="Specify number of passengers, Origin and Destination">
+                            Especifique número de personas, Origen y Destino
+                        </span>
+                    </p>
+                    
+                    <a href="https://wa.me/529999908811?text=Hola,%20quiero%20cotizar%20un%20traslado%20desde%20el%20aeropuerto%20de%20Cancún%20hacia%20Valladolid.%20Por%20favor,%20indique%20el%20número%20de%20personas%20y%20tipo%20de%20vehículo%20deseado%20(SUV%20LOCAL,%20van%208%20pasajeros,%20van%2015%20pasajeros)." class="route-btn quote-btn" target="_blank" rel="noopener">
+                        <span data-es="Cotizar por WhatsApp" data-en="Quote via WhatsApp">Cotizar por WhatsApp</span>
+                    </a>
                 </div>
-                <p class="route-details">
-                    <i class="fas fa-clock"></i>
-                    <span data-es="Tiempo estimado: 2-2.5 horas" data-en="Estimated time: 2-2.5 hours">
-                        Tiempo estimado: 2-2.5 horas
-                    </span>
-                </p>
-                <p class="route-details">
-                    <i class="fas fa-users"></i>
-                    <span data-es="Especifique número de personas" data-en="Specify number of passengers">
-                        Especifique número de personas
-                    </span>
-                </p>
-                
-                <a href="https://wa.me/529999908811?text=Hola,%20quiero%20cotizar%20un%20traslado%20desde%20el%20aeropuerto%20de%20Cancún%20hacia%20Valladolid.%20Por%20favor,%20indique%20el%20número%20de%20personas%20y%20tipo%20de%20vehículo%20deseado%20(SUV%20LOCAL,%20van%208%20pasajeros,%20van%2015%20pasajeros)." class="route-btn quote-btn" target="_blank" rel="noopener">
-                    <i class="fab fa-whatsapp"></i>
-                    <span data-es="Cotizar por WhatsApp" data-en="Quote via WhatsApp">Cotizar por WhatsApp</span>
-                </a>
-            </div>
 
-            <div class="route-card fade-in">
-                <div class="route-header">
-                    <h3 class="route-name">Chichén Itzá</h3>
-                    <div class="route-price" data-es="Cotizar" data-en="Quote">Cotizar</div>
+                <div class="route-card fade-in">
+                    <div class="route-header">
+                        <h3 class="route-name">Chichén Itzá</h3>
+                        <div class="route-price" data-es="Cotizar" data-en="Quote">Cotizar</div>
+                    </div>
+                    <p class="route-details">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12 6 12 12 16 14"></polyline>
+                        </svg>
+                        <span data-es="Tiempo estimado: 2.5-3 horas - Aplica Peajes" data-en="Estimated time: 2.5-3 hours - Tolls Apply">
+                            Tiempo estimado: 2.5-3 horas - Aplica Peajes
+                        </span>
+                    </p>
+                    <p class="route-details">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                        </svg>
+                        <span data-es="Especifique número de personas" data-en="Specify number of passengers">
+                            Especifique número de personas
+                        </span>
+                    </p>
+                    
+                    <a href="https://wa.me/529999908811?text=Hola,%20quiero%20cotizar%20un%20traslado%20desde%20el%20aeropuerto%20de%20Cancún%20hacia%20Chichén%20Itzá.%20Por%20favor,%20indique%20el%20número%20de%20personas%20y%20tipo%20de%20vehículo%20deseado%20(SUV%20LOCAL,%20van%208%20pasajeros,%20van%2015%20pasajeros)." class="route-btn quote-btn" target="_blank" rel="noopener">
+                        <span data-es="Cotizar por WhatsApp" data-en="Quote via WhatsApp">Cotizar por WhatsApp</span>
+                    </a>
                 </div>
-                <p class="route-details">
-                    <i class="fas fa-clock"></i>
-                    <span data-es="Tiempo estimado: 2.5-3 horas" data-en="Estimated time: 2.5-3 hours">
-                        Tiempo estimado: 2.5-3 horas
-                    </span>
-                </p>
-                <p class="route-details">
-                    <i class="fas fa-users"></i>
-                    <span data-es="Especifique número de personas" data-en="Specify number of passengers">
-                        Especifique número de personas
-                    </span>
-                </p>
-                
-                <a href="https://wa.me/529999908811?text=Hola,%20quiero%20cotizar%20un%20traslado%20desde%20el%20aeropuerto%20de%20Cancún%20hacia%20Chichén%20Itzá.%20Por%20favor,%20indique%20el%20número%20de%20personas%20y%20tipo%20de%20vehículo%20deseado%20(SUV%20LOCAL,%20van%208%20pasajeros,%20van%2015%20pasajeros)." class="route-btn quote-btn" target="_blank" rel="noopener">
-                    <i class="fab fa-whatsapp"></i>
-                    <span data-es="Cotizar por WhatsApp" data-en="Quote via WhatsApp">Cotizar por WhatsApp</span>
-                </a>
-            </div>
 
-            <div class="route-card fade-in">
-                <div class="route-header">
-                    <h3 class="route-name">A → B</h3>
-                    <div class="route-price" data-es="Cotizar" data-en="Quote">Cotizar</div>
+                <div class="route-card fade-in">
+                    <div class="route-header">
+                        <h3 class="route-name">A → B</h3>
+                        <div class="route-price" data-es="Cotizar" data-en="Quote">Cotizar</div>
+                    </div>
+                    <p class="route-details">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                        <span data-es="Especifique su origen y destino" data-en="Specify your origin and destination">
+                            Especifique su destino
+                        </span>
+                    </p>
+                    <p class="route-details">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                        </svg>
+                        <span data-es="Especifique número de personas" data-en="Specify number of passengers">
+                            Especifique número de personas
+                        </span>
+                    </p>
+                    
+                    <a href="https://wa.me/529999908811?text=Hola,%20quiero%20cotizar%20un%20traslado%20desde%20el%20aeropuerto%20de%20Cancún%20hacia%20otra%20zona.%20Por%20favor,%20indique%20el%20destino,%20número%20de%20personas%20y%20tipo%20de%20vehículo%20deseado%20(SUV%20LOCAL,%20van%208%20pasajeros,%20van%2015%20pasajeros)." class="route-btn quote-btn" target="_blank" rel="noopener">
+                        <span data-es="Cotizar por WhatsApp" data-en="Quote via WhatsApp">Cotizar por WhatsApp</span>
+                    </a>
                 </div>
-                <p class="route-details">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <span data-es="Especifique su origen y destino" data-en="Specify your origin and destination">
-                        Especifique su destino
-                    </span>
-                </p>
-                <p class="route-details">
-                    <i class="fas fa-users"></i>
-                    <span data-es="Especifique número de personas" data-en="Specify number of passengers">
-                        Especifique número de personas
-                    </span>
-                </p>
-                
-                <a href="https://wa.me/529999908811?text=Hola,%20quiero%20cotizar%20un%20traslado%20desde%20el%20aeropuerto%20de%20Cancún%20hacia%20otra%20zona.%20Por%20favor,%20indique%20el%20destino,%20número%20de%20personas%20y%20tipo%20de%20vehículo%20deseado%20(SUV%20LOCAL,%20van%208%20pasajeros,%20van%2015%20pasajeros)." class="route-btn quote-btn" target="_blank" rel="noopener">
-                    <i class="fab fa-whatsapp"></i>
-                    <span data-es="Cotizar por WhatsApp" data-en="Quote via WhatsApp">Cotizar por WhatsApp</span>
-                </a>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
     <!-- How it Works -->
     <section class="how-it-works" id="how-it-works">
@@ -2308,9 +2197,7 @@
             
             <div class="benefits-grid">
                 <div class="benefit fade-in">
-                    <div class="benefit-icon">
-                        <i class="fas fa-mobile-alt"></i>
-                    </div>
+                    <img src="images/sin-apps.svg" alt="Sin Apps" class="icon-image">               
                     <h3 class="benefit-title" data-es="Sin apps ni tarjetas" data-en="No apps or cards">Sin apps ni tarjetas</h3>
                     <p class="benefit-description" data-es="Solo necesitas WhatsApp. No descargas, no registros complicados." data-en="You only need WhatsApp. No downloads, no complicated registrations.">
                         Solo necesitas WhatsApp. No descargas, no registros complicados.
@@ -2318,30 +2205,24 @@
                 </div>
 
                 <div class="benefit fade-in">
-                    <div class="benefit-icon">
-                        <i class="fas fa-dollar-sign"></i>
-                    </div>
-                    <h3 class="benefit-title" data-es="Precios justos" data-en="Fair prices">Precios justos</h3>
+                <img src="images/precios-justos.svg" alt="Precios Justos" class="icon-image">
+                  <h3 class="benefit-title" data-es="Precios justos" data-en="Fair prices">Precios justos</h3>
                     <p class="benefit-description" data-es="Sin comisiones ocultas ni tarifas dinámicas. Precio fijo y transparente." data-en="No hidden fees or dynamic rates. Fixed and transparent pricing.">
                         Sin comisiones ocultas ni tarifas dinámicas. Precio fijo y transparente.
                     </p>
                 </div>
 
                 <div class="benefit fade-in">
-                    <div class="benefit-icon">
-                        <i class="fas fa-car"></i>
-                    </div>
-                    <h3 class="benefit-title" data-es="Amplia Red Vehicular" data-en="Wide Vehicle Network">Amplia Red Vehicular</h3>
+                <img src="images/amplia-red.svg" alt="Amplia Red Vehicular" class="icon-image">
+                <h3 class="benefit-title" data-es="Amplia Red Vehicular" data-en="Wide Vehicle Network">Amplia Red Vehicular</h3>
                     <p class="benefit-description" data-es="Con nuestra amplia red logística: transporte rápido, seguro y precios de local." data-en="Exclusive SUV service for 4 passengers.">
                         Con nuestra amplia red logística: transporte rápido, seguro y precios de local.
                     </p>
                 </div>
 
                 <div class="benefit fade-in">
-                    <div class="benefit-icon">
-                        <i class="fas fa-users"></i>
-                    </div>
-                    <h3 class="benefit-title" data-es="Proveedores Certificados Seleccionados" data-en="Selected Certified Providers">Proveedores Certificados Seleccionados</h3>
+                <img src="images/proveedores-certificados.svg" alt="Proveedores Certificados" class="icon-image">
+                  <h3 class="benefit-title" data-es="Proveedores Certificados Seleccionados" data-en="Selected Certified Providers">Proveedores Certificados Seleccionados</h3>
                     <p class="benefit-description" data-es="Riguroso proceso de selección para tu tranquilidad." data-en="Rigorous selection for your peace of mind.">
                         Riguroso proceso de selección para tu tranquilidad.
                     </p>
@@ -2361,25 +2242,17 @@
             <div class="testimonials-grid">
                 <div class="testimonial fade-in">
                     <div class="testimonial-rating">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
+                        ★★★★★
                     </div>
-                    <p class="testimonial-text" data-es="Excelente servicio LOCAL con proveedores certificados. El SUV era lujoso y cómodo. El conductor fue puntual y muy profesional." data-en="Excellent LOCAL service with certified providers. The SUV was luxurious and comfortable. The driver was punctual and very professional.">
-                        "Excelente servicio LOCAL con proveedores certificados. El SUV era lujoso y cómodo. El conductor fue puntual y muy profesional."
+                    <p class="testimonial-text" data-es="Excelente servicio LOCAL con proveedores certificados. El SUV era lujoso y cómodo. El conductor fue puntual y muy profesional." data-en="Excellent service, the SUV was luxurious and comfortable. The driver was punctual and very professional.">
+                        "Excelente servicio,el SUV era lujoso y cómodo. El conductor fue puntual y muy profesional."
                     </p>
                     <div class="testimonial-author" data-es="María González - Ciudad de México" data-en="Maria Gonzalez - Mexico City">María González - Ciudad de México</div>
                 </div>
 
                 <div class="testimonial fade-in">
                     <div class="testimonial-rating">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
+                        ★★★★★
                     </div>
                     <p class="testimonial-text" data-es="Reservamos una van para 15 personas para nuestro grupo de trabajo. El espacio era perfecto y el precio muy razonable. ¡Altamente recomendado!" data-en="We booked a van for 15 people for our work group. The space was perfect and the price very reasonable. Highly recommended!">
                         "Reservamos una van para 15 personas para nuestro grupo de trabajo. El espacio era perfecto y el precio muy razonable. ¡Altamente recomendado!"
@@ -2389,11 +2262,7 @@
 
                 <div class="testimonial fade-in">
                     <div class="testimonial-rating">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
+                        ★★★★★
                     </div>
                     <p class="testimonial-text" data-es="El servicio de Van para 8 personas fue perfecto para nuestra familia. Confortable, puntual y con un conductor muy amable. ¡Volveremos a usar eKab!" data-en="The Van service for 8 people was perfect for our family. Comfortable, punctual and with a very friendly driver. We will use eKab again!">
                         "El servicio de Van para 8 personas fue perfecto para nuestra familia. Confortable, puntual y con un conductor muy amable. ¡Volveremos a usar eKab!"
@@ -2415,8 +2284,10 @@
             <div class="faq-grid">
                 <div class="faq-item">
                     <div class="faq-question">
-                        <span data-es="¿Cómo Reservar Transporte Aeropuerto con eKab?" data-en="How to Book Airport Transport with eKab?">¿Cómo Reservar Transporte Aeropuerto con eKab?</span>
-                        <i class="fas fa-chevron-down"></i>
+                        <span data-es="¿Cómo reservar Transporte Aeropuerto con eKab?" data-en="How to book Airport Transport with eKab?">¿Cómo reservar Transporte Aeropuerto con eKab?</span>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="faq-icon">
+                            <path d="M6 9l6 6 6-6"></path>
+                        </svg>
                     </div>
                     <div class="faq-answer">
                         <p data-es="¡Reservar tu traslado privado con eKab es rápido y sencillo! Envíanos un WhatsApp con tu destino exacto (hotel/dirección), fecha de llegada y hora del vuelo, número de pasajeros y tipo de vehículo deseado. Recibirás confirmación y pago seguro en minutos. ¡Sin apps ni registros!" data-en="Booking private airport transfers with eKab is fast and easy! Send us a WhatsApp message with your exact destination (hotel/address), arrival date and flight time, number of passengers, and preferred vehicle type. We’ll confirm your booking within minutes with confirmation and payment details. No app or account needed!">
@@ -2427,32 +2298,38 @@
                 
                 <div class="faq-item">
                     <div class="faq-question">
-                        <span data-es="¿Qué incluye el precio del transporte?" data-en="What’s Included in eKab’s Fixed Price?">¿Qué incluye el precio del transporte?</span>
-                        <i class="fas fa-chevron-down"></i>
+                        <span data-es="¿Qué incluye el precio del transporte?" data-en="What’s included in eKab’s fixed price?">¿Qué incluye el precio del transporte?</span>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="faq-icon">
+                            <path d="M6 9l6 6 6-6"></path>
+                        </svg>
                     </div>
                     <div class="faq-answer">
-                        <p data-es="Nuestro precio fijo todo incluido cubre transporte privado puerta a puerta, conductor profesional bilingüe, seguro de viaje y garantía de 20 minutos (cambio gratuito de proveedor si llega tarde). Exclusiones: propinas opcionales y peajes específicos (informados antes del pago). ¡Sin cargos ocultos!" data-en="Our all-inclusive airport transfer price covers private door-to-door transportation, a professional bilingual driver, travel insurance, and a 20-minute guarantee (free provider switch if late). Exclusions: optional driver tips and specific toll fees (always disclosed before booking). No hidden charges!">
-                            Nuestro precio fijo todo incluido cubre transporte privado puerta a puerta, conductor profesional bilingüe, seguro de viaje y garantía de 20 minutos (cambio gratuito de proveedor si llega tarde). Exclusiones: propinas opcionales y peajes específicos (informados antes del pago). ¡Sin cargos ocultos!
+                        <p data-es="Nuestro precio fijo todo incluido cubre transporte privado puerta a puerta, conductor profesional bilingüe, seguro de viaje y garantía de 20 minutos (cambio gratuito de proveedor si llega tarde una vez estes listo en Aeropuerto). Exclusiones: propinas opcionales y peajes específicos (informados antes del pago). ¡Sin cargos ocultos!" data-en="Our all-inclusive airport transfer price covers private door-to-door transportation, a professional bilingual driver, travel insurance, and a 20-minute guarantee (free provider switch if late once you are ready at the Airport). Exclusions: optional driver tips and specific toll fees (always disclosed before booking). No hidden charges!">
+                            Nuestro precio fijo todo incluido cubre transporte privado puerta a puerta, conductor profesional bilingüe, seguro de viaje y garantía de 20 minutos (cambio gratuito de proveedor si llega tarde una vez estes listo en Aeropuerto). Exclusiones: propinas opcionales y peajes específicos (informados antes del pago). ¡Sin cargos ocultos!
                         </p>
                     </div>
                 </div>
                 
                 <div class="faq-item">
                     <div class="faq-question">
-                        <span data-es="¿Me Esperarán si mi Vuelo se Retrasa?" data-en="Will My Driver Wait if My Flight is Delayed?">¿Me Esperarán si mi Vuelo se Retrasa?</span>
-                        <i class="fas fa-chevron-down"></i>
+                        <span data-es="¿Me esperarán si mi vuelo se retrasa?" data-en="Will my driver wait if my flight is delayed?">¿Me esperarán si mi vuelo se retrasa?</span>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="faq-icon">
+                            <path d="M6 9l6 6 6-6"></path>
+                        </svg>
                     </div>
                     <div class="faq-answer">
-                        <p data-es="¡Sí, siempre! Tu proveedor rastrea tu vuelo en tiempo real y te espera en llegadas sin costo adicional, incluso con retrasos. Busca tu nombre en nuestro cartel. Cero tarifas por espera – garantizado." data-en="Yes, absolutely! Your driver tracks your flight in real-time and waits at arrivals at no extra cost, even for delays. Look for your name on our welcome sign. Zero wait fees – guaranteed.">
-                            ¡Sí, siempre! Tu proveedor rastrea tu vuelo en tiempo real y te espera en llegadas sin costo adicional, incluso con retrasos. Busca tu nombre en nuestro cartel. Cero tarifas por espera – garantizado.
+                        <p data-es="¡Sí, siempre! Tu Proveedor rastrea tu vuelo en tiempo real y te espera en llegadas sin costo adicional, incluso con retrasos. Busca tu nombre en nuestro cartel. Cero tarifas por espera – garantizado." data-en="Yes, absolutely! Your Provider tracks your flight in real-time and waits at arrivals at no extra cost, even for delays. Look for your name on our welcome sign. Zero wait fees – guaranteed.">
+                            ¡Sí, siempre! Tu Proveedor rastrea tu vuelo en tiempo real y te espera en llegadas sin costo adicional, incluso con retrasos. Busca tu nombre en nuestro cartel. Cero tarifas por espera – garantizado.
                         </p>
                     </div>
                 </div>
                 
                 <div class="faq-item">
                     <div class="faq-question">
-                        <span data-es="¿Puedo Cancelar o Cambiar mi Reserva con eKab?" data-en="Can I Cancel or Change My eKab Reservation?">¿Puedo Cancelar o Cambiar mi Reserva con eKab?</span>
-                        <i class="fas fa-chevron-down"></i>
+                        <span data-es="¿Puedo cancelar o cambiar mi reserva con eKab?" data-en="Can I cancel or change my eKab reservation?">¿Puedo cancelar o cambiar mi reserva con eKab?</span>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="faq-icon">
+                            <path d="M6 9l6 6 6-6"></path>
+                        </svg>
                     </div>
                     <div class="faq-answer">
                         <p data-es="Modificaciones gratuitas hasta 24 horas antes del servicio. Cancelaciones se penalizan con: 30% de cargo. Para cambios, escríbenos por WhatsApp. ¡Flexible y sin complicaciones!" data-en="Free amendments up to 24 hours before the service. Cancellations are penalized with: 30% charge. For changes, write us by WhatsApp, flexible and hassle free!">
@@ -2469,16 +2346,45 @@
         <div class="footer-content">
             <div class="footer-section">
                 <h4 data-es="Contacto eKab" data-en="Contact eKab">Contacto eKab</h4>
-                <p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/529999908811" target="_blank" rel="noopener noreferrer">+52 999 990 8811</a></p>
-                <p><i class="fas fa-envelope"></i> <a href="mailto:ekabshuttles@gmail.com">ekabshuttles@gmail.com</a></p>
-                <p><i class="fas fa-clock"></i> <span data-es="Atención 24/7" data-en="24/7 Support">Atención 24/7</span></p>
-                <p><i class="fas fa-map-marker-alt"></i> <span data-es="Aeropuerto Internacional de Cancún" data-en="Cancun International Airport">Aeropuerto Internacional de Cancún</span></p>
+                <p>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                        <polyline points="22,6 12,13 2,6"></polyline>
+                    </svg>
+                    <a href="mailto:ekabshuttles@gmail.com">ekabshuttles@gmail.com</a>
+                </p>
+                <p>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                    </svg>
+                    <a href="https://wa.me/529999908811" target="_blank" rel="noopener noreferrer">+52 999 990 8811</a>
+                </p>
+                <p>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <polyline points="12 6 12 12 16 14"></polyline>
+                    </svg>
+                    <span data-es="Atención 24/7" data-en="24/7 Support">Atención 24/7</span>
+                </p>
+                <p>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                        <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                    <span data-es="Aeropuerto Internacional de Cancún" data-en="Cancun International Airport">Aeropuerto Internacional de Cancún</span>
+                </p>
                 <div class="social-links">
                     <a href="https://www.facebook.com/ekabtransporte" class="social-link" aria-label="Facebook eKab" rel="noopener noreferrer">
-                        <i class="fab fa-facebook-f"></i>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                        </svg>
                     </a>
                     <a href="https://www.instagram.com/ekabtransporte" class="social-link" aria-label="Instagram eKab" rel="noopener noreferrer">
-                        <i class="fab fa-instagram"></i>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                        </svg>
                     </a>
                 </div>
             </div>
@@ -2510,7 +2416,10 @@
                 <p data-es="Transporte seguro y confiable" data-en="Safe and reliable transport">Transporte seguro y confiable</p>
                 
                 <div class="certified-text">
-                    <i class="fas fa-shield-alt"></i> 
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="8" r="7"></circle>
+                        <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+                    </svg> 
                     <span data-es="Todos nuestros proveedores cuentan con permisos oficiales emitidos por la Secretaría de Turismo de Quintana Roo." data-en="All our providers have official permits issued by the Quintana Roo Tourism Secretariat.">
                         Todos nuestros proveedores cuentan con permisos oficiales emitidos por la Secretaría de Turismo de Quintana Roo.
                     </span>
@@ -2527,7 +2436,9 @@
 
     <!-- WhatsApp Float Button -->
     <a href="https://wa.me/529999908811?text=Hola,%20acabo%20de%20visitar%20eKab%20y%20quiero%20cotizar%20un%20traslado%20LOCAL%20desde%20el%20aeropuerto." class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
-        <i class="fab fa-whatsapp"></i>
+        <svg class="whatsapp-svg" viewBox="0 0 32 32">
+            <path d=" M19.11 17.205c-.372 0-1.088 1.39-1.518 1.39a.63.63 0 0 1-.315-.1c-.802-.402-1.504-.817-2.163-1.447-.545-.516-1.146-1.29-1.46-1.963a.426.426 0 0 1-.073-.215c0-.33.99-.945.99-1.49 0-.143-.73-2.09-.832-2.335-.143-.372-.214-.487-.6-.487-.187 0-.36-.043-.53-.043-.302 0-.53.115-.746.315-.688.645-1.032 1.318-1.06 2.264v.114c-.015.99.472 1.977 1.017 2.78 1.23 1.82 2.506 3.41 4.554 4.34.616.287 2.035.888 2.722.888.817 0 2.15-.515 2.478-1.318.13-.33.244-.73.244-1.088 0-.058 0-.144-.03-.215-.1-.172-2.434-1.39-2.678-1.39zm-2.908 7.593c-1.747 0-3.48-.53-4.942-1.49L7.793 24.41l1.132-3.337a8.955 8.955 0 0 1-1.72-5.272c0-4.955 4.04-8.995 8.997-8.995S25.2 10.845 25.2 15.8c0 4.958-4.04 8.998-8.998 8.998zm0-19.798c-5.96 0-10.8 4.842-10.8 10.8 0 1.964.53 3.898 1.546 5.574L5 27.176l5.974-1.92a10.807 10.807 0 0 0 16.82-9.455c0-5.958-4.842-10.8-10.802-10.8z" fill-rule="evenodd"></path>
+        </svg>
     </a>
 
     <script>
@@ -2581,7 +2492,7 @@
                     // Close mobile menu after click
                     document.getElementById('mobileMenu').classList.remove('active');
                     // Change the menu icon back to bars
-                    document.getElementById('navToggle').innerHTML = '<i class="fas fa-bars"></i>';
+                    document.getElementById('navToggle').innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>';
                 }
             });
         });
@@ -2714,15 +2625,13 @@
         function toggleFAQ(element) {
             const faqItem = element.closest('.faq-item');
             const answer = faqItem.querySelector('.faq-answer');
-            const icon = element.querySelector('i');
+            const icon = faqItem.querySelector('.faq-icon');
             
             answer.classList.toggle('active');
             if (answer.classList.contains('active')) {
-                icon.classList.remove('fa-chevron-down');
-                icon.classList.add('fa-chevron-up');
+                icon.style.transform = 'rotate(180deg)';
             } else {
-                icon.classList.remove('fa-chevron-up');
-                icon.classList.add('fa-chevron-down');
+                icon.style.transform = 'rotate(0deg)';
             }
         }
         
@@ -2735,9 +2644,9 @@
             
             // Change icon based on menu state
             if (mobileMenu.classList.contains('active')) {
-                navToggle.innerHTML = '<i class="fas fa-times"></i>';
+                navToggle.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>';
             } else {
-                navToggle.innerHTML = '<i class="fas fa-bars"></i>';
+                navToggle.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>';
             }
         });
         
