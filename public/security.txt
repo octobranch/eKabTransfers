@@ -1,0 +1,2 @@
+Ver archivo de seguridad en: 
+https://www.ekab.mx/.well-known/security.txt
