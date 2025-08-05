@@ -1,0 +1,1039 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eKab | Alianza con Proveedores Locales</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --primary-dark: #1d4ed8;
+            --local-color: #8b5cf6;
+            --secondary-color: #1f2937;
+            --accent-color: #f59e0b;
+            --text-dark: #1f2937;
+            --text-light: #6b7280;
+            --background-light: #f9fafb;
+            --white: #ffffff;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            --border-radius: 16px;
+            --max-width: 1200px;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background: linear-gradient(135deg, #f0fdf4 0%, #eff6ff 100%);
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+            line-height: 1.2;
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        .container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        /* Header */
+        .header {
+            background: rgba(255, 255, 255, 0.92);
+            box-shadow: var(--shadow);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+            padding: 0.5rem 0;
+            transition: var(--transition);
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 1.5rem;
+        }
+
+        .logo {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .logo i {
+            color: var(--local-color);
+        }
+
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+            color: var(--white);
+            padding: 9rem 1.5rem 5rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+            margin-top: 70px;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" fill="rgba(255,255,255,0.1)"><polygon points="0,100 1000,0 1000,100"/></svg>') no-repeat bottom center;
+            background-size: cover;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-section h1 {
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            font-weight: 800;
+            margin-bottom: 1rem;
+            animation: fadeInUp 1s ease;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1.15rem, 2.5vw, 1.35rem);
+            margin-bottom: 2.5rem;
+            opacity: 0.92;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            animation: fadeInUp 1s ease 0.2s both;
+        }
+
+        .local-badge {
+            display: inline-block;
+            background: var(--local-color);
+            color: white;
+            padding: 0.4rem 1.2rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-top: 0.5rem;
+            vertical-align: middle;
+            animation: pulse 2s infinite;
+            box-shadow: 0 4px 10px rgba(139, 92, 246, 0.3);
+        }
+
+        /* Section Styles */
+        .section {
+            padding: 5rem 1.5rem;
+            background: var(--white);
+        }
+
+        .section-alt {
+            background: var(--background-light);
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: clamp(2.25rem, 4vw, 2.75rem);
+            font-weight: 800;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+            position: relative;
+            display: inline-block;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: var(--primary-color);
+            margin: 0.5rem auto;
+            border-radius: 2px;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: clamp(1.1rem, 2vw, 1.2rem);
+            color: var(--text-light);
+            margin-bottom: 3.5rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Problem Section */
+        .problem-section {
+            background: linear-gradient(135deg, #fff1f2 0%, #fff7ed 100%);
+        }
+
+        .problem-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .problem-card {
+            background: var(--white);
+            border-radius: var(--border-radius);
+            padding: 2.5rem;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            text-align: center;
+            border-top: 4px solid #ef4444;
+        }
+
+        .problem-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .problem-icon {
+            font-size: 3.5rem;
+            color: #ef4444;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Solution Section */
+        .solution-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .solution-card {
+            background: var(--white);
+            border-radius: var(--border-radius);
+            padding: 2.5rem;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            text-align: center;
+            border-top: 4px solid var(--primary-color);
+        }
+
+        .solution-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .solution-icon {
+            font-size: 3.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+        }
+
+        /* Benefits Section */
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .benefit-card {
+            background: var(--white);
+            border-radius: var(--border-radius);
+            padding: 2.5rem 2rem;
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border: 1px solid rgba(37, 99, 235, 0.1);
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .benefit-icon {
+            width: 80px;
+            height: 80px;
+            background: rgba(37, 99, 235, 0.1);
+            color: var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 2.5rem;
+            transition: var(--transition);
+        }
+
+        .benefit-card:hover .benefit-icon {
+            background: var(--primary-color);
+            color: white;
+            transform: rotateY(180deg);
+        }
+
+        /* Testimonial */
+        .testimonial {
+            background: var(--white);
+            border-radius: var(--border-radius);
+            padding: 2.5rem;
+            position: relative;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .testimonial:hover {
+            transform: translateY(-8px);
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 1.5rem;
+            color: var(--text-dark);
+            position: relative;
+            padding-left: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        .testimonial-text::before {
+            content: """;
+            position: absolute;
+            left: 0;
+            top: -1rem;
+            font-size: 4rem;
+            color: rgba(37, 99, 235, 0.1);
+            font-family: serif;
+            line-height: 1;
+        }
+
+        .testimonial-author {
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .testimonial-author::before {
+            content: "—";
+        }
+
+        .testimonial-rating {
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        /* Requirements */
+        .requirements-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: var(--white);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        .requirements-table th {
+            background: var(--primary-color);
+            color: var(--white);
+            padding: 1.2rem;
+            text-align: left;
+        }
+
+        .requirements-table td {
+            padding: 1rem 1.2rem;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .requirements-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .requirements-table tr:nth-child(even) {
+            background: var(--background-light);
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+            color: var(--white);
+            padding: 5rem 1.5rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%);
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" fill="rgba(255,255,255,0.1)"><polygon points="0,100 1000,0 1000,100"/></svg>') no-repeat bottom center;
+            background-size: cover;
+        }
+
+        .cta-content {
+            position: relative;
+            z-index: 2;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .cta-stats {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .stat-item {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            padding: 1rem 1.5rem;
+            border-radius: var(--border-radius);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .stat-value {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .steps {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .step {
+            background: var(--white);
+            color: var(--primary-color);
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.8rem;
+            box-shadow: var(--shadow);
+        }
+
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            background: var(--white);
+            color: var(--primary-color);
+            padding: 1.1rem 2.5rem;
+            border-radius: var(--border-radius);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.15rem;
+            box-shadow: var(--shadow-lg);
+            transition: var(--transition);
+            margin-top: 1.5rem;
+            border: 2px solid transparent;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.15);
+            background: transparent;
+            color: white;
+            border-color: white;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--secondary-color);
+            color: var(--white);
+            padding: 4rem 1.5rem 2rem;
+            clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 100%);
+        }
+
+        .footer-content {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .footer-section h4 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            color: var(--primary-color);
+        }
+
+        .footer-section p, .footer-section a {
+            color: #d1d5db;
+            text-decoration: none;
+            margin-bottom: 0.75rem;
+            display: block;
+            transition: var(--transition);
+        }
+
+        .footer-section a:hover {
+            color: var(--primary-color);
+            transform: translateX(5px);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-link {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: #374151;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+
+        .social-link:hover {
+            background: var(--primary-color);
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 3rem;
+            margin-top: 3rem;
+            border-top: 1px solid #374151;
+            color: #9ca3af;
+            max-width: var(--max-width);
+            margin: 3rem auto 0;
+        }
+
+        /* WhatsApp Float Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 65px;
+            height: 65px;
+            background: #25d366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.3);
+            z-index: 1000;
+            transition: var(--transition);
+            text-decoration: none;
+            color: var(--white);
+            font-size: 1.8rem;
+            animation: bounce 2s infinite;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            background: #128c7e;
+            box-shadow: 0 15px 30px rgba(37, 211, 102, 0.4);
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-12px);
+            }
+            60% {
+                transform: translateY(-7px);
+            }
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(139, 92, 246, 0.4);
+            }
+            70% {
+                box-shadow: 0 0 0 12px rgba(139, 92, 246, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(139, 92, 246, 0);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero-section {
+                padding: 7rem 1.5rem 3rem;
+            }
+            
+            .section {
+                padding: 3rem 1.5rem;
+            }
+            
+            .cta-section {
+                padding: 3rem 1.5rem;
+            }
+            
+            .requirements-table {
+                display: block;
+                overflow-x: auto;
+            }
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <a href="#" class="logo" aria-label="eKab Transporte Privado">
+                <i class="fas fa-taxi"></i>
+                eKab
+            </a>
+            
+            <div class="nav-right">
+                <a href="https://www.ekab.mx" class="lang-btn" style="text-decoration: none; padding: 0.5rem 1rem; border-radius: 6px; background: var(--primary-color); color: white;">
+                    <i class="fas fa-arrow-left"></i> Volver al sitio
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <h1>eKab & Tú: Una Alianza que Impulsa tu Negocio</h1>
+                <p class="hero-subtitle">Sistema de Pagos Justos - Operación Transparente - Crecimiento Compartido</p>
+                <div class="local-badge">SOLO PARA PROVEEDORES LOCALES CERTIFICADOS</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="section problem-section" id="problem">
+        <div class="container">
+            <h2 class="section-title">El Problema que Resolvemos</h2>
+            <p class="section-subtitle">¿Cansado de los modelos tradicionales que no valoran tu trabajo?</p>
+            
+            <div class="problem-container">
+                <div class="problem-card fade-in">
+                    <div class="problem-icon">
+                        <i class="fas fa-calendar-times"></i>
+                    </div>
+                    <h3>Pagos Retrasados</h3>
+                    <p>Las grandes empresas retienen tus pagos por 30-60 días, afectando tu flujo de efectivo y capacidad de operación.</p>
+                </div>
+                
+                <div class="problem-card fade-in">
+                    <div class="problem-icon">
+                        <i class="fas fa-money-bill-wave"></i>
+                    </div>
+                    <h3>Comisiones Ocultas</h3>
+                    <p>Tarifas no transparentes que reducen tus ganancias sin justificación clara ni beneficio para ti.</p>
+                </div>
+                
+                <div class="problem-card fade-in">
+                    <div class="problem-icon">
+                        <i class="fas fa-user-shield"></i>
+                    </div>
+                    <h3>Falta de Protección</h3>
+                    <p>Asumes todo el riesgo de impago sin respaldo cuando los clientes cancelan en el último momento.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section class="section" id="solution">
+        <div class="container">
+            <h2 class="section-title">Nuestra Propuesta Revolucionaria</h2>
+            <p class="section-subtitle">Un modelo justo que beneficia a ambas partes</p>
+            
+            <div class="solution-grid">
+                <div class="solution-card fade-in">
+                    <div class="solution-icon">
+                        <i class="fas fa-hand-holding-usd"></i>
+                    </div>
+                    <h3>Cobra el 70% Directamente</h3>
+                    <p>Recibe el pago en efectivo o tarjeta al contactar al cliente en el aeropuerto, sin esperas ni intermediarios.</p>
+                </div>
+                
+                <div class="solution-card fade-in">
+                    <div class="solution-icon">
+                        <i class="fas fa-percentage"></i>
+                    </div>
+                    <h3>Comisión Justa del 30%</h3>
+                    <p>eKab recibe solo el 30% por la gestión de reservas, marketing y soporte. Transparencia total.</p>
+                </div>
+                
+                <div class="solution-card fade-in">
+                    <div class="solution-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Seguridad Garantizada</h3>
+                    <p>eKab asume el riesgo del pago inicial. Tú recibes tu pago completo al entregar el servicio.</p>
+                </div>
+            </div>
+            
+            <div class="infographic fade-in" style="max-width: 800px; margin: 3rem auto; text-align: center; background: var(--background-light); padding: 2rem; border-radius: var(--border-radius);">
+                <h3 style="margin-bottom: 1.5rem; color: var(--primary-color);">Flujo de Pagos Transparente</h3>
+                <div style="display: flex; justify-content: space-around; align-items: center; flex-wrap: wrap;">
+                    <div style="text-align: center; margin: 1rem;">
+                        <div style="background: var(--primary-color); color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <p>Reserva por WhatsApp</p>
+                    </div>
+                    <div style="font-size: 2rem; color: var(--text-light);">→</div>
+                    <div style="text-align: center; margin: 1rem;">
+                        <div style="background: var(--primary-color); color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
+                            30%
+                        </div>
+                        <p>Pago inicial a eKab</p>
+                    </div>
+                    <div style="font-size: 2rem; color: var(--text-light);">→</div>
+                     <div style="text-align: center; margin: 1rem;">
+                        <div style="background: var(--primary-color); color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
+                            70%
+                        </div>
+                        <p>Pago directo al proveedor</p>
+                    </div>
+                    <div style="font-size: 2rem; color: var(--text-light);">→</div>
+                   <div style="text-align: center; margin: 1rem;">
+                        <div style="background: var(--primary-color); color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
+                            <i class="fas fa-car"></i>
+                        </div>
+                        <p>Servicio de transporte</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="section section-alt" id="benefits">
+        <div class="container">
+            <h2 class="section-title">Beneficios Clave para Ti</h2>
+            <p class="section-subtitle">Por qué nuestra alianza es diferente</p>
+            
+            <div class="benefits-grid">
+                <div class="benefit-card fade-in">
+                    <div class="benefit-icon">
+                        <i class="fas fa-money-bill-wave"></i>
+                    </div>
+                    <h3>Flujo de Efectivo Inmediato</h3>
+                    <p>Dinero en tus manos al concluir cada servicio, sin esperas de 30-60 días.</p>
+                </div>
+                
+                <div class="benefit-card fade-in">
+                    <div class="benefit-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Seguridad Garantizada</h3>
+                    <p>eKab asume el riesgo de impago inicial. Tú recibes tu pago completo en el momento.</p>
+                </div>
+                
+                <div class="benefit-card fade-in">
+                    <div class="benefit-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Crecimiento Predecible</h3>
+                    <p>Tarifas competitivas que respetamos. Aumento de clientes mediante nuestra plataforma.</p>
+                </div>
+                
+                <div class="benefit-card fade-in">
+                    <div class="benefit-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Valoración de tu Trabajo</h3>
+                    <p>Te presentamos como "Proveedor Certificado" destacando tu profesionalismo y servicio local.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonial Section -->
+    <section class="section" id="testimonial">
+        <div class="container">
+            <h2 class="section-title">Testimonio Real</h2>
+            <p class="section-subtitle">Lo que dicen proveedores como tú</p>
+            
+            <div class="testimonial fade-in">
+                <div class="testimonial-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p class="testimonial-text">
+                    "Con eKab recibo mi pago al bajar el cliente del vehículo. ¡Esa tranquilidad no tiene precio! Ahora puedo planear mis gastos y mantener mi flota en óptimas condiciones sin preocuparme por cobranzas. La comisión del 30% es justa porque realmente me consiguen clientes sin que yo tenga que invertir en publicidad."
+                </p>
+                <div class="testimonial-author">
+                    Carlos Mendoza, Proveedor en Cancún desde 2022
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Commitment Section -->
+    <section class="section section-alt" id="commitment">
+        <div class="container">
+            <h2 class="section-title">Nuestro Compromiso Contigo</h2>
+            <p class="section-subtitle">Construyendo una relación de confianza mutua</p>
+            
+            <div class="benefits-grid">
+                <div class="benefit-card fade-in">
+                    <div class="benefit-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3>Transparencia Total</h3>
+                    <p>Sabrás exactamente cuánto paga el cliente. Sin costos ocultos ni cargos sorpresa.</p>
+                </div>
+                
+                <div class="benefit-card fade-in">
+                    <div class="benefit-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3>Protección de tu Marca</h3>
+                    <p>Te presentamos como "Proveedor Certificado" resaltando tu profesionalismo.</p>
+                </div>
+                
+                <div class="benefit-card fade-in">
+                    <div class="benefit-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>Soporte 24/7</h3>
+                    <p>Equipo dedicado para resolver incidencias. Sistema de reemplazo rápido en emergencias.</p>
+                </div>
+                
+                <div class="benefit-card fade-in">
+                    <div class="benefit-icon">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <h3>Crecimiento Compartido</h3>
+                    <p>A medida que eKab crece, tú creces con nosotros. Tu éxito es nuestro éxito.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Requirements Section -->
+    <section class="section" id="requirements">
+        <div class="container">
+            <h2 class="section-title">Requisitos para Unirte</h2>
+            <p class="section-subtitle">Manteniendo los más altos estándares de calidad</p>
+            
+            <table class="requirements-table fade-in">
+                <thead>
+                    <tr>
+                        <th>Requisito</th>
+                        <th>Detalle</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Vehículo</strong></td>
+                        <td>SUV o Van en excelente estado (máximo 5 años de antigüedad)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Certificaciones</strong></td>
+                        <td>Permisos oficiales vigentes para transporte turístico</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Seguro</strong></td>
+                        <td>Póliza de seguro actualizada con cobertura amplia</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Conductores</strong></td>
+                        <td>Profesionales con licencia vigente y experiencia comprobada</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Actitud</strong></td>
+                        <td>Compromiso con servicio profesional, puntual y amable</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <div class="fade-in" style="text-align: center; margin-top: 2rem;">
+                <div class="local-badge">Proceso de validación simple y rápido (48 horas)</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section" id="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Únete hoy a la familia eKab</h2>
+                <p>Más de 200 proveedores locales ya están creciendo con nosotros</p>
+                
+                <div class="cta-stats fade-in">
+                    <div class="stat-item">
+                        <div class="stat-value">95%</div>
+                        <div>de proveedores renovaron</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">4.9/5</div>
+                        <div>satisfacción en pagos</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">24h</div>
+                        <div>soporte continuo</div>
+                    </div>
+                </div>
+                
+                <div class="steps fade-in">
+                    <div class="step">1</div>
+                    <div class="step">2</div>
+                    <div class="step">3</div>
+                </div>
+                
+                <p style="margin-bottom: 1.5rem;">
+                    <strong>Regístrate en solo 3 pasos:</strong><br>
+                    Completa el formulario → Validamos documentos → Recibe tu primera reserva
+                </p>
+                
+                <a href="https://wa.me/529999908811?text=Hola,%20soy%20proveedor%20de%20transporte%20en%20Cancún%20y%20quiero%20unirme%20a%20eKab" class="cta-button" target="_blank">
+                    <i class="fab fa-whatsapp"></i>
+                    ¡Quiero unirme ahora!
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Contacto eKab</h4>
+                    <p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/529999908811" target="_blank">+52 999 990 8811</a></p>
+                    <p><i class="fas fa-envelope"></i> <a href="mailto:proveedores@ekab.mx">proveedores@ekab.mx</a></p>
+                    <p><i class="fas fa-clock"></i> Atención 24/7</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Aeropuerto Internacional de Cancún</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Recursos para Proveedores</h4>
+                    <a href="#">Manual de Operaciones</a>
+                    <a href="#">Guía de Tarifas</a>
+                    <a href="#">Plantillas de Contratos</a>
+                    <a href="#">Calendario de Capacitaciones</a>
+                    <a href="#">Preguntas Frecuentes</a>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <a href="#">Acuerdo de Proveedores</a>
+                    <a href="#">Política de Privacidad</a>
+                    <a href="#">Términos y Condiciones</a>
+                    <div class="certified-text" style="margin-top: 1rem;">
+                        <i class="fas fa-shield-alt"></i> Proveedores Certificados por la Secretaría de Turismo de Quintana Roo
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2024 eKab Transporte Privado. Todos los derechos reservados. "Juntos hacemos de Cancún el destino mejor conectado"</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/529999908811?text=Hola,%20soy%20proveedor%20de%20transporte%20en%20Cancún%20y%20quiero%20unirme%20a%20eKab" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+        // Fade in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+        
+        // Observe all fade-in elements
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+        
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(255, 255, 255, 0.95)';
+                header.style.backdropFilter = 'blur(10px)';
+            } else {
+                header.style.background = 'var(--white)';
+                header.style.backdropFilter = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
