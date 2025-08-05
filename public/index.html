@@ -1240,6 +1240,22 @@
         }
     </style>
 </head>
+    <!-- Cookies -->
+<div id="cookie-banner" class="fixed bottom-0 left-0 right-0 bg-gray-800 text-white p-4 hidden">
+  <div class="container mx-auto flex justify-between items-center">
+    <p>Usamos cookies para mejorar tu experiencia. <a href="/privacy" class="underline">Más info</a></p>
+    <button id="accept-cookies" class="bg-blue-500 px-4 py-2 rounded">Aceptar</button>
+  </div>
+</div>
+<script>
+  if(!localStorage.getItem('cookies-accepted')) {
+    document.getElementById('cookie-banner').classList.remove('hidden');
+  }
+  document.getElementById('accept-cookies').addEventListener('click', () => {
+    localStorage.setItem('cookies-accepted', 'true');
+    document.getElementById('cookie-banner').classList.add('hidden');
+  });
+</script>
 <body>
     <!-- Header -->
     <header class="header">
