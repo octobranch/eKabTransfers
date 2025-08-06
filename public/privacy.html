@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>eKab - Aviso de Privacidad | Transporte Privado LOCAL</title>
-    <meta name="description" content="Aviso de Privacidad de eKab Transporte Privado LOCAL. Conoce cómo protegemos tus datos personales.">
-    <meta name="keywords" content="transporte local cancún, aviso privacidad eKab, protección de datos, traslado aeropuerto cancún">
-    <meta name="author" content="eKab Transporte Privado">
     
+<title data-es="eKab - Aviso de Privacidad | Transporte Privado LOCAL" data-en="eKab - Privacy Policy | LOCAL Private Transport">eKab - Aviso de Privacidad | Transporte Privado LOCAL</title>
+<meta name="description" content="Aviso de Privacidad de eKab Transporte Privado LOCAL. Conoce cómo protegemos tus datos personales." 
+      data-es="Aviso de Privacidad de eKab Transporte Privado LOCAL. Conoce cómo protegemos tus datos personales."
+      data-en="Privacy Policy of eKab Private LOCAL Transport. Learn how we protect your personal data.">
+
     <!-- Favicon -->
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚗</text></svg>">
     
@@ -496,14 +495,14 @@
                 </div>
             </div>
             
-            <div class="footer-section">
-                <h4 data-es="Servicios eKab" data-en="eKab Services">Servicios eKab</h4>
-                <a href="index.html#vehicles" data-es="Nuestros vehículos" data-en="Our Vehicles">Nuestros vehículos</a>
-                <a href="index.html#routes" data-es="Rutas populares" data-en="Popular Routes">Rutas populares</a>
-                <a href="index.html#benefits" data-es="Ventajas" data-en="Benefits">Ventajas</a>
-                <a href="index.html#faq" data-es="Preguntas frecuentes" data-en="FAQ">Preguntas frecuentes</a>
-            </div>
-            
+<div class="footer-section">
+    <h4 data-es="Servicios eKab" data-en="eKab Services">Servicios eKab</h4>
+    <a href="index.html#vehicles" data-es="Nuestros vehículos" data-en="Our Vehicles">Nuestros vehículos</a>
+    <a href="index.html#routes" data-es="Rutas populares" data-en="Popular Routes">Rutas populares</a>
+    <a href="index.html#benefits" data-es="Ventajas" data-en="Benefits">Ventajas</a>
+    <a href="index.html#faq" data-es="Preguntas frecuentes" data-en="FAQ">Preguntas frecuentes</a>
+</div>
+
             <div class="footer-section">
                 <h4 data-es="Legal" data-en="Legal">Legal</h4>
                 <a href="/privacy.html" data-es="Aviso de Privacidad" data-en="Privacy Policy">Aviso de Privacidad</a>
@@ -569,6 +568,17 @@
                 });
             });
         });
+        const metaDesc = document.querySelector('meta[name="description"]');
+        if (metaDesc) {
+            metaDesc.content = metaDesc.getAttribute(`data-${lang}`);
+        }
+        
+        // Update page title
+        const pageTitle = document.querySelector('title');
+        if (pageTitle) {
+            pageTitle.textContent = pageTitle.getAttribute(`data-${lang}`);
+        }
+    }
     </script>
 </body>
 </html>
