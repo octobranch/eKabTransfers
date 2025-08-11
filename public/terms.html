@@ -542,59 +542,43 @@
         </div>
     </footer>
 
-    <script>
-        // Language switching functionality
-        let currentLanguage = 'es';
-        
-        function switchLanguage(lang) {
-            currentLanguage = lang;
-            
-            // Update active button
-            document.querySelectorAll('.lang-btn').forEach(btn => {
-                btn.classList.remove('active');
-                if (btn.dataset.lang === lang) {
-                    btn.classList.add('active');
-                }
-            });
-            
-            // Update all translatable elements
-            document.querySelectorAll('[data-es][data-en]').forEach(element => {
-                element.textContent = element.getAttribute(`data-${lang}`);
-            });
-            
-            // Update document language
-            document.documentElement.lang = lang;
-            
-            // Update page title
-            document.title = currentLanguage === 'es' 
-                ? 'eKab - Términos y Condiciones | Transporte Privado LOCAL' 
-                : 'eKab - Terms and Conditions | LOCAL Private Transport';
-        }
-        
-        // Initialize page
-        document.addEventListener('DOMContentLoaded', function() {
-            // Set initial language
-            switchLanguage('es');
-            
-            // Set up language button events
-            document.querySelectorAll('.lang-btn').forEach(btn => {
-                btn.addEventListener('click', function() {
-                    switchLanguage(this.dataset.lang);
-                });
-            });
+<script>
+    // Language switching functionality - CORREGIDO
+    function switchLanguage(lang) {
+        // Update active button
+        document.querySelectorAll('.lang-btn').forEach(btn => {
+            btn.classList.toggle('active', btn.dataset.lang === lang);
         });
-        // Update meta description
-        const metaDesc = document.querySelector('meta[name="description"]');
-        if (metaDesc) {
-            metaDesc.content = metaDesc.getAttribute(`data-${lang}`);
-        }
+        
+        // Update all translatable elements
+        document.querySelectorAll('[data-es][data-en]').forEach(element => {
+            element.textContent = element.getAttribute(`data-${lang}`);
+        });
+        
+        // Update document language
+        document.documentElement.lang = lang;
         
         // Update page title
         const pageTitle = document.querySelector('title');
-        if (pageTitle) {
-            pageTitle.textContent = pageTitle.getAttribute(`data-${lang}`);
-        }
+        pageTitle.textContent = pageTitle.getAttribute(`data-${lang}`);
+        
+        // Update meta description
+        const metaDesc = document.querySelector('meta[name="description"]');
+        metaDesc.content = metaDesc.getAttribute(`data-${lang}`);
     }
-    </script>
+    
+    // Initialize page
+    document.addEventListener('DOMContentLoaded', function() {
+        // Set up language button events
+        document.querySelectorAll('.lang-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                switchLanguage(this.dataset.lang);
+            });
+        });
+        
+        // Set initial language
+        switchLanguage('es');
+    });
+</script>
 </body>
 </html>
