@@ -1,19 +1,18 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eKab - Aviso de Privacidad | Transporte Privado LOCAL</title>
+    <meta name="description" content="Aviso de Privacidad de eKab Transporte Privado LOCAL. Conoce cómo protegemos tus datos personales.">
     
-<title data-es="eKab - Aviso de Privacidad | Transporte Privado LOCAL" data-en="eKab - Privacy Policy | LOCAL Private Transport">eKab - Aviso de Privacidad | Transporte Privado LOCAL</title>
-<meta name="description" content="Aviso de Privacidad de eKab Transporte Privado LOCAL. Conoce cómo protegemos tus datos personales." 
-      data-es="Aviso de Privacidad de eKab Transporte Privado LOCAL. Conoce cómo protegemos tus datos personales."
-      data-en="Privacy Policy of eKab Private LOCAL Transport. Learn how we protect your personal data.">
-
     <!-- Favicon -->
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚗</text></svg>">
     
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
     
-    <!-- Font Awesome for icons -->
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
     <style>
@@ -53,7 +52,7 @@
             font-weight: 700;
         }
 
-        /* Header */
+        /* Header - SOLUCIÓN LOGO */
         .header {
             background: rgba(255, 255, 255, 0.92);
             box-shadow: var(--shadow);
@@ -74,21 +73,33 @@
             justify-content: space-between;
             align-items: center;
             padding: 0 1.5rem;
+            height: 70px; /* Altura fija para mantener consistencia */
         }
 
+        /* Logo optimizado */
         .logo {
-            font-size: 1.75rem;
-            font-weight: 700;
-            color: var(--primary-color);
-            text-decoration: none;
             display: flex;
             align-items: center;
             gap: 0.5rem;
+            text-decoration: none;
+        }
+
+        .logo-text {
+            font-size: 1.5rem; /* Tamaño reducido */
+            font-weight: 700;
+            color: var(--primary-color);
             font-family: 'Montserrat', sans-serif;
+            white-space: nowrap;
         }
 
         .logo i {
             color: var(--local-color);
+            font-size: 1.5rem; /* Tamaño reducido */
+        }
+
+        .logo-image {
+            max-height: 40px; /* Tamaño controlado */
+            width: auto;
         }
 
         .language-toggle {
@@ -334,22 +345,59 @@
             }
         }
 
-        /* Responsive Design */
+        /* Responsive Design - MEJORADO */
+        @media (max-width: 992px) {
+            .legal-title {
+                font-size: 2.4rem;
+            }
+            
+            .legal-content {
+                padding: 2.5rem;
+            }
+            
+            .legal-section h2 {
+                font-size: 1.6rem;
+            }
+        }
+
         @media (max-width: 768px) {
+            .nav {
+                height: 60px; /* Altura reducida para móviles */
+                padding: 0 1rem;
+            }
+            
+            .logo-text {
+                font-size: 1.3rem; /* Tamaño reducido para móviles */
+            }
+            
+            .logo-image {
+                max-height: 35px; /* Tamaño reducido para móviles */
+            }
+            
+            .lang-btn {
+                padding: 0.4rem 0.8rem;
+                font-size: 0.9rem;
+            }
+            
             .legal-container {
                 margin-top: 6rem;
             }
             
             .legal-title {
-                font-size: 2.25rem;
+                font-size: 2rem;
             }
             
             .legal-content {
-                padding: 2rem 1.5rem;
+                padding: 1.5rem;
             }
             
-            .legal-section h2, .legal-section h3 {
-                font-size: 1.5rem;
+            .legal-section h2 {
+                font-size: 1.4rem;
+                flex-wrap: wrap;
+            }
+            
+            .legal-section h3 {
+                font-size: 1.2rem;
             }
             
             .legal-section p {
@@ -373,15 +421,56 @@
                 font-size: 1.5rem;
             }
         }
+
+        @media (max-width: 480px) {
+            .nav {
+                height: 55px;
+            }
+            
+            .logo {
+                gap: 0.3rem;
+            }
+            
+            .logo-text {
+                font-size: 1.1rem;
+            }
+            
+            .logo-image {
+                max-height: 30px;
+            }
+            
+            .lang-btn {
+                padding: 0.3rem 0.7rem;
+                font-size: 0.8rem;
+            }
+            
+            .legal-title {
+                font-size: 1.7rem;
+            }
+            
+            .legal-section h2 {
+                font-size: 1.2rem;
+            }
+            
+            .legal-section li {
+                padding-left: 1rem;
+            }
+            
+            .back-btn {
+                width: 100%;
+                justify-content: center;
+                padding: 0.7rem;
+            }
+        }
     </style>
 </head>
 <body>
-    <!-- Header -->
+    <!-- Header optimizado -->
     <header class="header">
         <nav class="nav">
             <a href="/index.html" class="logo">
-                <i class="fas fa-taxi"></i>
-                eKab
+                <img src="https://via.placeholder.com/150x50?text=eKab+Logo" alt="eKab Logo" class="logo-image">
+                <span class="logo-text">eKab</span>
             </a>
             <div class="language-toggle">
                 <button class="lang-btn active" data-lang="es">ES</button>
@@ -495,13 +584,13 @@
                 </div>
             </div>
             
-<div class="footer-section">
-    <h4 data-es="Servicios eKab" data-en="eKab Services">Servicios eKab</h4>
-    <a href="index.html#vehicles" data-es="Nuestros vehículos" data-en="Our Vehicles">Nuestros vehículos</a>
-    <a href="index.html#routes" data-es="Rutas populares" data-en="Popular Routes">Rutas populares</a>
-    <a href="index.html#benefits" data-es="Ventajas" data-en="Benefits">Ventajas</a>
-    <a href="index.html#faq" data-es="Preguntas frecuentes" data-en="FAQ">Preguntas frecuentes</a>
-</div>
+            <div class="footer-section">
+                <h4 data-es="Servicios eKab" data-en="eKab Services">Servicios eKab</h4>
+                <a href="index.html#vehicles" data-es="Nuestros vehículos" data-en="Our Vehicles">Nuestros vehículos</a>
+                <a href="index.html#routes" data-es="Rutas populares" data-en="Popular Routes">Rutas populares</a>
+                <a href="index.html#benefits" data-es="Ventajas" data-en="Benefits">Ventajas</a>
+                <a href="index.html#faq" data-es="Preguntas frecuentes" data-en="FAQ">Preguntas frecuentes</a>
+            </div>
 
             <div class="footer-section">
                 <h4 data-es="Legal" data-en="Legal">Legal</h4>
@@ -527,42 +616,42 @@
         </div>
     </footer>
 
- <script>
-    // Language switching functionality - CORREGIDO
-    function switchLanguage(lang) {
-        // Update active button
-        document.querySelectorAll('.lang-btn').forEach(btn => {
-            btn.classList.toggle('active', btn.dataset.lang === lang);
-        });
-        
-        // Update all translatable elements
-        document.querySelectorAll('[data-es][data-en]').forEach(element => {
-            element.textContent = element.getAttribute(`data-${lang}`);
-        });
-        
-        // Update document language
-        document.documentElement.lang = lang;
-        
-        // Update page title
-        document.title = document.querySelector('title').getAttribute(`data-${lang}`);
-        
-        // Update meta description
-        const metaDesc = document.querySelector('meta[name="description"]');
-        metaDesc.content = metaDesc.getAttribute(`data-${lang}`);
-    }
-    
-    // Initialize page
-    document.addEventListener('DOMContentLoaded', function() {
-        // Set up language button events
-        document.querySelectorAll('.lang-btn').forEach(btn => {
-            btn.addEventListener('click', function() {
-                switchLanguage(this.dataset.lang);
+    <script>
+        // Language switching functionality
+        function switchLanguage(lang) {
+            // Update active button
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.toggle('active', btn.dataset.lang === lang);
             });
-        });
+            
+            // Update all translatable elements
+            document.querySelectorAll('[data-es][data-en]').forEach(element => {
+                element.textContent = element.getAttribute(`data-${lang}`);
+            });
+            
+            // Update document language
+            document.documentElement.lang = lang;
+            
+            // Update page title
+            document.title = document.querySelector('title').getAttribute(`data-${lang}`);
+            
+            // Update meta description
+            const metaDesc = document.querySelector('meta[name="description"]');
+            metaDesc.content = metaDesc.getAttribute(`data-${lang}`);
+        }
         
-        // Set initial language
-        switchLanguage('es');
-    });
-</script>
+        // Initialize page
+        document.addEventListener('DOMContentLoaded', function() {
+            // Set up language button events
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    switchLanguage(this.dataset.lang);
+                });
+            });
+            
+            // Set initial language
+            switchLanguage('es');
+        });
+    </script>
 </body>
 </html>
