@@ -77,18 +77,28 @@
         }
 
         .logo {
-            font-size: 1.75rem;
-            font-weight: 700;
-            color: var(--primary-color);
-            text-decoration: none;
             display: flex;
             align-items: center;
             gap: 0.5rem;
+            text-decoration: none;
+        }
+
+        .logo-text {
+            font-size: 1.5rem; /* Tamaño reducido */
+            font-weight: 700;
+            color: var(--primary-color);
             font-family: 'Montserrat', sans-serif;
+            white-space: nowrap;
         }
 
         .logo i {
             color: var(--local-color);
+            font-size: 1.5rem; /* Tamaño reducido */
+        }
+
+        .logo-image {
+            max-height: 40px; /* Tamaño controlado */
+            width: auto;
         }
 
         .language-toggle {
